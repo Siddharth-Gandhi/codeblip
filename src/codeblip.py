@@ -3,7 +3,7 @@ import contextlib
 import torch
 import torch.nn as nn
 # from transformers import BertTokenizer, BertConfig
-from transformers import AutoTokenizer, AutoConfig
+from transformers import AutoTokenizer, AutoConfig, AutoModel
 from Qformer import BertLMHeadModel
 
 BERT_MODEL = "microsoft/graphcodebert-base"
@@ -41,6 +41,12 @@ class CodeBlip(nn.Module):
         )
         query_tokens.data.normal_(mean=0.0, std=encoder_config.initializer_range)
         return Qformer, query_tokens
+
+    @classmethod
+    def init_code_encoder(cls):
+        code_encoder = AutoModel.from_pretrained(BERT_MODEL)
+        ln_code = nn.LayerNorm(code_encoder.config.hidden_size, eps=1e-12)
+        return code_encoder, ln_code
 
 
 if __name__ == "__main__":
