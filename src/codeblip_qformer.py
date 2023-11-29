@@ -3,6 +3,25 @@ import torch.nn as nn
 import torch.nn.functional as F
 from transformers import AutoTokenizer, AutoModel
 from codeblip import CodeBlip
+import torch.distributed as dist
+from dist_utils import is_dist_avail_and_initialized
+
+# def concat_all_gather(tensor):
+#     """
+#     Performs all_gather operation on the provided tensors.
+#     *** Warning ***: torch.distributed.all_gather has no gradient.
+#     """
+#     # if use distributed training
+#     if not is_dist_avail_and_initialized():
+#         return tensor
+#
+#     tensors_gather = [
+#         torch.ones_like(tensor) for _ in range(torch.distributed.get_world_size())
+#     ]
+#     torch.distributed.all_gather(tensors_gather, tensor, async_op=False)
+#
+#     output = torch.cat(tensors_gather, dim=0)
+#     return output
 
 class CodeQformer(CodeBlip):  # Inherits from Blip2Base
     """
@@ -64,21 +83,15 @@ class CodeQformer(CodeBlip):  # Inherits from Blip2Base
         ).to(self.Qformer.device)
 
         # code embedding
-        # source_output = self.ln_code(self.code_encoder(**source_tokens, return_dict=True).last_hidden_state)
-        # source_attention_mask = source_tokens["attention_mask"]
-
         # source_output = self.ln_code(self.code_encoder(source_tokens.input_ids, attention_mask=source_tokens.attention_mask, return_dict=True).last_hidden_state)
         source_output = self.ln_code(self.code_encoder(**source_tokens, return_dict=True).last_hidden_state)
-        # get attention
-
-
 
         # source_output = self.Qformer.bert(**source_tokens, return_dict=True)
         # source_representations = F.normalize(
         #     self.source_proj(source_output.last_hidden_state[:, 0, :]), dim=-1
         # )
 
-        # query_tokens = self.query_tokens.expand(source_output.shape[0], -1, -1)
+        # expand query tokens to batch size
         query_tokens = self.query_tokens.expand(source_output.shape[0], -1, -1)
 
         query_output = self.Qformer.bert(
@@ -90,7 +103,7 @@ class CodeQformer(CodeBlip):  # Inherits from Blip2Base
         )
 
         source_features = F.normalize(
-            self.source_proj(query_output.last_hidden_state[:, 0, :]), dim=-1
+            self.source_proj(query_output.last_hidden_state), dim=-1
         )
 
         # Process target code
@@ -105,10 +118,43 @@ class CodeQformer(CodeBlip):  # Inherits from Blip2Base
         )
 
         # Contrastive learning
-        sim_matrix = torch.matmul(source_features, target_features.T) / self.temp
-        loss_contrastive = F.cross_entropy(sim_matrix, torch.arange(source_features.size(0), device=sim_matrix.device))
+        # sim_matrix = torch.matmul(source_features, target_features.T) / self.temp
+        # loss_contrastive = F.cross_entropy(sim_matrix, torch.arange(source_features.size(0), device=sim_matrix.device))
+        #
+        # return loss_contrastive
 
-        return loss_contrastive
+        # Contrastive learning
+        # image feat = source_features
+        # text feat = target_features
+
+        source_features_all = source_features
+        target_features_all = target_features
+
+        #
+        sim_q2t = torch.matmul(source_features.unsqueeze(1), target_features_all.unsqueeze(-1)).squeeze()
+
+        # source-target similarity
+        sim_s2t, _ = sim_q2t.max(-1)
+        sim_s2t /= self.temp
+
+        # sim_t2q = torch.matmul(target_features.unsqueeze(1), source_features_all.unsqueeze(-1)).squeeze()
+        sim_t2q = torch.matmul(
+            target_features.unsqueeze(1).unsqueeze(1), source_features_all.permute(0, 2, 1)
+        ).squeeze()
+        # target-source similarity ; aggregate the max across all query tokens
+        sim_t2s, _ = sim_t2q.max(-1)
+        sim_t2s /= self.temp
+
+        # rank = dist.get_rank()
+        rank = 0 # something to do with distributed training, but we're not using it so just set to 0
+        bs = source_features.size(0)
+        targets = torch.linspace(rank * bs, rank * bs + bs - 1, bs, dtype=int).to(sim_s2t.device)
+
+        loss_stc = (F.cross_entropy(sim_s2t, targets, label_smoothing=0.1) + F.cross_entropy(sim_t2s, targets, label_smoothing=0.1)) / 2
+
+        return loss_stc
+
+
 
     @classmethod
     def from_config(cls, cfg):
@@ -128,6 +174,7 @@ class CodeQformer(CodeBlip):  # Inherits from Blip2Base
 
 
 if __name__ == "__main__":
+    # disable distributed training
     # test stage1 loss
     # Assuming CodeQformer and Blip2Base are defined as previously discussed
     # Create an instance of CodeQformer
