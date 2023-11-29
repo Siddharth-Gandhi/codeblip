@@ -1,0 +1,8 @@
+EM: 0.00
+BLEU: 32.68
+ngram_match_score: 32.53
+weighted_ngram_match_score: 34.55
+syntax_match_score: 54.24
+dataflow_match_score: 40.25
+CodeBLEU: 40.39
+MOSES BLEU: 32.53
