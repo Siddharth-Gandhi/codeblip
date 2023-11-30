@@ -7,6 +7,18 @@ from transformers import get_linear_schedule_with_warmup
 
 from codeblip_qformer import CodeQformer
 from dataset import CodeTranslationDataset
+import random
+import numpy as np
+
+def set_seed(seed):
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)
+    torch.backends.cudnn.deterministic = True
+    torch.backends.cudnn.benchmark = False
+
+set_seed(42)
 
 # paths
 source_lang = 'java'
@@ -68,7 +80,7 @@ for epoch in range(num_epochs):
     train_loss = 0
     for batch in tqdm(train_loader, desc=f"Training Epoch {epoch + 1}"):
         optimizer.zero_grad()
-        loss = model(batch)
+        loss = model(batch)['loss']
         loss.backward()
         optimizer.step()
         scheduler.step()

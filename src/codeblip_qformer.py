@@ -255,7 +255,14 @@ class CodeQformer(CodeBlip):  # Inherits from Blip2Base
 
         loss_lm = lm_output.loss
 
-        return loss_stc + loss_itm + loss_lm
+        total_loss =  loss_stc + loss_itm + loss_lm
+
+        return {
+            "loss": total_loss,
+            "loss_stc": loss_stc,
+            "loss_itm": loss_itm,
+            "loss_lm": loss_lm,
+        }
 
 
 
@@ -296,5 +303,5 @@ if __name__ == "__main__":
     samples = {"source_code": source_code_samples, "target_code": target_code_samples}
 
     # Perform a forward pass
-    loss = model(samples)
-    print(f"Loss from forward pass: {loss.item()}")
+    losses = model(samples)
+    print(f"Loss from forward pass: {losses['loss'].item()}")
