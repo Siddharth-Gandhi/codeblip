@@ -1,8 +1,12 @@
+import os
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+
 # from transformers import AutoTokenizer, AutoModel
 from codeblip import CodeBlip
+
 # import torch.distributed as dist
 # from dist_utils import is_dist_avail_and_initialized
 
@@ -80,7 +84,7 @@ class CodeQformer(CodeBlip):  # Inherits from Blip2Base
 
         # Process source code
         source_tokens = self.tokenizer(
-            source_code, padding="max_length", truncation=True, 
+            source_code, padding="max_length", truncation=True,
             max_length=self.max_source_len, return_tensors="pt"
         ).to(self.Qformer.device)
 
@@ -110,7 +114,7 @@ class CodeQformer(CodeBlip):  # Inherits from Blip2Base
 
         # Process target code
         target_tokens = self.tokenizer(
-            target_code, padding="max_length", truncation=True, 
+            target_code, padding="max_length", truncation=True,
             max_length=self.max_target_len, return_tensors="pt"
         ).to(self.Qformer.device)
         target_output = self.Qformer.bert(target_tokens.input_ids, attention_mask=target_tokens.attention_mask, return_dict=True)
@@ -231,7 +235,7 @@ class CodeQformer(CodeBlip):  # Inherits from Blip2Base
             [torch.ones(bs, dtype=torch.long), torch.zeros(2 * bs, dtype=torch.long)],
             dim=0,
         ).to(self.Qformer.device)
-        loss_itm = F.cross_entropy(logits, itm_labels)
+        loss_stm = F.cross_entropy(logits, itm_labels)
 
 
         # 3rd loss
@@ -255,12 +259,12 @@ class CodeQformer(CodeBlip):  # Inherits from Blip2Base
 
         loss_lm = lm_output.loss
 
-        total_loss =  loss_stc + loss_itm + loss_lm
+        total_loss =  loss_stc + loss_stm + loss_lm
 
         return {
             "loss": total_loss,
             "loss_stc": loss_stc,
-            "loss_itm": loss_itm,
+            "loss_stm": loss_stm,
             "loss_lm": loss_lm,
         }
 
@@ -270,17 +274,21 @@ class CodeQformer(CodeBlip):  # Inherits from Blip2Base
     def from_config(cls, cfg):
         num_query_token = cfg.get("num_query_token", 32)
         cross_attention_freq = cfg.get("cross_attention_freq", 2)
-        embed_dim = cfg.get("embed_dim", 256)
-        max_source_len = cfg.get("max_source_len", 128)
-        max_target_len = cfg.get("max_target_len", 128)
+        embed_dim = cfg.get("embed_dim", 768)
+        max_source_len = cfg.get("max_source_len", 512)
+        max_target_len = cfg.get("max_target_len", 512)
 
-        return cls(
+        model = cls(
             num_query_token=num_query_token,
             cross_attention_freq=cross_attention_freq,
             embed_dim=embed_dim,
             max_source_len=max_source_len,
             max_target_len=max_target_len,
         )
+        device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        pretrained_path = cfg.get("pretrained_path", os.path.join("models", "stage1_out", "stage1_best.pt"))
+        model.load_state_dict(torch.load(pretrained_path))
+        return model
 
 
 if __name__ == "__main__":

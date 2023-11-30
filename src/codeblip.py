@@ -2,8 +2,10 @@ import contextlib
 
 import torch
 import torch.nn as nn
+
 # from transformers import BertTokenizer, BertConfig
-from transformers import AutoTokenizer, AutoConfig, AutoModel
+from transformers import AutoConfig, AutoModel, AutoTokenizer
+
 from Qformer import BertLMHeadModel
 
 BERT_MODEL = "microsoft/graphcodebert-base"
