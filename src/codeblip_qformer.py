@@ -1,10 +1,10 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from transformers import AutoTokenizer, AutoModel
+# from transformers import AutoTokenizer, AutoModel
 from codeblip import CodeBlip
-import torch.distributed as dist
-from dist_utils import is_dist_avail_and_initialized
+# import torch.distributed as dist
+# from dist_utils import is_dist_avail_and_initialized
 
 # def concat_all_gather(tensor):
 #     """
