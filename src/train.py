@@ -29,15 +29,20 @@ num_training_steps = 1000  # This should be adjusted based on your dataset size
 train_dataset = CodeTranslationDataset(train_source_file, train_target_file)
 valid_dataset = CodeTranslationDataset(valid_source_file, valid_target_file)
 
+# print dataset sizes
+print(f"Train dataset size: {len(train_dataset)}")
+print(f"Valid dataset size: {len(valid_dataset)}")
+
+
 # Create data loaders
 train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
 valid_loader = DataLoader(valid_dataset, batch_size=batch_size, shuffle=False)
 
 # Create model
 model = CodeQformer.from_config({
-    "num_query_token": 512,
+    "num_query_token": 32,
     "cross_attention_freq": 2,
-    "embed_dim": 256,
+    "embed_dim": 768,
     "max_source_len": 512,
     "max_target_len": 512,
 })

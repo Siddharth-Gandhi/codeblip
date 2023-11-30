@@ -13,7 +13,8 @@ class CodeTranslationDataset(Dataset):
         return [line.strip() for line in lines]
 
     def __len__(self):
-        return min(len(self.source_data), len(self.target_data))
+        assert len(self.source_data) == len(self.target_data), "Source and target data must be the same length"
+        return len(self.source_data)
 
     def __getitem__(self, idx):
         source_sample = self.source_data[idx]

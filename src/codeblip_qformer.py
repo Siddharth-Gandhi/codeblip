@@ -72,6 +72,8 @@ class CodeQformer(CodeBlip):  # Inherits from Blip2Base
         self.max_source_len = max_source_len
         self.max_target_len = max_target_len
 
+        self.itm_head = nn.Linear(self.Qformer.config.hidden_size, 2)
+
     def forward(self, samples):
         source_code = samples["source_code"] # image
         target_code = samples["target_code"] # text
@@ -152,7 +154,108 @@ class CodeQformer(CodeBlip):  # Inherits from Blip2Base
 
         loss_stc = (F.cross_entropy(sim_s2t, targets, label_smoothing=0.1) + F.cross_entropy(sim_t2s, targets, label_smoothing=0.1)) / 2
 
-        return loss_stc
+        # return loss_stc
+
+        # Sorce - Target Matching
+        # image feat = source_features
+        # text feat = target_features
+        target_input_ids_world = target_tokens.input_ids # if distributed, this is all_gather(target_tokens.input_ids)
+        target_attention_mask_world = target_tokens.attention_mask # if distributed, this is all_gather(target_tokens.attention_mask)
+        # image_embeds_world = all_gather_with_grad(image_embeds)
+        source_features_world = source_features_all # if distributed, this is all_gather_with_grad(source_features_all)
+        with torch.no_grad():
+            # if "image_id" in samples.keys():
+            #     mask = torch.eq(image_ids, image_ids_all.t())
+            #     sim_t2i.masked_fill_(mask, -10000)
+            #     sim_i2t.masked_fill_(mask, -10000)
+            # else:
+            sim_s2t[:, rank * bs: rank * bs + bs].fill_diagonal_(-10000)
+            sim_t2s[:, rank * bs: rank * bs + bs].fill_diagonal_(-10000)
+
+            weights_t2s = F.softmax(sim_t2s, dim=1)
+            weights_s2t = F.softmax(sim_s2t, dim=1)
+
+        # select a negative image for each text
+        source_embeds_neg = []
+        for b in range(bs):
+            neg_idx = torch.multinomial(weights_t2s[b], 1).item()
+            source_embeds_neg.append(source_features_world[neg_idx])
+        source_embeds_neg = torch.stack(source_embeds_neg, dim=0)
+
+        # select a negative text for each image
+        target_ids_neg = []
+        target_atts_neg = []
+        for b in range(bs):
+            neg_idx = torch.multinomial(weights_s2t[b], 1).item()
+            target_ids_neg.append(target_input_ids_world[neg_idx])
+            target_atts_neg.append(target_attention_mask_world[neg_idx])
+
+        target_ids_neg = torch.stack(target_ids_neg, dim=0)
+        target_atts_neg = torch.stack(target_atts_neg, dim=0)
+
+        target_ids_all = torch.cat(
+            [target_tokens.input_ids, target_tokens.input_ids, target_ids_neg], dim=0
+        )  # pos, pos, neg
+        target_atts_all = torch.cat(
+            [target_tokens.attention_mask, target_tokens.attention_mask, target_atts_neg],
+            dim=0,
+        )
+
+        query_tokens_itm = self.query_tokens.expand(target_ids_all.shape[0], -1, -1)
+        query_atts_itm = torch.ones(query_tokens_itm.size()[:-1], dtype=torch.long).to(
+            self.Qformer.device
+        )
+        attention_mask_all = torch.cat([query_atts_itm, target_atts_all], dim=1)
+
+        source_embeds_all = torch.cat(
+            [source_features, source_embeds_neg, source_features], dim=0
+        )  # pos, neg, pos
+        source_atts_all = torch.ones(source_embeds_all.size()[:-1], dtype=torch.long).to(
+            self.Qformer.device
+        )
+
+        output_itm = self.Qformer.bert(
+            target_ids_all,
+            query_embeds=query_tokens_itm,
+            attention_mask=attention_mask_all,
+            encoder_hidden_states=source_embeds_all,
+            encoder_attention_mask=source_atts_all,
+            return_dict=True,
+        )
+
+        vl_embeddings = output_itm.last_hidden_state[:, : query_tokens_itm.size(1), :]
+        vl_output = self.itm_head(vl_embeddings)
+        logits = vl_output.mean(dim=1)
+
+        itm_labels = torch.cat(
+            [torch.ones(bs, dtype=torch.long), torch.zeros(2 * bs, dtype=torch.long)],
+            dim=0,
+        ).to(self.Qformer.device)
+        loss_itm = F.cross_entropy(logits, itm_labels)
+
+
+        # 3rd loss
+        decoder_input_ids = target_tokens.input_ids.clone()
+        decoder_input_ids[:, 0] = self.tokenizer.bos_token_id
+        labels = decoder_input_ids.masked_fill(
+            decoder_input_ids == self.tokenizer.pad_token_id, -100
+        )
+
+        query_atts = torch.ones(query_tokens.size()[:-1], dtype=torch.long).to(
+            self.Qformer.device
+        )
+        attention_mask = torch.cat([query_atts, target_tokens.attention_mask], dim=1)
+        lm_output = self.Qformer(
+            decoder_input_ids,
+            attention_mask=attention_mask,
+            past_key_values=query_output.past_key_values,
+            return_dict=True,
+            labels=labels,
+        )
+
+        loss_lm = lm_output.loss
+
+        return loss_stc + loss_itm + loss_lm
 
 
 
