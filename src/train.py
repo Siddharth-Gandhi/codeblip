@@ -5,9 +5,9 @@ import warnings
 import numpy as np
 import torch
 from torch.optim import AdamW
-from torch.utils.data import DataLoader, Dataset
+from torch.utils.data import DataLoader
 from tqdm import tqdm
-from transformers import get_linear_schedule_with_warmup, logging
+from transformers import logging
 
 from codeblip_qformer import CodeQformer
 from dataset import CodeTranslationDataset
@@ -24,11 +24,11 @@ def set_seed(seed):
     torch.backends.cudnn.benchmark = False
 
 def update_loss_dict(loss_dict, new_loss_dict):
-        for key in new_loss_dict:
-            if key not in loss_dict:
-                loss_dict[key] = 0
-            loss_dict[key] += new_loss_dict[key].item()
-        return loss_dict
+    for key in new_loss_dict:
+        if key not in loss_dict:
+            loss_dict[key] = 0
+        loss_dict[key] += new_loss_dict[key].item()
+    return loss_dict
 
 
 if __name__ == '__main__':
@@ -46,16 +46,24 @@ if __name__ == '__main__':
     assert os.path.exists(train_source_file) and os.path.exists(train_target_file)
 
     # Parameters
-    num_epochs = 1
+    num_epochs = 10
     batch_size = 4
-    learning_rate = 5e-5
-    num_warmup_steps = 0
-    num_training_steps = 1000  # This should be adjusted based on your dataset size
+    # learning_rate = 1e-4
+    # num_training_steps = 1000  # This should be adjusted based on your dataset size
+    weight_decay = 0.01
+    # num_workers = 4
+
+    learning_rate = 5e-5  # Initial learning rate
+    # min_lr = 1e-5   # Minimum learning rate
+    # warmup_lr = 1e-6  # Warmup learning rate
+    # num_warmup_steps = 3
 
     # Load dataset
-    # train_dataset = CodeTranslationDataset(train_source_file, train_target_file)
-    train_dataset = CodeTranslationDataset(valid_source_file, valid_target_file)
+    train_dataset = CodeTranslationDataset(train_source_file, train_target_file)
     valid_dataset = CodeTranslationDataset(valid_source_file, valid_target_file)
+
+    # train_dataset = train_dataset[:1000]
+    # valid_dataset = valid_dataset[:100]
 
     # print dataset sizes
     print(f"Train dataset size: {len(train_dataset)}")
@@ -77,22 +85,22 @@ if __name__ == '__main__':
 
     # Create optimizer
     # optimizer = AdamW(model.parameters(), lr=learning_rate)
-    optimizer = AdamW(filter(lambda p: p.requires_grad, model.parameters()), lr=learning_rate)
+    optimizer = AdamW(filter(lambda p: p.requires_grad, model.parameters()), lr=learning_rate, weight_decay=weight_decay)
+
     # Calculate the number of trainable parameters
     trainable_parameters = sum(p.numel() for p in model.parameters() if p.requires_grad)
     print(f"Number of trainable parameters: {trainable_parameters}")
 
-    # Create learning rate scheduler
-    scheduler = get_linear_schedule_with_warmup(optimizer, num_warmup_steps=num_warmup_steps, num_training_steps=num_training_steps)
+    # scheduler = torch.optim.lr_scheduler.ExponentialLR(optimizer, gamma=0.5, verbose=True)
 
     # Move model to device
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model = model.to(device)
-
+    train_loss_list = []
+    valid_loss_list = []
 
     best_val_loss = float('inf')
 
-    # Train model
     # Training loop with tqdm
     for epoch in range(num_epochs):
         model.train()
@@ -104,14 +112,15 @@ if __name__ == '__main__':
             loss = train_loss_dict['loss']
             loss.backward()
             optimizer.step()
-            scheduler.step()
             # train_loss += loss.item()
             train_loss = update_loss_dict(train_loss, train_loss_dict)
 
-
+        # scheduler.step()
         # train_loss /= len(train_loader)
         for key in train_loss:
             train_loss[key] /= len(train_loader)
+
+        train_loss_list.append(train_loss['loss'])
         print(f"Epoch {epoch + 1}: Train Loss: {train_loss}")
 
         # Validation loop
@@ -128,17 +137,21 @@ if __name__ == '__main__':
         # valid_loss /= len(valid_loader)
         for key in valid_loss:
             valid_loss[key] /= len(valid_loader)
+
+        valid_loss_list.append(valid_loss['loss'])
         print(f"Epoch {epoch + 1}: Validation Loss: {valid_loss}")
 
         # Save the Qformer state after latest epoch
-        torch.save(model.Qformer.state_dict(), 'models/stage1_out/qformer_stage1_latest.pt')
+        torch.save(model.Qformer.state_dict(), 'models/stage1_out/qformer_stage1_latest.pt') # type: ignore
         torch.save(model.state_dict(), 'models/stage1_out/stage1_latest.pt')
 
         # Save the Qformer state after best validation loss
         if valid_loss['loss'] < best_val_loss:
             best_val_loss = valid_loss['loss']
             print(f'New best validation loss: {best_val_loss}')
-            torch.save(model.Qformer.state_dict(), 'models/stage1_out/qformer_stage1_best.pt')
+            torch.save(model.Qformer.state_dict(), 'models/stage1_out/qformer_stage1_best.pt') # type: ignore
             torch.save(model.state_dict(), 'models/stage1_out/stage1_best.pt')
 
     print(f"Training completed. Best validation loss: {best_val_loss}")
+    print(f"Training loss list: {train_loss_list}")
+    print(f"Validation loss list: {valid_loss_list}")

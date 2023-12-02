@@ -1,0 +1,9 @@
+{
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "pylint.args": [
+        "--disable=C0115,C0114,C0116,C0200,E1102,C0103,C0301,C0305"
+    ],
+    "python.analysis.autoImportCompletions": true
+}
