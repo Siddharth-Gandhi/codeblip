@@ -94,6 +94,9 @@ if __name__ == '__main__':
 
     model = CodeBlipT5(stage1_qformer, stage1_query_tokens, t5_model=t5_model).to('cuda' if torch.cuda.is_available() else 'cpu')
 
+    stage_2_checkpoint = 'models/stage2_out/stage2_best.pt'
+    model.load_state_dict(torch.load(stage_2_checkpoint))
+
     # Create optimizer
     # optimizer = AdamW(model.parameters(), lr=learning_rate)
     optimizer = AdamW(filter(lambda p: p.requires_grad, model.parameters()), lr=learning_rate, weight_decay=weight_decay)
@@ -111,6 +114,13 @@ if __name__ == '__main__':
     valid_loss_list = []
 
     best_val_loss = float('inf')
+
+    samples = {}
+    samples["source_code"] = "public void serialize(LittleEndianOutput out) {out.writeShort(field_1_vcenter);}"
+    model.eval()
+    print("Sample:", samples["source_code"])
+    output_text = model.generate(samples)
+    print("Output:", output_text)
 
     # Training loop with tqdm
     for epoch in range(num_epochs):
