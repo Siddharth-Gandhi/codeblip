@@ -252,6 +252,15 @@ class CodeBlipT5(CodeBlip):
             )
 
         return output_text
+    @classmethod
+    def from_config(cls, config):
+        checkpoint = config['pretrained_path']
+        stage1_model = CodeQformer.from_config({'pretrained_path': checkpoint})
+
+        stage1_qformer = stage1_model.Qformer
+        stage1_query_tokens = stage1_model.query_tokens
+
+        return cls(stage1_qformer, stage1_query_tokens, **config)
 
 
 if __name__ == '__main__':
