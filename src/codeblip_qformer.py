@@ -277,15 +277,14 @@ class CodeQformer(CodeBlip):  # Inherits from Blip2Base
         embed_dim = cfg.get("embed_dim", 768)
         max_source_len = cfg.get("max_source_len", 512)
         max_target_len = cfg.get("max_target_len", 512)
-
+        device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         model = cls(
             num_query_token=num_query_token,
             cross_attention_freq=cross_attention_freq,
             embed_dim=embed_dim,
             max_source_len=max_source_len,
             max_target_len=max_target_len,
-        )
-        device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        ).to(device)
         pretrained_path = cfg.get("pretrained_path", os.path.join("models", "stage1_out", "stage1_best.pt"))
         model.load_state_dict(torch.load(pretrained_path))
         return model
