@@ -36,8 +36,8 @@ if __name__ == '__main__':
     set_seed(42)
 
     # paths
-    source_lang = 'java'
-    target_lang = 'cs'
+    source_lang = 'cs'
+    target_lang = 'java'
 
     train_source_file, train_target_file = f'data/train.java-cs.txt.{source_lang}', f'data/train.java-cs.txt.{target_lang}'
     valid_source_file, valid_target_file = f'data/valid.java-cs.txt.{source_lang}', f'data/valid.java-cs.txt.{target_lang}'
@@ -142,15 +142,15 @@ if __name__ == '__main__':
         print(f"Epoch {epoch + 1}: Validation Loss: {valid_loss}")
 
         # Save the Qformer state after latest epoch
-        torch.save(model.Qformer.state_dict(), 'models/stage1_out/qformer_stage1_latest.pt') # type: ignore
-        torch.save(model.state_dict(), 'models/stage1_out/stage1_latest.pt')
+        torch.save(model.Qformer.state_dict(), 'models/stage1_out/cs2java_qformer_stage1_latest.pt') # type: ignore
+        torch.save(model.state_dict(), 'models/stage1_out/cs2java_stage1_latest.pt')
 
         # Save the Qformer state after best validation loss
         if valid_loss['loss'] < best_val_loss:
             best_val_loss = valid_loss['loss']
             print(f'New best validation loss: {best_val_loss}')
-            torch.save(model.Qformer.state_dict(), 'models/stage1_out/qformer_stage1_best.pt') # type: ignore
-            torch.save(model.state_dict(), 'models/stage1_out/stage1_best.pt')
+            torch.save(model.Qformer.state_dict(), 'models/stage1_out/cs2java_qformer_stage1_best.pt') # type: ignore
+            torch.save(model.state_dict(), 'models/stage1_out/cs2java_stage1_best.pt')
 
     print(f"Training completed. Best validation loss: {best_val_loss}")
     print(f"Training loss list: {train_loss_list}")
