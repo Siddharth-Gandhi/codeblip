@@ -13,6 +13,8 @@ from codeblip_qformer import CodeQformer
 from codeblip_t5 import CodeBlipT5
 from dataset import CodeTranslationDataset
 
+from codeblip_llama import Blip2Llama
+
 logging.set_verbosity_error()  # Only show errors, not warnings
 
 
@@ -96,7 +98,9 @@ if __name__ == '__main__':
     # prompt = f'Translate {source_lang} to {target_lang}'
     prompt = ''
 
-    model = CodeBlipT5(stage1_qformer, stage1_query_tokens, t5_tokenizer=t5_tokenizer, t5_model=t5_model, prompt=prompt).to('cuda' if torch.cuda.is_available() else 'cpu')
+    # model = CodeBlipT5(stage1_qformer, stage1_query_tokens, t5_tokenizer=t5_tokenizer, t5_model=t5_model, prompt=prompt).to('cuda' if torch.cuda.is_available() else 'cpu')
+
+    model = Blip2Llama(stage1_qformer, stage1_query_tokens).to('cuda' if torch.cuda.is_available() else 'cpu')
 
 
     # Create optimizer
