@@ -7,11 +7,11 @@ import torch
 from torch.optim import AdamW
 from torch.utils.data import DataLoader
 from tqdm import tqdm
-from transformers import logging
+from transformers import AutoTokenizer, logging
 
 from codeblip_qformer import CodeQformer
-from codeblip_t5 import CodeBlipT5
 from dataset import CodeTranslationDataset
+
 from codeblip_llama import Blip2Llama
 
 logging.set_verbosity_error()  # Only show errors, not warnings
@@ -38,8 +38,8 @@ if __name__ == '__main__':
     set_seed(42)
 
     # paths
-    source_lang = 'java'
-    target_lang = 'cs'
+    source_lang = 'cs'
+    target_lang = 'java'
 
     train_source_file, train_target_file = f'data/train.java-cs.txt.{source_lang}', f'data/train.java-cs.txt.{target_lang}'
     valid_source_file, valid_target_file = f'data/valid.java-cs.txt.{source_lang}', f'data/valid.java-cs.txt.{target_lang}'
@@ -64,6 +64,8 @@ if __name__ == '__main__':
     train_dataset = CodeTranslationDataset(train_source_file, train_target_file)
     valid_dataset = CodeTranslationDataset(valid_source_file, valid_target_file)
 
+    print("First element of train dataset:", train_dataset[0])
+
     # train_dataset = train_dataset[:1000]
     # valid_dataset = valid_dataset[:100]
 
@@ -85,17 +87,19 @@ if __name__ == '__main__':
     #     max_target_len=512,
     # )
 
-    stage1_checkpoint = 'models/stage1_out/stage1_best.pt'
+    stage1_checkpoint = 'models/stage1_out/codeblip/cs2java_stage1_best.pt'
     stage1_model = CodeQformer.from_config({'pretrained_path': stage1_checkpoint})
 
     stage1_qformer = stage1_model.Qformer
     stage1_query_tokens = stage1_model.query_tokens
 
 
+
+    prompt = ''
+
+
     model = Blip2Llama(stage1_qformer, stage1_query_tokens).to('cuda' if torch.cuda.is_available() else 'cpu')
 
-    # stage_2_checkpoint = 'models/stage2_out/stage2_best.pt'
-    # model.load_state_dict(torch.load(stage_2_checkpoint))
 
     # Create optimizer
     # optimizer = AdamW(model.parameters(), lr=learning_rate)
@@ -115,9 +119,33 @@ if __name__ == '__main__':
 
     best_val_loss = float('inf')
 
+    source_code_samples = [
+        "public virtual ObjectId GetObjectId(){return objectId;}",
+        "public virtual long RamBytesUsed(){return fst == null ? 0 : fst.GetSizeInBytes();}"]
+
+    def sanity_check():
+        for source_code in source_code_samples:
+            # Prepare input for the model
+            # samples = {"source_code": source_code_samples, "target_code": target_code_samples}
+            samples = {"source_code": [source_code]}
+            print(f'Current Sample: {source_code}')
+            # Perform a forward pass
+            try:
+                output = model.generate(samples, max_length=750)
+                print(f"Current Output: {output}")
+                print()
+            except Exception as e:
+                print(f'Exception: {e}')
+                print("Current sample: ", samples)
+                print()
+
+    print('Sanity Check')
+    sanity_check()
+
+    print(f'Starting training for {num_epochs} epochs from {source_lang} to {target_lang} with prompt: {prompt}')
+
     # Training loop with tqdm
     for epoch in range(num_epochs):
-        print(f"---------------------Epoch {epoch + 1} of {num_epochs}----------------------------")
         model.train()
         # train_loss = 0
         train_loss = {}
@@ -143,13 +171,6 @@ if __name__ == '__main__':
         # valid_loss = 0
         valid_loss = {}
         with torch.no_grad():
-            samples = {}
-            samples["source_code"] = """System.out.println("This is a statement");"""
-            model.eval()
-            print("Sample:", samples["source_code"])
-            output_text = model.generate(samples)
-            print("Output:", output_text)
-
             for batch in tqdm(valid_loader, desc="Validating"):
                 valid_loss_dict = model(batch)
                 loss = valid_loss_dict['loss']
@@ -163,16 +184,19 @@ if __name__ == '__main__':
         valid_loss_list.append(valid_loss['loss'])
         print(f"Epoch {epoch + 1}: Validation Loss: {valid_loss}")
 
+        print('Sanity Check')
+        sanity_check()
+
         # Save the Qformer state after latest epoch
-        torch.save(model.Qformer.state_dict(), 'models/stage2_out/qformer_stage2_latest_llama.pt') # type: ignore
-        torch.save(model.state_dict(), 'models/stage2_out/stage2_latest_llama.pt')
+        torch.save(model.Qformer.state_dict(), 'models/stage2_out_32/llama_qformer_stage2_latest.pt') # type: ignore
+        torch.save(model.state_dict(), 'models/stage2_out_32/llama_stage2_latest.pt')
 
         # Save the Qformer state after best validation loss
         if valid_loss['loss'] < best_val_loss:
             best_val_loss = valid_loss['loss']
             print(f'New best validation loss: {best_val_loss}')
-            torch.save(model.Qformer.state_dict(), 'models/stage2_out/qformer_stage2_best_llama.pt') # type: ignore
-            torch.save(model.state_dict(), 'models/stage2_out/stage2_best_llama.pt')
+            torch.save(model.Qformer.state_dict(), 'models/stage2_out_32/llama_qformer_stage2_best.pt') # type: ignore
+            torch.save(model.state_dict(), 'models/stage2_out_32/llama_stage2_best.pt')
 
     print(f"Training completed. Best validation loss: {best_val_loss}")
     print(f"Training loss list: {train_loss_list}")

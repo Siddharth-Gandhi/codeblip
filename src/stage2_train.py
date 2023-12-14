@@ -62,8 +62,10 @@ if __name__ == '__main__':
     # num_warmup_steps = 3
 
     # Load dataset
-    train_dataset = CodeTranslationDataset(train_source_file, train_target_file, is_t5=True)
-    valid_dataset = CodeTranslationDataset(valid_source_file, valid_target_file, is_t5=True)
+    train_dataset = CodeTranslationDataset(train_source_file, train_target_file)
+    valid_dataset = CodeTranslationDataset(valid_source_file, valid_target_file)
+
+    print("First element of train dataset:", train_dataset[0])
 
     # train_dataset = train_dataset[:1000]
     # valid_dataset = valid_dataset[:100]

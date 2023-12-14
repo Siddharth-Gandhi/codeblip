@@ -16,12 +16,15 @@ GraphCodeBERT/translation/data/
 GraphCodeBERT/translation/saved_models/
 GraphCodeBERT/translation/data.zip
 GraphCodeBERT/translation/parser/
-
+GraphCodeBERT_translation/
+SumGenToBT/
+codeblip/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
+*.pkl
 
 # C extensions
 *.so

@@ -6,10 +6,11 @@ from torch.utils.data import Dataset
 class CodeTranslationDataset(Dataset):
     """Custom Dataset for loading code translation pairs"""
 
-    def __init__(self, source_file, target_file, is_t5=False):
+    def __init__(self, source_file, target_file, is_t5=False, is_llama=False):
         self.source_data = self._load_data(source_file)
         self.target_data = self._load_data(target_file)
         self.is_t5 = is_t5
+        self.is_llama = is_llama
 
     def _load_data(self, file_path):
         with open(file_path, 'r', encoding='utf-8') as file:
@@ -28,5 +29,7 @@ class CodeTranslationDataset(Dataset):
             ti = target_sample[:middle]
             to = target_sample[middle:]
             return {"source_code": source_sample, "target_code_input": ti, "target_code_output": to}
+        if self.is_llama:
+            return source_sample
 
         return {"source_code": source_sample, "target_code": target_sample}

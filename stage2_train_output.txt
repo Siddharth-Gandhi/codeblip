@@ -1,0 +1,5 @@
+Train dataset size: 10300
+Valid dataset size: 500
+Device: cuda
+Number of trainable parameters: 102415360
+---------------------Epoch 1 of 10----------------------------

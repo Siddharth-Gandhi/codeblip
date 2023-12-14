@@ -1,0 +1,6 @@
+['public int compare(int[] a, int[] b) {for (int i=0; i<a.length; i++) {int diff = a[i] - b[']
+['public int compare(int[] a, int aStart, int[] b, int bStart, int length) {int aEnd = aStart + length;int bEnd = bStart']
+['public char[] normalize(char[] s) {int len = s.length();char[] norm = new char[len];int j = ']
+['public int compare(String lhs, String rhs) {if (lhs == null) {if (rhs == null) {return ']
+['public static List<ATNConfig> removeAllConfigs(List<ATNConfig> configs, Predicate<ATNConfig> configPredicate) {List<ATNConfig']
+['public int intersect(List<Interval> intervals) {int n = intervals.size();int[] starts = new int[n];int[] ends = new int[n];for (int']

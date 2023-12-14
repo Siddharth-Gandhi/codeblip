@@ -15,4 +15,4 @@ echo "On host $(hostname)"
 nvidia-smi
 
 # Run the training script
-python src/stage2_train_llama.py > stage2_llama_output_cs2java_32.txt
+python src/stage2_train_llama_prompt.py > stage2_train_llama_prompt_output.txt

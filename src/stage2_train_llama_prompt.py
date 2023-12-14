@@ -7,14 +7,14 @@ import torch
 from torch.optim import AdamW
 from torch.utils.data import DataLoader
 from tqdm import tqdm
-from transformers import logging
+from transformers import AutoTokenizer, logging
 
 from codeblip_qformer import CodeQformer
 from dataset import CodeTranslationDataset
 
-logging.set_verbosity_error()  # Only show errors, not warnings
+from codeblip_llama import Blip2Llama
 
-num_query_token = 512
+logging.set_verbosity_error()  # Only show errors, not warnings
 
 
 def set_seed(seed):
@@ -38,8 +38,8 @@ if __name__ == '__main__':
     set_seed(42)
 
     # paths
-    source_lang = 'cs'
-    target_lang = 'java'
+    source_lang = 'java'
+    target_lang = 'cs'
 
     train_source_file, train_target_file = f'data/train.java-cs.txt.{source_lang}', f'data/train.java-cs.txt.{target_lang}'
     valid_source_file, valid_target_file = f'data/valid.java-cs.txt.{source_lang}', f'data/valid.java-cs.txt.{target_lang}'
@@ -48,7 +48,7 @@ if __name__ == '__main__':
     assert os.path.exists(train_source_file) and os.path.exists(train_target_file)
 
     # Parameters
-    num_epochs = 10
+    num_epochs = 6
     batch_size = 4
     # learning_rate = 1e-4
     # num_training_steps = 1000  # This should be adjusted based on your dataset size
@@ -64,6 +64,8 @@ if __name__ == '__main__':
     train_dataset = CodeTranslationDataset(train_source_file, train_target_file)
     valid_dataset = CodeTranslationDataset(valid_source_file, valid_target_file)
 
+    print("First element of train dataset:", train_dataset[0])
+
     # train_dataset = train_dataset[:1000]
     # valid_dataset = valid_dataset[:100]
 
@@ -77,13 +79,38 @@ if __name__ == '__main__':
     valid_loader = DataLoader(valid_dataset, batch_size=batch_size, shuffle=False)
 
     # Create model
-    model = CodeQformer(
-        num_query_token=num_query_token,
-        cross_attention_freq=2,
-        embed_dim=768,
-        max_source_len=512,
-        max_target_len=512,
-    )
+    # model = CodeQformer(
+    #     num_query_token=32,
+    #     cross_attention_freq=2,
+    #     embed_dim=768,
+    #     max_source_len=512,
+    #     max_target_len=512,
+    # )
+
+    stage1_checkpoint = 'models/stage1_out/stage1_best.pt'
+    stage1_model = CodeQformer.from_config({'pretrained_path': stage1_checkpoint})
+
+    stage1_qformer = stage1_model.Qformer
+    stage1_query_tokens = stage1_model.query_tokens
+
+
+    prompt = f"""You are an expert at translating code from one language to another.
+    Translate the provided code in {source_lang} to {target_lang}. """ + """Use the following format for translation:
+    Java: public class HelloWorld { public static void main(String[] args) { System.out.println(\"Hello, world!\"); } } 
+    CS: public class HelloWorld { public static void Main(string[] args) { System.Console.WriteLine(\"Hello, world!\"); } }
+     
+    Java: public class Test { public static int add(int a, int b) { return a + b; } }
+    CS: public class Test { public static int Add(int a, int b) { return a + b; } }
+
+    Java: public String toString() {return getClass().getName() + " [" +_value +"]";}
+    CS: public override String ToString(){StringBuilder sb = new StringBuilder(64);sb.Append(GetType().Name).Append(" [");sb.Append(value);sb.Append("]");return sb.ToString();}
+
+    Translate the given Java code to CS: 
+    """
+
+
+    model = Blip2Llama(stage1_qformer, stage1_query_tokens, prompt=prompt).to('cuda' if torch.cuda.is_available() else 'cpu')
+
 
     # Create optimizer
     # optimizer = AdamW(model.parameters(), lr=learning_rate)
@@ -102,6 +129,26 @@ if __name__ == '__main__':
     valid_loss_list = []
 
     best_val_loss = float('inf')
+
+    source_code_samples = [
+        "public static void main(String[] args) { System.out.println(\"Hello, world!\"); }",
+        "public class Test { public static int add(int a, int b) { return a + b; } }"]
+
+    def sanity_check():
+        for source_code in source_code_samples:
+            # Prepare input for the model
+            # samples = {"source_code": source_code_samples, "target_code": target_code_samples}
+            samples = {"source_code": [source_code]}
+            print(f'Current Sample: {source_code}')
+            # Perform a forward pass
+            output = model.generate(samples, max_length=750)
+            print(f"Current Output: {output}")
+            print()
+
+    print('Sanity Check')
+    sanity_check()
+
+    print(f'Statring training for {num_epochs} epochs from {source_lang} to {target_lang} with prompt: {prompt}')
 
     # Training loop with tqdm
     for epoch in range(num_epochs):
@@ -143,16 +190,19 @@ if __name__ == '__main__':
         valid_loss_list.append(valid_loss['loss'])
         print(f"Epoch {epoch + 1}: Validation Loss: {valid_loss}")
 
+        print('Sanity Check')
+        sanity_check()
+
         # Save the Qformer state after latest epoch
-        torch.save(model.Qformer.state_dict(), f'models/stage1_out/cs2java_qformer_stage1_latest_{num_query_token}.pt') # type: ignore
-        torch.save(model.state_dict(), f'models/stage1_out/cs2java_stage1_latest_{num_query_token}.pt')
+        torch.save(model.Qformer.state_dict(), 'models/stage2_out/llama_prompt_qformer_stage2_latest.pt') # type: ignore
+        torch.save(model.state_dict(), 'models/stage2_out/llama_prompt_stage2_latest.pt')
 
         # Save the Qformer state after best validation loss
         if valid_loss['loss'] < best_val_loss:
             best_val_loss = valid_loss['loss']
             print(f'New best validation loss: {best_val_loss}')
-            torch.save(model.Qformer.state_dict(), f'models/stage1_out/cs2java_qformer_stage1_best_{num_query_token}.pt') # type: ignore
-            torch.save(model.state_dict(), f'models/stage1_out/cs2java_stage1_best_{num_query_token}.pt')
+            torch.save(model.Qformer.state_dict(), 'models/stage2_out/llama_prompt_qformer_stage2_best.pt') # type: ignore
+            torch.save(model.state_dict(), 'models/stage2_out/llama_prompt_stage2_best.pt')
 
     print(f"Training completed. Best validation loss: {best_val_loss}")
     print(f"Training loss list: {train_loss_list}")

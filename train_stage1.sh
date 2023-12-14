@@ -1,5 +1,5 @@
 #!/bin/bash -x
-#SBATCH --gres=gpu:A6000:1
+#SBATCH --gres=gpu:A6000:2
 #SBATCH --mem=128G
 ###SBATCH --cpus-per-task=4
 #SBATCH -t 1-00:00              # time limit: (D-HH:MM) 
@@ -15,4 +15,4 @@ echo "On host $(hostname)"
 nvidia-smi
 
 # Run the training script
-python src/stage2_train_llama.py > stage2_llama_output_cs2java_32.txt
+python src/train.py > stage1_512_output.txt

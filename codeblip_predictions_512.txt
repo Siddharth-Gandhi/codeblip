@@ -1,0 +1,1000 @@
+public void serialize(LittleEndianOutput out) {out.writeShort(field_1_options);}\n\t@Override\n\tpublic String toString() {\n\t\t
+public void addAll(TreeWalk walk) {while (walk.next()) {add(walk.getPathString(), walk.getFileMode(0), walk.getObjectId
+public void writeByte(byte b) throws IOException {ensureOpen();if (count == buf.length) flush();buf[count++] = b;count++;}\n 
+public ObjectId getObjectId() {return objectId;}\n    public void setObjectId(ObjectId objectId) {\n        this.objectId = objectId;\n    }
+public DeleteRepositoryResult deleteRepository(DeleteRepositoryRequest request) {request = beforeClientExecution(request);return executeDeleteRepository(request);}\n\nprivate DeleteRepositoryResult executeDeleteRepository(
+public long ramBytesUsed() {long bytesUsed = BASE_RAM_BYTES_USED;if (fields != null) {bytesUsed += fields.ram
+public final String getMessage() {byte[] raw = getRawBuffer();int msgBeg = RawParseUtils.commitMessage(raw, 
+public POIFSWriter()\n    {\n        _bigBlockSize = POIFSConstants.SMALLER_BIG_BLOCK_SIZE_DETAILS.
+public void reset(int size) {assert size >= 
+public TagCommand setName(String name) {checkCallable();this.name = name;return this;}\n\npublic TagCommand setName(String name) {\n\tcheckCall
+public ListTagsResult listTags(ListTagsRequest request) {request = beforeClientExecution(request);return executeListTags(request);}\n\n    /**\n     * <p>
+public StandardSyntaxParserTokenManager(CharStream stream, int lexState, int startState){super(stream,lexState,startState);setTokenFactory(new StandardSyntaxParserTokenManager
+public GetRecordsResult getRecords(GetRecordsRequest request) {request = beforeClientExecution(request);return executeGetRecords(request);}\n\n    /**\n    
+public UpdateAlbumRequest() {super("CloudPhoto", "2017-07-11", "UpdateAlbum", "cloudphoto");setProtocol(ProtocolType.
+public boolean ready() throws IOException {synchronized (lock) {if (closed) {throw new IOException("Stream is closed");}if (pos < count) {return true;}if
+public ExtendedPrecisionRecord getExtendedPrecision() {return _extendedPrecision;}\n    public void setExtendedPrecision(ExtendedPrecision
+public synchronized int read(char[] buf, int offset, int count) throws IOException {if (buf == null) {throw new NullPointerException("buf == null");}if (
+public PerFieldAnalyzerWrapper(Analyzer analyzer) {this.analyzer = analyzer;}\n\n    @Override\n    public TokenStreamComponents createComponents(String field
+public void print(Object obj) {print(String.valueOf(obj));}\n    public void println(Object obj) {println(String.valueOf(obj));}\n\n   
+public IllegalArgumentException(String message, Object offender) {super(message);this.offender = offender;}public Object getOffender() {return offender;}\n\n
+public K next() { return super.nextEntry().getKey(); }\n      public K next() { return super.nextEntry().getKey(); }\n      public void remove() {
+public void readBytes(byte[] b, int offset, int len) throws IOException {while (len > 
+public TerminateWorkflowExecutionResult terminateWorkflowExecution(TerminateWorkflowExecutionRequest request) {request = beforeClientExecution(request);return executeTerminateWorkflowExecution(request);
+public void remove() {throw new UnsupportedOperationException();}\n        @Override\n        public int hashCode() {\n            throw new UnsupportedOperationException();\n        }\n       
+public ModifyCacheParameterGroupResult modifyCacheParameterGroup(ModifyCacheParameterGroupRequest request) {request = beforeClientExecution(request);return executeModifyCacheParameterGroup(request);
+public void setParams(String params) {super.setParams(params);path = params;if (path == null) {\n      throw new IllegalArgumentException("path must be
+public DeleteDocumentationVersionResult deleteDocumentationVersion(DeleteDocumentationVersionRequest request) {request = beforeClientExecution(request);return executeDeleteDocumentationVersion(request);}\n\n
+public boolean equals(Object obj) {if (this == obj) {return true;}if (obj == null) {return false;}if (getClass() != obj.getClass())
+public GetRelationalDatabaseResult getRelationalDatabase(GetRelationalDatabaseRequest request) {request = beforeClientExecution(request);return executeGetRelationalDatabase(request);}\n\n
+public HSSFClientAnchor createClientAnchor();\n\nHSSFClientAnchor createClientAnchor(int dx1, int dy1, int dx2, int dy2) {\n
+public String getSheetName(int sheetIndex) {return _workbook.getSheetName(sheetIndex);}\npublic int getSheetIndex(String sheetName) {return _work
+public UpdateDashboardResult updateDashboard(UpdateDashboardRequest request) {request = beforeClientExecution(request);return executeUpdateDashboard(request);}\n\n
+public AssociateAdminAccountResult associateAdminAccount(AssociateAdminAccountRequest request) {request = beforeClientExecution(request);return executeAssociateAdminAccount(request);}\n\n   
+public void addHyperlink(int firstRow, int lastRow, int firstCol, int lastCol, String address) {addHyperlink(firstRow, lastRow, first
+public static String quote(String s) {StringBuilder sb = new StringBuilder(s.length() + 
+public ByteBuffer putShort(int index, short value) {throw new ReadOnlyBufferException();}\n\n    public final ByteBuffer putShort(short value) {\n        if (
+public NumberPtg(LittleEndianInput in) {int nItems = in.readUByte();int nColumns = in.readUByte();int nRows = in
+public GetLoadBalancerTlsCertificatesResult getLoadBalancerTlsCertificates(GetLoadBalancerTlsCertificatesRequest request) {request = beforeClientExecution
+public String toString() {StringBuilder sb = new StringBuilder();sb.append(getClass().getName());sb.append(" [");sb.append(getName());sb.append("]
+public String toString(String field) {return "WildcardQuery(" + this.term + ")";}\n\n\t@Override\n\tpublic boolean equals(Object other) {
+public void incRef() {refCount.incrementAndGet();}\n\n    public void decRef() {\n      if (refCount.decrementAndGet() == 
+public UpdateDataSourcePermissionsResult updateDataSourcePermissions(UpdateDataSourcePermissionsRequest request) {request = beforeClientExecution(request);return executeUpdateDataSourcePermissions(request);}\n\n
+public int getBATBlockCount() {return getBATBlockCount(getBATBlockSize());}\n    private int getBATBlockCount(int blockSize) {\n
+public void normalise() {if (Double.isNaN(mDenominator)) {mNumerator = 
+public String toString() {StringBuilder result = new StringBuilder();for (int i = 
+public DefaultCredentialProvider(AlibabaCloudCredentialsProvider credentialsProvider) {this.credentialsProvider = credentialsProvider;this.credentials = credentialsProvider.getCredentials();}\n\n
+public void setVerbose(boolean verbose) {this.verbose = verbose;}\n\n    @Override\n    public void run() {\n        if (verbose) {\n           
+public void reset() {if (mark == -1)throw new IllegalStateException();pos = mark;mark = -1;}\n    @Override\n    public String toString()
+public K next() {if (nextIndex != expectedModCount) {throw new ConcurrentModificationException();}if (!hasNext()) {throw new NoSuchElementException();}
+public String getOriginalLiteral() {return this.originalLiteral;}\n\n   public String getLiteral() {\n      return this.literal;\n   }\n\n  
+public int indexOf(Object element) {if (element == null) {for (int i = 
+public List<String> stem(List<String> words) {if (words == null) {return null;}List<String> stemmed = new ArrayList<String>(words.size
+public GetVpnConnectionMetricsResult getVpnConnectionMetrics(GetVpnConnectionMetricsRequest request) {request = beforeClientExecution(request);return executeGetVpnConnection
+public void setPosition(long pos) {_position = pos;_blockIndex = (int) (pos >>> _blockBits);_blockOffset = (int) (pos &
+public long advance(long n) {final long pos = pos();final long skip = Math.min(n, maxPos - pos);pos = pos + skip;return skip;}\n
+public JobFlowInstancesConfig(InstanceCount instanceCount) {setInstanceCount(instanceCount);}\n    JobFlowInstancesConfig(InstanceCount instanceCount) {\n        setInstance
+public void serialize(LittleEndianOutput out) {out.writeShort(field_1_first_row);out.writeShort(field_2_last_row);out
+public int indexOf(String string, int start) {return indexOf(string, start, start + string.length());}\n/**\n * Returns the index within this string of the
+public boolean add(E object) {return addLastImpl(object);}\n    /**\n     * Inserts the specified element at the end of this deque.\n     *
+public void rename(String oldName, String newName, boolean force) {if (force) {rename(oldName, newName, true);}else {rename(old
+public String getPropertyName() {return this.propertyName;}\n\npublic String getPropertyValue() {\n    return this.propertyValue;\n}\n\\end{code}\n
+public void addRecord(int index, Record record) {records.add(index, record);}\n    public void removeRecord(int index) {records.remove(index
+@Override public boolean remove(Object object) {synchronized (mutex) {return c.remove(object);}}\n    /**\n     * {@inheritDoc}\n    
+public TokenStream create(TokenStream input) {return new ShingleFilter(input, minShingleSize, maxShingleSize, outputUnigrams, outputUnigr
+public long size() {return _size;}\n\n 
+public void setValue(Object value) {this.value = value;}\n\n    public Object getValue() {\n        return value;\n    }\n\n    @Override\n   
+public Revision(RevWalk walk, RevCommit commit) {this.walk = walk;this.commit = commit;this.tree = commit.getTree();this.
+public int get(int i) {if (i < 
+public CreateRepoRequest() {super("cr", "2016-06-07", "CreateRepo", "cr");setUriPattern("/repos/[
+public boolean isLargeFile() {return isLargeFile;}\n\n/**\n * If this is true, the file is considered to be a large file.\n * <p>
+public void remove() {if (lastReturned == null) {throw new IllegalStateException();}if (modCount != expectedModCount) {throw new ConcurrentModificationException
+public MonitorInstancesResult monitorInstances(MonitorInstancesRequest request) {request = beforeClientExecution(request);return executeMonitorInstances(request);}\n\n   
+public AllocateAddressResult allocateAddress(AllocateAddressRequest request) {request = beforeClientExecution(request);return executeAllocateAddress(request);}\n\n/**\n
+public int getBeginIndex() { return beginIndex; }\npublic int getEndIndex() { return endIndex; }\npublic int getIndex() { return beginIndex; }\npublic
+public static List<Query> getQueries(SolrQueryRequest req) {return getQueries(req, null);}\n\n 
+public ShortBuffer compact() {throw new ReadOnlyBufferException();}\n    @Override\n    public ShortBuffer put(short c) {\n        throw new ReadOnlyBufferException();\n
+public void decode(byte[] blocks, int blocksOffset, long[] values, int valuesOffset, int iterations) {for (int i = 
+public String toString() {if (isDirectory())return "Directory: " + path;if (isFile())return "File: " + path;if (isSymbolicLink())
+public DescribeImageAttributeResult describeImageAttribute(DescribeImageAttributeRequest request) {request = beforeClientExecution(request);return executeDescribeImageAttribute(request);}\n\n   
+public String getAccessKeyId() {return this.accessKeyId;}\n\n    public void setAccessKeyId(String accessKeyId) {this.accessKeyId = accessKey
+public CreateVpnGatewayResult createVpnGateway(CreateVpnGatewayRequest request) {request = beforeClientExecution(request);return executeCreateVpnG
+public DescribeAppsResult describeApps(DescribeAppsRequest request) {request = beforeClientExecution(request);return executeDescribeApps(request);}\n\n   
+public ListNotebookInstancesResult listNotebookInstances(ListNotebookInstancesRequest request) {request = beforeClientExecution(request);return executeListNotebookInstances(request
+public DescribeJobRequest(String accountId, String vaultName, String jobId) {setAccountId(accountId);setVaultName(vaultName);setJobId
+public EscherRecord getEscherRecord(int index) {return _escherRecords.get(index);}\npublic int getNumberOfEscherRecords() {return _
+public GetApiResult getApi(GetApiRequest request) {request = beforeClientExecution(request);return executeGetApi(request);}\n\n    /**\n     * <p>
+public DeleteApnsVoipChannelResult deleteApnsVoipChannel(DeleteApnsVoipChannelRequest request) {request = beforeClientExecution(request);return executeDelete
+public TrackingRefUpdate getTrackingRefUpdate() {return trackingRefUpdate;}\n    public TrackingRefUpdate getTrackingRefUpdate() {\n        return trackingRefUpdate;\n
+public void print(char c) {print(String.valueOf(c));}\n    /**\n     * Print a boolean.\n     */\n    public void print(boolean b)
+public QueryNode getChild() {return getChildren().get(0);}\n\t@Override\n\tpublic List<QueryNode> getChildren() {return Collections.emptyList();
+public FilterAttachments(boolean includeAttachments) {this.includeAttachments = includeAttachments;}\n\n    @Override\n    public DirectoryStream<Path> new
+public PrintHeadersRecord(RecordInputStream in) {field_1_print_headers = in.readShort();}\n\nprotected void fillFields(RecordInputStream in) {\n    field
+public CreateAlbumRequest() {super("CloudPhoto", "2017-07-11", "CreateAlbum", "cloudphoto");setProtocol(ProtocolType.
+public DescribeLocalGatewayRouteTableVpcAssociationsResult describeLocalGatewayRouteTableVpcAssociations(DescribeLocalGatewayRouteTableVpcAssociationsRequest
+public PutConfigurationSetReputationOptionsResult putConfigurationSetReputationOptions(PutConfigurationSetReputationOptionsRequest request) {request = beforeClientExecution(request);return executePutConfigurationSetRe
+public Ref getRef(String name) {return refs.get(name);}\n 
+public String getText() {int start = getStartIndex();int stop = getStopIndex();if (start == -1) {return "";}if (stop == -1) {
+public E next() {return nextElement();}\n    public final E nextElement() {return nextElement();}\n    public final E previous() {return previousElement();}\n   
+public CreateDatasetResult createDataset(CreateDatasetRequest request) {request = beforeClientExecution(request);return executeCreateDataset(request);}\n\n    /**\n    
+public SeriesIndexRecord clone() {return copy();}\npublic SeriesIndexRecord copy() {\n    SeriesIndexRecord rec = new SeriesIndexRecord();\n    copy(rec);\n   
+public DescribeDatasetResult describeDataset(DescribeDatasetRequest request) {request = beforeClientExecution(request);return executeDescribeDataset(request);}\n\n   
+public IntArrayList(int capacity) {mGrowthFactor = DEFAULT_GROWTH_FACTOR;if (capacity < 
+public PorterStemFilter create(TokenStream input) {return new PorterStemFilter(input);}\n 
+public CreateInfrastructureConfigurationResult createInfrastructureConfiguration(CreateInfrastructureConfigurationRequest request) {request = beforeClientExecution(request);return executeCreateInfrastructureConfiguration(request
+public FileOutputStream(String path, boolean append) throws FileNotFoundException {this(new File(path), append);}\n     *\n     * @param file the file to be opened
+public DeleteImageBuilderResult deleteImageBuilder(DeleteImageBuilderRequest request) {request = beforeClientExecution(request);return executeDeleteImageBuilder(request);}\n\n    /**\n    
+public static String toHex(String value) {if (value == null)return "null";StringBuilder sb = new StringBuilder(value.length() * 
+public UpdateDashboardResult updateDashboard(UpdateDashboardRequest request) {request = beforeClientExecution(request);return executeUpdateDashboard(request);}\n\n
+public HSSFColor getColor(short index) {HSSFPalette palette = getPalette();HSSFColor color = palette.getColor(index);if (
+public final ValueEval evaluate(ValueEval[] args, int srcRowIndex, int srcColumnIndex) {if (args.length != 
+public void serialize(LittleEndianOutput out) {out.writeShort(field_1_first_row);out.writeShort(field_2_last_row);out
+public DescribeDBParameterGroupsResult describeDBParameterGroups() {return describeDBParameterGroups(new DescribeDBParameterGroupsRequest());}\n\n    /**\n     * <p>Return
+public Highlight(int startIndex, int endIndex, String highlightColor) {this.startIndex = startIndex;this.endIndex = endIndex;this.highlightColor = highlight
+public static byte[] utf8ToBytes(char[] chars, int offset, int length) {byte[] bytes = new byte[length * UTF8_BYTES_PER_CHAR
+public UploadLayerPartResult uploadLayerPart(UploadLayerPartRequest request) {request = beforeClientExecution(request);return executeUploadLayerPart(request);}\n\n    /**\n
+public List<Token> getTokens(int start, int stop) {return getTokens(start, stop, Token.DEFAULT_CHANNEL);}\n\t
+public boolean equals(Object obj) {if (this == obj) return true;if (!super.equals(obj)) return false;if (getClass() != obj.getClass())
+public SpanOrQuery build() {SpanQuery[] clauses = new SpanQuery[this.clauses.size()];this.clauses.toArray(clauses);return new Span
+public CloneCommand cloneRepository() {return new CloneCommand(repo);}\n/** @see CloneCommand */\npublic CloneCommand cloneRepository() {\n\treturn new Cl
+public FieldInfo fieldInfo(String fieldName) {return fieldInfos.fieldInfo(fieldName);}\n\n 
+public DescribeSchemaResult describeSchema(DescribeSchemaRequest request) {request = beforeClientExecution(request);return executeDescribeSchema(request);}\n\n    /**\n     *
+public GetDocumentResult getDocumentResult(GetDocumentRequest request) {request = beforeClientExecution(request);return executeGetDocument(request);}\n\n    /**\n     * <p
+public CancelExportTaskResult cancelExportTask(CancelExportTaskRequest request) {request = beforeClientExecution(request);return executeCancelExportTask(request);}\n\n    /**\n
+public ModifyInstanceFleet(ModifyInstanceFleetRequest request) {request = beforeClientExecution(request);return executeModifyInstanceFleet(request);}\n
+public SetInstanceProtectionResult setInstanceProtection(SetInstanceProtectionRequest request) {request = beforeClientExecution(request);\n        return executeSetInstanceProtection
+public ModifyDBClusterResult modifyDBCluster(ModifyDBClusterRequest request) {request = beforeClientExecution(request);return executeModifyDBCluster(request);
+public void add(BytesRef term, int docFreq, long totalTermFreq, BytesRef payload) {if (payload != null) {throw new IllegalArgumentException("
+public UploadImageRequest() {super("CloudPhoto", "2017-07-11", "UploadImage", "cloudphoto");setProtocol(ProtocolType.HTTP
+public boolean isEmpty() {return entries.isEmpty();}\n\n    public void clear() {\n      entries.clear();\n    }\n\n    public int size() {\n     
+public PipedOutputStream(PipedInputStream sink) {this.sink = sink;}\n```\n## 
+public CreateRepoRequest() {super("cr", "2016-06-07", "CreateRepo", "cr");setUriPattern("/repos/[
+public DataValidationConstraint createDateConstraint(int operatorType, String formula1, String formula2) {return DataValidationConstraint.createDateConstraint(operatorType, formula1, formula2);
+public ListObjectVersionsResult listObjectVersions(ListObjectVersionsRequest request) {request = beforeClientExecution(request);return executeListObjectVersions(request
+public DescribeDBSubnetGroupsResult describeDBSubnetGroups(DescribeDBSubnetGroupsRequest request) {request = beforeClientExecution(request);return executeDescribeDBSubnet
+public void setLocked(boolean value) {field_1_options = locked.setShortBoolean(field_1_options, value);}\n\npublic void setHidden(boolean
+public boolean isForceUpdate() {return forceUpdate;}\n    public void setForceUpdate(boolean forceUpdate) {this.forceUpdate = forceUpdate;}\n\n    /**\n
+public TerminalNode createTermNode(Token token) {CommonToken t = new CommonToken(token);t.setLine(token.getLine());t.setCharPositionInLine(
+public GermanLightStemFilterFactory(Map<String,String> args) {super(args);if (!args.isEmpty()) {throw new IllegalArgumentException("Unknown parameters: "
+public UnshareDirectory(UnshareDirectoryRequest request) {request = beforeClientExecution(request);return executeUnshareDirectory(request);}\n\n    private UnshareDirectoryResult executeUn
+public static CharFilterFactory forName(String name, Map<String,String> args) {return factories.get(name).create(args);}\n    public static CharFilter
+public DeleteAlbumsRequest() {super("CloudPhoto", "2017-07-11", "DeleteAlbums", "cloudphoto");}\n\n   
+public GetCelebrityInfoResult getCelebrityInfo(GetCelebrityInfoRequest request) {request = beforeClientExecution(request);return executeGetCelebr
+public RevFilter clone() {return new Binary(a.clone(), b.clone());}\n@Override\npublic int hashCode() {return a.hashCode() ^ b.hash
+public boolean equals( Object o ) {return o instanceof DutchStemmer;}\n    }\n\n    @Override\n    public TokenStream create(TokenStream input) {\n        return
+public final boolean isDirect() {return protectedHasArray();}\n\n    public final byte[] protectedArray() {\n        if (!protectedHasArray()) {\n            throw new Unsupported
+public UpdateFleetAttributesResult updateFleetAttributes(UpdateFleetAttributesRequest request) {request = beforeClientExecution(request);return executeUpdateFleetAttributes(request
+public void removePersonalization() {personalizationRemoved = true;}\n\n    /**\n     * @return <code>true</code> if the document has been personalized
+public PerFieldAnalyzerWrapper(Analyzer defaultAnalyzer, Map<String, Analyzer> fieldAnalyzers) {super(defaultAnalyzer);this.
+public StartInstancesResult startInstances(StartInstancesRequest request) {request = beforeClientExecution(request);return executeStartInstances(request);}\n\n    /**\n    
+public byte[] getBytes() {return _record.getBytes();}\npublic byte[] getData() {return _record.getData();}\npublic int getRecordSize() {
+public GetIdentityVerificationAttributesResult getIdentityVerificationAttributes(GetIdentityVerificationAttributesRequest request) {request = beforeClientExecution(request);return executeGetIdentityVerificationAttributes(request
+public String toString() {return getClass().getSimpleName() + "[" + getName() + "]";}\n\n 
+public ListLabelingJobsResult listLabelingJobs(ListLabelingJobsRequest request) {request = beforeClientExecution(request);return executeListLabelingJobs(request
+public UpdateContactAttributesResult updateContactAttributes(UpdateContactAttributesRequest request) {request = beforeClientExecution(request);return executeUpdateContactAttributes(request);}\n\n    /**\n    
+public static int getBuiltinCode(Ptg ptg) {if (ptg instanceof OperationPtg) {OperationPtg optg = (OperationPtg
+public DescribeScalingPoliciesResult describeScalingPolicies(DescribeScalingPoliciesRequest request) {request = beforeClientExecution(request);return executeDescribe
+public static String sign(String awsAccessKeyId, String stringToSign, String signature) {return sign(awsAccessKeyId, stringToSign, signature, null);}\n   
+public long getObjectSize(AnyObjectId objectId, int objectType)throws MissingObjectException, IncorrectObjectTypeException {if (objectType != Constants.OBJ
+public CopyImageResult copyImage(CopyImageRequest request) {request = beforeClientExecution(request);return executeCopyImage(request);}\n\n    /**\n     * <p>
+public PutInsightSelectorResult putInsightSelector(PutInsightSelectorRequest request) {request = beforeClientExecution(request);return executePutInsightSelector(request
+public NumberPtg(LittleEndianInput in) 
+public GetLifecyclePolicyPreviewResult getLifecyclePolicyPreview(GetLifecyclePolicyPreviewRequest request) {request = beforeClientExecution(request);return executeGetLifecyclePolicy
+public DescribeModelResult describeModel(DescribeModelRequest request) {request = beforeClientExecution(request);return executeDescribeModel(request);}\n\n    /**\n     *
+public MonitorInstancesResult monitorInstances(MonitorInstancesRequest request) {request = beforeClientExecution(request);return executeMonitorInstances(request);}\n\n   
+public DeleteAppResult deleteApp(DeleteAppRequest request) {request = beforeClientExecution(request);return executeDeleteApp(request);}\n\n    /**\n     * <p>
+public TokenStream create(TokenStream input) {return new DutchStemFilter(input);}\n}\n\n/**\n * Filters {@link StandardTokenizer} with {@link Dutch
+public BOFRecord() {_reserved1 = _reserved2 = _reserved3 = _reserved4 = _reserved5 = _reserved6 = _reserved
+@Override public boolean remove(Object object) {synchronized (mutex) {return c.remove(object);}}\n    /**\n     * {@inheritDoc}\n    
+public GetDomainSuggestionsResult getDomainSuggestions(GetDomainSuggestionsRequest request) {request = beforeClientExecution(request);return executeGetDomainSuggestions(request
+public String toString() {return "(" + a + " AND " + b + ")";}\n 
+public ListPoliciesResult listPolicies(ListPoliciesRequest request) {request = beforeClientExecution(request);return executeListPolicies(request);}\n\n
+public DeleteLoadBalancerPolicyRequest(String loadBalancerName, String policyName) {setLoadBalancerName(loadBalancerName);setPolicyName(policyName);}\n
+public ProtectRecord(boolean protect) {_protect = protect;}\n\n    public void setProtect(boolean protect) {\n        _protect = protect;\n   
+public ByteQueue(int capacity) {buf = new byte[capacity];}\n    public ByteQueue(byte[] buf) {\n        this.buf = buf;\n    }
+public GetOperationsResult getOperations(GetOperationsRequest request) {request = beforeClientExecution(request);return executeGetOperations(request);}\n\n    /**\n    
+public void readRawData(byte[] b, int off, int len) {Platform.getInstance().readFully(b, off, len, this);}\n\npublic void
+public ViewDefinitionRecord(RecordInputStream in) {field_1_window_width = in.readShort();field_2_window_height = in.readShort();field_3
+public TerminateWorkspacesResult terminateWorkspaces(TerminateWorkspacesRequest request) {request = beforeClientExecution(request);return executeTerminateWorkspaces(request);}\n\n   
+public void close() throws IOException {if (!closed) {synchronized (this) {if (!closed) {closed = true;if (in != null) {in.close();
+public DescribeScalingPoliciesResult describeScalingPolicies(DescribeScalingPoliciesRequest request) {request = beforeClientExecution(request);return executeDescribe
+public String getReading(int wordId, int posId) {return getReading(wordId, posId, null);}\npublic String getReading(int wordId
+public String getPath() {return path;}\npublic String getName() {return name;}\n\npublic String toString() {\n    StringBuilder result = new StringBuilder();\n    result.
+public static double log10(double d) {if (d <= 
+public DescribeImageResult describeImage(DescribeImageRequest request) {request = beforeClientExecution(request);return executeDescribeImage(request);}\n\n    /**\n     *
+public boolean isEpsilonTransition() {return isEpsilonTransition;}\npublic boolean isEpsilonTransition() {\n\treturn isEpsilonTransition;\n}\n\n
+public int available() {return available(0);}\n\n    /**\n     * Returns the number of bytes that can be read (or skipped over) from this\n     * input
+public void visit(Ptg ptg) {if (ptg instanceof OperationPtg) {OperationPtg opPtg = (OperationPtg)ptg
+public int getRowIndex() {return _rowIndex;}\n    public void setRowIndex(int rowIndex) {_rowIndex = rowIndex;}\n\n    @Override\n   
+public boolean equals(Object obj) {if (this == obj) return true;if (obj == null) return false;if (getClass() != obj.getClass()) return false
+public int stem(char s[], int len) {for (int i = 
+public void serialize(LittleEndianOutput out) {out.writeShort(getFlags());}\n\n\t@Override\n\tpublic String toString() {\n\t\tStringBuilder
+public MissingSchemaException(String message) {this.message = message;}\n\npublic MissingSchemaException(String message) {\n\tthis.message = message;\n}\n
+public Tag(String key, String value) {setKey(key);setValue(value);}\n    Tag(String key, String value) {\n        setKey(key);
+public UpdateDatasetResult updateDataset(UpdateDatasetRequest request) {request = beforeClientExecution(request);return executeUpdateDataset(request);}\n\n    /**\n    
+public boolean hasObjectId(AnyObjectId id) {return id.equals(getObjectId());}\n\npublic ObjectId getObjectId() {\n\treturn objectId;\n
+public GroupingSearch setGroupDocs(boolean groupDocs) {this.groupDocs = groupDocs;return this;}\n\npublic GroupingSearch setGroupDocs(
+public synchronized void setDocValues(String name, boolean docValues) {FieldInfo fi = fields.get(name);if (fi == null) {fi = new FieldInfo(
+public int getCellCount() {int count = 
+public DeleteLexBotResult deleteLexBot(DeleteLexBotRequest request) {request = beforeClientExecution(request);return executeDeleteLexBot(request
+public DeleteModelPackageResult deleteModelPackage(DeleteModelPackageRequest request) {request = beforeClientExecution(request);return executeDeleteModelPackage(request);}\n\n    /**\n    
+public void write(byte[] b, int off, int len) {checkPosition(len);System.arraycopy(b, off, _buf, _pos, len);_pos
+public RenameDetector getRenameDetector() {return renameDetector;}\n\n 
+public static int getBitsRequired(long maxValue) {int bitsRequired = 
+public DescribeProjectResult describeProject(DescribeProjectRequest request) {request = beforeClientExecution(request);return executeDescribeProject(request);}\n\n    /**\n     *
+public SnapshotResult createSnapshot(CreateSnapshotRequest request) {request = beforeClientExecution(request);return executeCreateSnapshot(request);}\n\n    /**\n     * <p>
+public String toString() {StringBuilder buffer = new StringBuilder();buffer.append("[HFPATTERN]\\n");buffer.append("    .patternType = ").append(
+public List<String> getRemoved() {return removed;}\n\n    public void setRemoved(List<String> removed) {this.removed = removed;}\n\n   
+public String toString() {return "PacketLineIn";}\n    }\n\n    public static class PacketLineOut extends PacketLineIn {\n        public PacketLine
+public DVRecord clone() {return copy();}\n public DVRecord copy() {\n   DVRecord rec = new DVRecord();\n   rec.field_1_
+public StandardAnalyzer(ReuseStrategy reuseStrategy) {this.reuseStrategy = reuseStrategy;}\n\n    @Override\n    public TokenStreamComponents createComponents(String fieldName
+public StringBuilder append(Object obj) {if (obj == null) {appendNull();} else {append0(obj.toString());}return this;}\n    public StringBuilder append(String
+public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {request = beforeClientExecution(request);return executeListTagsForResource(request);}\n\n
+public static double max(double[] values) {double max = Double.NEGATIVE_INFINITY;for (int i = 
+public DescribeLocalGatewayVirtualInterfaceGroupsResult describeLocalGatewayVirtualInterfaceGroups(DescribeLocalGatewayVirtualInterfaceGroupsRequest request) {request = beforeClientExecution(
+public GetObjectResult getObject(GetObjectRequest request) {request = beforeClientExecution(request);return executeGetObject(request);}\n\n    /**\n     * <p>
+public CreateDBClusterParameterGroupResult createDBClusterParameterGroup(CreateDBClusterParameterGroupRequest request) {request = beforeClientExecution(request);return executeCreateDBCluster
+public static CharBuffer wrap(char[] array, int start, int charCount) {Arrays.checkOffsetAndCount(array.length, start, charCount);if (start <
+public State getState() {return state;}\n\npublic String toString() {\n\tswitch (state) {\n\tcase INITIAL:\n\t\treturn "initial";\n
+public DescribeImageAttributeResult describeImageAttribute(DescribeImageAttributeRequest request) {request = beforeClientExecution(request);return executeDescribeImageAttribute(request);}\n\n   
+public Pattern pattern() {return this.pattern;}\npublic String pattern() {\n    if (this.pattern != null) {\n        return this.pattern;\n    }\n   
+public V setValue(V object) {throw new UnsupportedOperationException();}\n    public void setValue(V object) {\n        throw new UnsupportedOperationException();\n   
+public Token filter(Token token) {if (termAtt == null) {termAtt.setEmpty().append(token.termBuffer(), token.termOffset(), token.termLength());
+public CreateAlbumRequest() {super("CloudPhoto", "2017-07-11", "CreateAlbum", "cloudphoto");setProtocol(ProtocolType.
+public String decrypt(String ciphertext, String password) {return decrypt(ciphertext, password, null);}\n    public String decrypt(String ciphertext,
+public static String toString(List<ParseTree> nodes) {return toString(nodes, null);}\n\tpublic static String toString(List<ParseTree> nodes, Rec
+public String toString() {return "NONE";}\n 
+public GetRepoWebhookRequest() {super("cr", "2016-06-07", "GetRepoWebhook", "cr");}\n\n   
+public GetPipelineDefinitionResult getPipelineDefinition(GetPipelineDefinitionRequest request) {request = beforeClientExecution(request);return executeGetPipelineDefinition(request);}\n\n
+public DeleteTagsRequest(String resourceId) {setResourceId(resourceId);}\n\n    public void setResourceId(String resourceId) {\n        this.resourceId =
+public int readHexNibble(char c) {if (c >= '0' && c <= '9') {return c - '0';}if (c >= '
+public PushCommand setRefSpecs(RefSpec... refSpecs) {checkCallable();this.refSpecs.clear();this.refSpecs.addAll(Array
+public int checkExternSheet(int firstSheetIndex, int lastSheetIndex) {return checkExternSheet(firstSheetIndex, lastSheetIndex, true);}\npublic int check
+@Override public boolean equals(Object object) {return map.equals(object);}\n    @Override public int hashCode() {return map.hashCode();}\n    @Override
+public QueryNode build(QueryNode queryNode) throws QueryNodeException {if (queryNode.getChildren().size() != 
+public DescribeSchemaResult describeSchema(DescribeSchemaRequest request) {request = beforeClientExecution(request);return executeDescribeSchema(request);}\n\n    /**\n     *
+public DescribeSchemaVersionsResult describeSchemaVersions(DescribeSchemaVersionsRequest request) {request = beforeClientExecution(request);return executeDescribeSchemaVers
+public Repository open(AnyObjectId id) throws MissingObjectException, IncorrectObjectTypeException {throw new MissingObjectException(MessageFormat.format(JGitText.get
+public long ramBytesUsed() {return RamUsageEstimator.alignObjectSize(RamUsageEstimator.NUM_BYTES_OBJECT_HEADER +R
+public GetAccountCredentialsResult getAccountCredentials(GetAccountCredentialsRequest request) {request = beforeClientExecution(request);return executeGetAccountCredentials(request);}\n\n    /**\n    
+public DescribeScalingActivitiesResult describeScalingActivities(DescribeScalingActivitiesRequest request) {request = beforeClientExecution(request);return executeDescribeScalingActiv
+public void setRule(int rowIndex, int colIndex, ConditionalFormattingRule rule) {setRule(rowIndex, colIndex, rowIndex, colIndex, rule);}
+public CreateLoadBalancerResult createLoadBalancer(CreateLoadBalancerRequest request) {request = beforeClientExecution(request);return executeCreateLoadBalancer(request);}\n\n
+public PrintHeadersRecord(RecordInputStream in) {field_1_print_headers = in.readShort();}\n\npublic void setPrintHeaders(boolean value) {\n    field
+public CreateAlbumRequest() {super("CloudPhoto", "2017-07-11", "CreateAlbum", "cloudphoto");setProtocol(ProtocolType.
+public void serialize(LittleEndianOutput out) {out.writeShort(field_1_options);}\n\n\tpublic String toString() {\n\t\tStringBuffer buffer
+public boolean equals(Object obj) {if (this == obj) return true;if (obj == null) return false;if (getClass() != obj.getClass()) return false
+public CreateNatGatewayResult createNatGateway(CreateNatGatewayRequest request) {request = beforeClientExecution(request);return executeCreateNatG
+public CreateLifecyclePolicyResult createLifecyclePolicy(CreateLifecyclePolicyRequest request) {request = beforeClientExecution(request);return executeCreateLifecyclePolicy(request);}\n\n
+public static double log10(double x) {return Math.log10(x);}\n    public static double log10(double x) {\n        return Math.
+public CopyImageResult copyImage(CopyImageRequest request) {request = beforeClientExecution(request);return executeCopyImage(request);}\n\n    public CopyImageResult copyImage(
+public PushCommand setRefSpecs(RefSpec... refSpecs) {checkCallable();this.refSpecs.clear();this.refSpecs.addAll(Array
+public ValueEval evaluate(int srcRowIndex, int srcColumnIndex, ValueEval arg0, ValueEval arg1) {ValueEval veText;ValueEval ve
+public K firstKey() {Iterator<Entry<K, V>> it = entrySet().iterator();return (it.hasNext() ? it.next().getKey() : null);
+public int readInt() {int b1 = readUByte();int b2 = readUByte();int b3 = readUByte();int b4 = readUByte();return
+public ModifyImageAttributeRequest(String imageId, String attribute, String value) {setImageId(imageId);setAttribute(attribute);setValue(value);}\n\n    public
+public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {request = beforeClientExecution(request);return executeListTagsForResource(request);}\n\n
+public V get(Object key) {if(key == null)throw new NullPointerException();return null;}\n\npublic boolean containsKey(Object key) {\nif(key ==
+public TokenStream create(TokenStream input) {return new ShingleFilter(input, minShingleSize, maxShingleSize, outputUnigrams, outputUnigr
+public String getPath() {return path;}\npublic String getName() {return name;}\n\npublic String toString() {\n    StringBuilder result = new StringBuilder();\n    result.
+public CopyImageResult copyImage(CopyImageRequest request) {request = beforeClientExecution(request);return executeCopyImage(request);}\n\nprivate CopyImageResult executeCopyImage(
+public StringBuilder insert(int offset, boolean b) {insert0(offset, b ? "true" : "false");return this;}\n    public StringBuilder insert(int offset, char c
+public void encode(long[] values, int valuesOffset, byte[] blocks, int blocksOffset, int iterations) {for (int i = 
+public TokenStream create(TokenStream input) {return new LowerCaseFilter(input);}\n\n\t@Override\n\tpublic TokenStream create(TokenStream input) {\n\t\t
+public boolean add(XWPFDocument doc, List<XWPFRelationShip> rels) {boolean changed = false;for (XWPFRelationShip rel
+final public Token getToken(int index) {Token t = token;for(int i=0;i<index;i++) {if(t.next != null) t =
+public String toString() {StringBuilder sb = new StringBuilder();sb.append(super.toString());sb.append("\\n");sb.append(" 
+public DeleteObjectResult deleteObject(DeleteObjectRequest request) {request = beforeClientExecution(request);return executeDeleteObject(request);}\n\n    /**\n     * Executes the
+public void add(int location, E object) {throw new UnsupportedOperationException();}\n    /**\n     * {@inheritDoc}\n     *\n     * <p>
+public PerFieldAnalyzerWrapper(Analyzer defaultAnalyzer) {this.defaultAnalyzer = defaultAnalyzer;}\n\n    @Override\n    public Analy
+public CreateRepoSyncTaskRequest() {super("cr", "2016-06-07", "CreateRepoSyncTask", "cr");setUriPattern("/
+public AreaEval(AreaEval ae) {_firstRow = ae.getFirstRow();_firstCol = ae.getFirstColumn();_lastRow = a
+public HSSFSheetCloner(HSSFSheet sheet) {this.sheet = sheet;}\n\npublic HSSFSheetCloner cloneSheet(HSSFSheet
+public void close() {if (!closed) {closed = true;buf.clear();}}\n\n    @Override\n    public void reset() {\n      if (closed) {\n
+public final CoderResult flush() {if (decoder == null) {throw new IllegalStateException();}return decoder.implFlush(this);}\n\npublic final
+public BufferedWriter(Writer out, int size) {super(out);if (size <= 
+public DescribeSchemaResult describeSchema(DescribeSchemaRequest request) {request = beforeClientExecution(request);return executeDescribeSchema(request);}\n\n    /**\n     *
+public CreateDBInstanceReadReplicaResult createDBInstanceReadReplica(CreateDBInstanceReadReplicaRequest request) {request = beforeClientExecution(request);return executeCreateDBInstanceRead
+public AddNoteCommand setObjectId(AnyObjectId objectId) {checkCallable();this.objectId = objectId;return this;}\n\n    /**\n     * Executes
+public PushCommand setRefSpecs(List<RefSpec> refSpecs) {checkCallable();this.refSpecs.clear();this.refSpecs.addAll
+public StopTrainingJobResult stopTrainingJob(StopTrainingJobRequest request) {request = beforeClientExecution(request);return executeStopTrainingJob(request);}\n\n
+public synchronized void setSecondaryProgress(int secondaryProgress) {if (mSecondaryProgress != secondaryProgress) {mSecondaryProgress = secondaryProgress;postInvalidate();}}\n
+public int[] reset() {int[] tmp = buf; buf = null;return tmp;}\n\n    @Override\n    public String toString() {\n      if (buf == null
+public String getPath() {return path;}\n    public String getQuery() {return query;}\n    public String getFragment() {return fragment;}\n\n    /**\n     * Returns
+public CreateRepoWebhookRequest() {super("cr", "2016-06-07", "CreateRepoWebhook", "cr");setUriPattern("/
+public CreateImageResult createImage(CreateImageRequest request) {request = beforeClientExecution(request);return executeCreateImage(request);}\n\n    /**\n     * <p>
+public CreateLoadBalancerPolicyResult createLoadBalancerPolicy(CreateLoadBalancerPolicyRequest request) {request = beforeClientExecution(request);return executeCreateLoadBalancerPolicy(request
+public boolean equals(Object obj) {if (obj == null) {return false;}if (obj == this) {return true;}if (obj.getClass() != getClass())
+public CopyImageResult copyImage(CopyImageRequest request) {request = beforeClientExecution(request);return executeCopyImage(request);}\n\n    /**\n     * <p>
+@Override public boolean equals(Object o) {if (!(o instanceof Set)) {return false;}Set<?> s = (Set<?>)o;if (s.size() !=
+public void setRefLogMessage(String refLogMessage, boolean append) {if (refLogMessage != null) {this.refLogMessage = refLogMessage;this.appendRef
+public RefModeRecord(RecordInputStream in) {field_1_refMode = in.readShort();}\n\npublic String toString() {\n    StringBuffer buffer = new String
+public RecognizeLogoRequest() {super("facebody", "2019-12-30", "RecognizeLogo", "facebody");setMethod(
+public ByteOrder order() {\n        return ByteOrder.nativeOrder();\n    }\n\n    public ByteBuffer asReadOnlyBuffer() {\n        return new ReadOnlyByteBufferView
+public int getCount() {return count;}\n\n 
+public boolean isIssue() {return false;}\n\n    @Override\n    public String toString() {\n        StringBuilder sb = new StringBuilder();\n        sb.append(get
+public GetCloudFrontOriginAccessIdentityResult getCloudFrontOriginAccessIdentity(GetCloudFrontOriginAccessIdentityRequest request) {request = beforeClientExecution(request);return executeGetCloudFrontOrigin
+public boolean matches(int symbol, int minVocabSymbol, int maxVocabSymbol) {return symbol >= minVocabSymbol && symbol <= maxVocabSymbol;}
+public DeleteDirectConnectGatewayResult deleteDirectConnectGateway(DeleteDirectConnectGatewayRequest request) {request = beforeClientExecution(request);return executeDeleteDirectConnectG
+public static double[] grow(double[] array, int minSize) {assert minSize >= 
+public CreateImageRequest() {super("CloudPhoto", "2017-07-11", "CreateImage", "cloudphoto");setProtocol(ProtocolType.HTTPS
+public ReceivePackCommand setRefLogIdent(PersonIdent refLogIdent) {this.refLogIdent = refLogIdent;return this;}\n\npublic ReceivePackCommand setRef
+public UpdateImagePipelineResult updateImagePipeline(UpdateImagePipelineRequest request) {request = beforeClientExecution(request);return executeUpdateImagePipeline(request);}\n\n
+public HSSFFormulaEvaluator(HSSFWorkbook workbook) {this.bookEvaluator = new HSSFWorkbookEvaluator(workbook);}\n
+public IndexerConfig(String indexDir, String indexName, String analyzerName) {this.indexDir = indexDir;this.indexName = indexName;this.analyzer
+public DBCluster restoreDBClusterFromSnapshot(RestoreDBClusterFromSnapshotRequest request) {request = beforeClientExecution(request);return executeRestoreDBClusterFrom
+public DescribeInstanceAttributeResult describeInstanceAttribute(DescribeInstanceAttributeRequest request) {request = beforeClientExecution(request);return executeDescribeInstanceAttribute(request);}\n\n   
+public String toString() {return "CompositeReaderMatcher(" + Arrays.toString(matchers) + ")";}\n 
+public boolean markSupported() {return false;}\n\n        @Override\n        public boolean markSupported() {\n            return false;\n        }\n\n        @Override\n       
+public void serialize(LittleEndianOutput out) {out.writeShort(getFirstRow());out.writeShort(getLastRow());out.writeShort(getFirstCol());
+public void decode(byte[] blocks, int blocksOffset, long[] values, int valuesOffset, int iterations) {for (int i = 
+public boolean isPredicateEvaluationEnabled(ATNState state) {if (state.predicates == null || state.predicates.isEmpty()) {return false;}if
+public UpdatePipelineResult updatePipeline(UpdatePipelineRequest request) {request = beforeClientExecution(request);return executeUpdatePipeline(request);}\n\n    /**\n    
+public ValueEval evaluate(int srcRowIndex, int srcColumnIndex, ValueEval arg0) {ValueEval ve;try {ve = OperandResolver.getSingleValue
+public String toString() {StringBuilder sb = new StringBuilder();sb.append(getClass().getName());sb.append(" [");sb.append(getName());sb.append("]
+public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {request = beforeClientExecution(request);return executeListTagsForResource(request);}\n\n
+public DeleteApnsVoipChannelResult deleteApnsVoipChannel(DeleteApnsVoipChannelRequest request) {request = beforeClientExecution(request);return executeDelete
+public FST<T> getOutput(Arc<T> arc) {return getOutput(arc.nextState);}\n    public FST<T> getOutput(int
+public void encode(long[] values, int valuesOffset, byte[] blocks, int blocksOffset, int iterations) {for (int i = 
+public synchronized long skip(long n) throws IOException {if (n < 
+public Map<String, Ref> getRefs() {return refs;}\n    public void setRefs(Map<String, Ref> refs) {this.refs = ref
+public UpdateApiKeyResult updateApiKey(UpdateApiKeyRequest request) {request = beforeClientExecution(request);return executeUpdateApiKey(request);}\n\npublic UpdateApiKey
+public RevWalk open() throws IOException {RevWalk walk = new RevWalk(repo);walk.setRetainBody(true);walk.sort(RevSort.
+public ArrayList() {this.elementData = ObjectArrays.EMPTY_OBJECT_ARRAY;this.size = 
+public UpdateDetectorVersionResult updateDetectorVersion(UpdateDetectorVersionRequest request) {request = beforeClientExecution(request);return executeUpdateDetectorVersion(request);}\n\n
+public void dispose() {dispose(true);}\n\n    public void dispose(boolean force) {\n        if (disposed) {\n            return;\n        }\n       
+public RevFlagSet(RevFlag... flags) {super(flags.length);this.flags.addAll(Arrays.asList(flags));}\n\tpublic RevFlag
+@Override public int size() {return backingMap.size();}\n\n        @Override\n        public boolean isEmpty() {\n            return backingMap.isEmpty();\n        }\n
+public final float getFloat() {if (remaining() < Float.BYTES) {throw new BufferUnderflowException();}int pos = position;position = pos + Float.
+public StringBuilder insert(int offset, int i) {insert0(offset, Integer.toString(i));return this;}\n    public StringBuilder insert(int offset, long l) {\n
+public GermanNormalizationFilter(TokenStream input) {super(input);}\n\n\t@Override\n\tpublic void reset() throws IOException {\n\t\tsuper.reset();\n\t
+public ParseTreeWalker walk(ParseTreeListener listener, ParseTree t) {ParseTreeWalker walker = getWalker();walker.walk(listener, t
+public void add(Collector collector) {if (collectors.containsKey(collector.getName())) {throw new IllegalArgumentException("Collector with name \'" + collector
+public RepositoryBuilder clone() {return new RepositoryBuilder(this);}\n\npublic static RepositoryBuilder create(File gitDir) {\n\treturn new RepositoryBuilder().set
+public float idf(int docFreq, int numDocs, float avgFieldLength) {return (float)Math.log(numDocs / (double)(docF
+public Collection<ParseTree> evaluate(ParseTree t) {return Collections.singletonList(t);}\n\t@Override\n\tpublic Collection<ParseTree> evaluate(Parse
+public String toString() {StringBuilder buffer = new StringBuilder();buffer.append("[COLINFO]\\n");formatString(buffer);buffer.append("[/COLINFO]\\n");
+public DescribeScalingPoliciesResult describeScalingPolicies(DescribeScalingPoliciesRequest request) {request = beforeClientExecution(request);return executeDescribe
+public String getName(int index) {return _names.get(index);}\n@Override\npublic int getIndex(String name) {return _names.indexOf(name);
+public DescribeVolumesResult describeVolumes() {return describeVolumes(new DescribeVolumesRequest());}\n\n    /**\n     * <p>Describes one or
+public String toString() {StringBuilder sb = new StringBuilder();sb.append(this.getClass().getSimpleName());sb.append(" [");sb.append(this.get
+public DirCacheEntry getDirCacheEntry() {Preconditions.checkState(isDirCacheEntry());return dirCacheEntry;}\n\npublic boolean isDirCacheEntry() {\n\t
+public IntBuffer put(int[] src, int srcOffset, int intCount) {Arrays.checkOffsetAndCount(src.length, srcOffset, intCount);if (int
+public void trimToSize() {if (size < array.length) {int o = array.length;Object[] a = new Object[size];System.arraycopy(array,
+public DescribeLocalGatewayVirtualInterfaceGroupsResult describeLocalGatewayVirtualInterfaceGroups(DescribeLocalGatewayVirtualInterfaceGroupsRequest request) {request = beforeClientExecution(
+public GermanStemFilter create(TokenStream input) {return new GermanStemFilter(input);}\n 
+public Object[] toArray(Object[] array) {if (array == null || array.length < _size) {Object[] tmp = new Object[_size];System.arraycopy(_
+public Credential(String accessKeyId, String accessKeySecret, String securityToken) {this.accessKeyId = accessKeyId;this.accessKeySecret = accessKeySecret;
+public final IntBuffer get(int[] dst, int dstOffset, int intCount) {if (intCount > remaining()) {throw new BufferUnderflowException();}byteBuffer.get
+public RegisterTaskDefinitionResult registerTaskDefinition(RegisterTaskDefinitionRequest request) {request = beforeClientExecution(request);return executeRegisterTaskDefinition(request);}\n\n    /**\n    
+public DescribeScalingPoliciesResult describeScalingPolicies(DescribeScalingPoliciesRequest request) {request = beforeClientExecution(request);return executeDescribe
+public Tag(String key) {setKey(key);}\npublic String getKey() {\n    return this.key;\n}\n\npublic void setKey(String key)
+public DoubleBuffer put(double c) {throw new ReadOnlyBufferException();}\n\n\tpublic DoubleBuffer put(int index, double c) {\n\t\tthrow new ReadOnly
+public CreateTrafficMirrorFilterResult createTrafficMirrorFilter(CreateTrafficMirrorFilterRequest request) {request = beforeClientExecution(request);return executeCreate
+public CJKWidthFilter(TokenStream input, boolean normalize, boolean preserveOriginal) {super(input);this.normalize = normalize;this.preserveOriginal = preserve
+public void writeLong(long v) {writeInt((int)v);writeInt((int)(v >> 
+public FileSystem() {files = new ArrayList<File>();}\n\n    public void addFile(File file) {\n        files.add(file);\n    }\n\n   
+public ValueEval getArea3DEval(Area3DPtg ptg) {SheetRangeEvaluator sre = createExternSheetEvaluator(ptg.get
+public DeleteDatasetResult deleteDataset(DeleteDatasetRequest request) {request = beforeClientExecution(request);return executeDeleteDataset(request);}\n\n    /**\n    
+public IncreaseStreamRetentionPeriodResult increaseStreamRetentionPeriod(IncreaseStreamRetentionPeriodRequest request) {request = beforeClientExecution(request);return executeIncrease
+public DescribeReservedInstancesModificationsResult describeReservedInstancesModifications() {return describeReservedInstancesModifications(new DescribeReservedInstancesModificationsRequest());
+public static double ppmt(double r, double nper, double pv, double fv, double type) {double pmt = pmt(r, nper, p
+public DescribeSchemaVersionsResult describeSchemaVersions(DescribeSchemaVersionsRequest request) {request = beforeClientExecution(request);return executeDescribeSchemaVers
+public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {request = beforeClientExecution(request);return executeListTagsForResource(request);}\n\n
+public DeleteKeyPairRequest(String keyName) {setKeyName(keyName);}\n\n    /**\n     * <p>The name of the key pair.</p>\n
+public static byte[] grow(byte[] array) {return grow(array, 
+public String toString() {StringBuilder builder = new StringBuilder();builder.append(getClass().getSimpleName());builder.append(" (");builder.append(Arrays.toString(
+public void notifyUpdateCell(Cell cell) {_bookEvaluator.notifyUpdateCell(cell);}\n\n    @Override\n    public void notifyDeleteCell(Cell cell)
+public StringBuilder insert(int offset, String str) {insert0(offset, str);return this;}\n    public StringBuilder insert(int offset, Object obj) {\n        insert0(
+public SetIdentityPoolRolesResult setIdentityPoolRoles(SetIdentityPoolRolesRequest request) {request = beforeClientExecution(request);return executeSetIdentityPoolRoles(request
+public static double mean(double[] v) {double m = Double.NaN;if (v != null && v.length > 
+public void set(int index, long value) {final int o = index >>> 
+public String toString() {if (getChildren() == null || getChildren().size() == 
+public int addSharedFormulas(FormulaRecord[] formulas, int startRow, int startCol) {int formulaCount = formulas.length;for (int i=0; i<
+public public void setOrd(int ord) {if (ord < 
+public void removeExternalSheet(ExternalSheet externalSheet) {if (externalSheet == null) {throw new IllegalArgumentException("externalSheet must not be null");}this.externalSheet
+@Override public List<E> subList(int fromIndex, int toIndex) {synchronized (mutex) {return delegate.subList(fromIndex, toIndex);
+public File getFile() {return file;}\npublic boolean hasFile() {return file != null;}\n\npublic byte[] getData() {\n\tif (hasData()) {\n
+public AttachLoadBalancerToSubnetsResult attachLoadBalancerToSubnets(AttachLoadBalancerToSubnetsRequest request) {request = beforeClientExecution(
+public CreateMultipartUploadRequest(String vaultName, String archiveDescription, String partSize, String archiveName) {setVaultName(vaultName);setArchiveDescription(
+public String toString() {return "PACK";}\n    }\n\n    public static final class OFS extends Pack {\n        @Override\n        public String toString() {
+public Parameter(String parameterName, String parameterValue) {setParameterName(parameterName);setParameterValue(parameterValue);}\n\n    /**\n     * <p>The name
+public void addProperty(Property property) {properties.add(property);}\n\npublic List<Property> getProperties() {\n    return Collections.unmodifiableList(properties
+public DeleteImageResult deleteImage(DeleteImageRequest request) {request = beforeClientExecution(request);return executeDeleteImage(request);}\n\n    /**\n     * <p>
+public GetRepoListRequest() {super("cr", "2016-06-07", "GetRepoList", "cr");setUriPattern("/repos
+public ByteArrayBuffer(int capacity) {mArray = new byte[capacity];mSize = 
+public CreateFaceRequest() {super("LinkFace", "2018-07-20", "CreateFace");setProtocol(ProtocolType.HTTPS);}\n\n
+public ListPhotosRequest() {super("CloudPhoto", "2017-07-11", "ListPhotos", "cloudphoto");setProtocol(ProtocolType.
+public boolean hasNext() {return iterator.hasNext();}\n    public E next() {return iterator.next();}\n    public void remove() {iterator.remove();}\n
+public DeleteEventSubscriptionResult deleteEventSubscription(DeleteEventSubscriptionRequest request) {request = beforeClientExecution(request);return executeDeleteEventSubscription(request);}\n\n
+public CreateLoadBalancerRequest(String loadBalancerName) {setLoadBalancerName(loadBalancerName);}\n\n/**\n * <p>Creates a Classic Load
+public String getAuthority() {return decode(this.authority);}\n\npublic String getPath() {return decode(this.path);}\n\npublic String getQuery()
+public TagResourceResult tagResource(TagResourceRequest request) {request = beforeClientExecution(request);return executeTagResource(request);}\n\n    /**\n     * <p>
+public String getName() { return name; }\n\n    public String toString() {\n        StringBuilder sb = new StringBuilder();\n        sb.append(name);\n        sb.
+public PhraseQuery build() {return new PhraseQuery(terms.toArray(new Term[terms.size()]), slop);}\n\n    /**\n
+public boolean matches(int doc, float freq) {return matches(doc, freq, null);}\npublic boolean matches(int doc, float freq, @Nullable By
+public DescribeDBClusterParameterGroupsResult describeDBClusterParameterGroups(DescribeDBClusterParameterGroupsRequest request) {request = beforeClientExecution(request);return executeDescribe
+public UpdateContactAttributesResult updateContactAttributes(UpdateContactAttributesRequest request) {request = beforeClientExecution(request);return executeUpdateContactAttributes(request);}\n\n    /**\n    
+public void setPackedGitConfig(long packedGitConfig) {checkArgument(packedGitConfig >= 
+public static Date getDateValue(String dateStr) {return getDateValue(dateStr, null);}\npublic static Date getDateValue(String dateStr, TimeZone timeZone
+public StartExperimentResult startExperiment(StartExperimentRequest request) {request = beforeClientExecution(request);return executeStartExperiment(request);}\n\n    /**\n    
+@Override public int size() {return backingMap.size();}\n\n        @Override\n        public boolean isEmpty() {\n            return backingMap.isEmpty();\n        }\n
+public GetResourceResult getResource(GetResourceRequest request) {request = beforeClientExecution(request);return executeGetResource(request);}\n\n    /**\n     * Execute the
+public Cluster deleteCluster(DeleteClusterRequest request) {request = beforeClientExecution(request);return executeDeleteCluster(request);}\n\n    /**\n     * <
+public String toString() {StringBuilder buffer = new StringBuilder();buffer.append("[BACKUP]\\n");buffer.append("    .backup          = ").append(H
+public GitIndexer(Repository repo, ProgressMonitor progressMonitor) {super(repo);this.progressMonitor = progressMonitor;this.progressMonitor = progressMonitor
+public int next(int n) {if (n == 
+public UpdateClusterParameterGroupResult updateClusterParameterGroup(UpdateClusterParameterGroupRequest request) {request = beforeClientExecution(request);return executeUpdateClusterParameterGroup(request
+public SeriesIndexRecord clone() {return copy();}\npublic SeriesIndexRecord copy() {\n    SeriesIndexRecord rec = new SeriesIndexRecord();\n    copy(rec);\n   
+public static double getDaysBetween(Date startDate, Date endDate) {if (startDate == null || endDate == null) {throw new IllegalArgumentException("D
+public int codePointAt(int index) {if (index < 
+public void setCredentials(String accessKeyId, String accessKeySecret) {this.accessKeyId = accessKeyId;this.accessKeySecret = accessKeySecret;}\n\n   
+public ListJobsRequest(String accountId) {setAccountId(accountId);}\n\n    public String getAccountId() {\n        return this.accountId;\n   
+public SignatureAlgorithm() {digestAlgorithm = "SHA1";signatureAlgorithm = "SHA1withRSA";}\n\n    public String toString() {\n
+public SetAlbumCoverRequest() {super("CloudPhoto", "2017-07-11", "SetAlbumCover", "cloudphoto");}\n
+public int indexOf(Object object) {if (size == 
+public DescribeFleetsResult describeFleets(DescribeFleetsRequest request) {request = beforeClientExecution(request);return executeDescribeFleets(request);
+public CompareFacesResult compareFaces(CompareFacesRequest request) {request = beforeClientExecution(request);return executeCompareFaces(request);}\n\n   
+public Reader getSubsequentCommentsReader(int line) throws IOException {if (line < 
+public String toString() {StringBuilder buffer = new StringBuilder();buffer.append("[BACKUP]\\n");buffer.append("    .backup          = ").append(H
+public int getPackedGitVersion() {return packedGitVersion;}\n 
+public String toString() {StringBuilder buffer = new StringBuilder();buffer.append("[HeaderFooter]\\n");buffer.append(" 
+public static String encodeBase64(byte[] value) {return encodeBase64(value, false);}\n    public static String encodeBase64(byte[] value, boolean
+public List<String> getFieldNames(int sheetIndex) {return getFieldNames(sheetIndex, null);}\npublic List<String> getFieldNames(int sheetIndex,
+public void close() {super.close();}\n\n    @Override\n    public void flush() {\n      super.flush();\n    }\n\n    @Override\n    public
+public long get(int index) {checkIndex(index);return byteBuffer.getLong(index * SizeOf.LONG);}\npublic void get(int index, long[]
+public DeleteModelResult deleteModel(DeleteModelRequest request) {request = beforeClientExecution(request);return executeDeleteModel(request);}\n\n    /**\n     * <p>
+public byte[][] getBlocks() {return Arrays.copyOf(blocks, numBlocks);}\n\npublic int getNumBlocks() {\n 
+public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {request = beforeClientExecution(request);return executeListTagsForResource(request);}\n\n
+public static RoundingMode getRoundingModeByName(String name) {for (RoundingMode mode : values()) {if (name.equalsIgnoreCase(mode.getName())) {
+public DBCluster restoreDBClusterFromSnapshot(RestoreDBClusterFromSnapshotRequest request) {request = beforeClientExecution(request);return executeRestoreDBClusterFrom
+public void serialize(LittleEndianOutput out) {out.writeShort(field_1_first_row);out.writeShort(field_2_last_row);out
+public SendMessageResult sendMessage(SendMessageRequest request) {request = beforeClientExecution(request);return executeSendMessage(request);}\n\n    /**\n     * <p>
+public ParseTreePattern compile(String pattern, int patternRuleIndex, TokenStream input) {ParseTreePatternMatcher matcher = new ParseTreePatternMatcher(this);ParseTreePattern
+public DBCluster restoreDBClusterFromSnapshot(RestoreDBClusterFromSnapshotRequest request) {request = beforeClientExecution(request);return executeRestoreDBClusterFrom
+public String getName() {return name;}\n\n\t@Override\n\tpublic int hashCode() {\n\t\treturn name.hashCode();\n\t}\n\n\t@Override
+public void set(long x, long y, long z, long w) {this.x = x;this.y = y;this.z = z;this.w =
+public static MutableObjectId parseId(byte[] id, int pos) {MutableObjectId oid = new MutableObjectId();oid.id[0] = id[pos
+public List<Ref> getMissing() {return Collections.emptyList();}\n    public List<Ref> getUpdated() {return Collections.emptyList();}\n   
+public long ramBytesUsed() {long ramBytesUsed = BASE_RAM_BYTES_USED;ramBytesUsed += RamUsageEstimator.sizeOf
+public String toString() {StringBuffer retval = new StringBuffer();retval.append("[").append(getClass().getName()).append("]\\n");retval.append("
+public TokenStream create(TokenStream input) {return new DutchStemFilter(input);}\n}\n\n/**\n * Filters {@link org.apache.lucene.
+public String toString() {StringBuilder sb = new StringBuilder();sb.append(super.toString());sb.append(' ');sb.append(getClass().getSimpleName());sb
+public TurkishLowerCaseFilterFactory(Map<String,String> args) {super(args);if (!args.isEmpty()) {throw new IllegalArgumentException("Unknown parameters: " +
+public CreateTableResult createTable(CreateTableRequest request) {request = beforeClientExecution(request);return executeCreateTable(request);}\n\n    /**\n     * <p>
+public AssociateSkillGroupWithRoomResult associateSkillGroupWithRoom(AssociateSkillGroupWithRoomRequest request) {request = beforeClientExecution(request);return
+public void onAnimationEnd() {if (mListener != null) {mListener.onAnimationEnd();}}\n    public void onAnimationCancel() {if (mListener != null)
+public TagResourceResult tagResource(TagResourceRequest request) {request = beforeClientExecution(request);return executeTagResource(request);}\n\n    /**\n     * <p>
+public int getCharPositionInLine() {Token t = getCurrentToken(); if (t.getType() == Token.EOF) {return -1;} return t.getChar
+public CharBuffer asReadOnlyBuffer() {CharToByteBufferAdapter buf = new CharToByteBufferAdapter(byteBuffer.asReadOnlyBuffer());buf.order(byteBuffer.order
+public StopTrainingJobResult stopTrainingJob(StopTrainingJobRequest request) {request = beforeClientExecution(request);return executeStopTrainingJob(request);}\n\n
+public NonNullList<SubmoduleConfig> getSubmoduleConfigs() {if (submoduleConfigs == null) return NonNullList.EMPTY;return submoduleConfigs
+public void clear() {array = null;count = 
+public void reset() throws IOException {if (buf == null) {throw new IOException("Stream is closed");}synchronized (buf) {if (pos < count) {throw new
+public RefErrorPtg(LittleEndianInput in) {field_1_index_extern_sheet = in.readUShort();}\nprotected RefErrorPt
+public CopyImageResult copyImage(CopyImageRequest request) {request = beforeClientExecution(request);return executeCopyImage(request);}\n\n    /**\n     * <p>
+public ValueEval evaluate(ValueEval[] args, int srcRowIndex, int srcColumnIndex) {if (args.length != 
+public GetRepoRequest() {super("cr", "2016-06-07", "GetRepo", "cr");setUriPattern("/repos/[
+public void setDate(java.util.Date date) {if (date == null) {throw new IllegalArgumentException("Date must not be null");}this.calendar.set
+public TokenStream create(TokenStream input) {return new DutchStemFilter(input);}\n}\n\n/**\n * Filters {@link StandardTokenizer} with {@link Dutch
+public Object[] toArray() {return toArray(new Object[size]);}\n    public Object[] toArray(int capacity) {\n        Object[] array = new Object[cap
+public void write(char[] buf, int offset, int count) throws IOException {synchronized (lock) {checkNotClosed();if (offset < 
+public static final RevFilter before(Date when) {return before(when.getTime());}\n    public static final RevFilter before(long when) {return new Before(when);
+public DeleteGroupRequest(String groupName) {setGroupName(groupName);}\n    public DeleteGroupRequest withGroupName(String groupName) {\n        setGroupName(
+public deregisterTransitGatewayMulticastGroupSources(RegisterTransitGatewayMulticastGroupSourcesRequest request) {request = beforeClientExecution(request
+public BatchGetNamedQueryResult batchGetNamedQuery(BatchGetNamedQueryRequest request) {request = beforeClientExecution(request);return executeBatchGetNamedQuery(request);}\n
+public CreateModelResult createModel(CreateModelRequest request) {request = beforeClientExecution(request);return executeCreateModel(request);}\n\n    /**\n     * <p>
+public int readUByte() {return _in.readUByte();}\n    public int readUShort() {return _in.readUShort();}\n    public int read
+public void setLength(long len) {if (len > Integer.MAX_VALUE) {throw new IllegalArgumentException(JGitText.get().fileTooLarge);
+public DescribeScalingActivitiesResult describeScalingActivities() {return describeScalingActivities(new DescribeScalingActivitiesRequest());}\n\n    /**\n     *
+public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {request = beforeClientExecution(request);return executeListTagsForResource(request);}\n\n
+public ParserException(Token token, String message) {if (token == null) {throw new NullPointerException();}if (message == null) {throw new NullPointerException();
+public TagResourceResult tagResource(TagResourceRequest request) {request = beforeClientExecution(request);return executeTagResource(request);}\n\n    /**\n     * <p>
+public UpdateAlbumRequest() {super("CloudPhoto", "2017-07-11", "UpdateAlbum", "cloudphoto");setProtocol(ProtocolType.
+public DescribeVpcEndpointServiceConfigurationsResult describeVpcEndpointServiceConfigurations(DescribeVpcEndpointServiceConfigurationsRequest request) {request = beforeClientExecution(
+public EnableUserResult enableUser(EnableUserRequest request) {request = beforeClientExecution(request);return executeEnableUser(request);}\n\n    /**\n     * <p
+@Override public boolean contains(Object o) {return containsKey(o);}\n\n    public boolean containsValue(Object value) {\n        return values.contains(value);\n
+public ExternalSheet(String workbookName, int externalWorkbookNumber, int firstSheetIndex, int lastSheetIndex) {this(workbookName, externalWorkbookNumber, firstSheetIndex,
+public UserName(String userName) {setUserName(userName);}\n    public void setUserName(String userName) {\n        this.userName = userName;\n
+public ParseException(Token currentTokenVal,int[][] expectedTokenSequencesVal,String[] tokenImageVal){super(currentTokenVal.beginLine,currentTokenVal.beginColumn
+public CreateAlbumRequest() {super("CloudPhoto", "2017-07-11", "CreateAlbum", "cloudphoto");setProtocol(ProtocolType.
+public Reader reader() {return reader;}\n\n    @Override\n    public void mark(int readAheadLimit) {\n        reader.mark(readAheadLimit);\n
+public ShingleFilterFactory(Map<String,String> args) {super(args);maxShingleSize = requireInt(args, "maxShingleSize");output
+public boolean isEmpty() {return entries.isEmpty();}\n\n    /**\n     * Removes all entries from this instance.\n     */\n    public void clear() {\n
+public SnowballStemFilter(TokenStream input, SnowballStemmer snowballStemmer) {super(input);this.snowballStemmer = snowballSt
+public CreateTrafficMirrorSessionResult createTrafficMirrorSession(CreateTrafficMirrorSessionRequest request) {request = beforeClientExecution(request);return executeCreate
+public void serialize(LittleEndianOutput out) {out.writeShort(field_1_option_flags);out.writeShort(field_2_protection_option_
+public static double log2(double x) {if (x <= 
+public ByteArrayDataInput(byte[] bytes, int offset, int len) {reset(bytes, offset, len);}\n\n 
+public static List<ParseTree> findAll(ParseTree t) {List<ParseTree> list = new ArrayList<ParseTree>();findAll(t, list);return list; }
+@Override public void clear() {map.clear();}\n\n\t@Override\n\tpublic int size() {\n\t\treturn map.size();\n\t}\n\n\t@
+public ProtectRecord(boolean protect) {\n        super(Type.PROTECT);\n        _protect = protect;\n    }\n\n    public ProtectRecord(Record
+public DeleteInferenceSchedulerResult deleteInferenceScheduler(DeleteInferenceSchedulerRequest request) {request = beforeClientExecution(request);return executeDeleteInferenceScheduler(request
+public StandardAnalyzer(Version matchVersion, boolean lowercaseExpandedTerms) {this.matchVersion = matchVersion;this.lowercaseExpandedTerms = lowercaseExpand
+public DeleteFaceRequest() {super("LinkFace", "2018-07-20", "DeleteFace");setProtocol(ProtocolType.HTTPS);}\n\n
+public ListUsersResult listUsers(ListUsersRequest request) {request = beforeClientExecution(request);return executeListUsers(request);}\n\n    /**\n     * <p>
+public CreateSnapshotCopyFromVolumeRecoveryPointResult createSnapshotCopyFromVolumeRecoveryPoint(CreateSnapshotCopyFromVolumeRecoveryPointRequest request) {request = beforeClientExecution(request);
+public RunTaskResult runTask(RunTaskRequest request) {request = beforeClientExecution(request);return executeRunTask(request);}\n\n    /**\n     * <p>
+public List<String> getConflictingPaths() {return conflictingPaths;}\n    public void setConflictingPaths(List<String> conflictingPaths)
+public UnknownRecord(RecordInputStream in) {_rawData = in.readRemainder();}\n\npublic byte[] getRawData() {\n    return _rawData;
+public JobFlowInstancesConfig(int masterInstanceCount, int slaveInstanceCount) {setMasterInstanceCount(masterInstanceCount);setSlaveInstanceCount(slaveInstanceCount);}
+public DeleteImageResult deleteImage(DeleteImageRequest request) {request = beforeClientExecution(request);return executeDeleteImage(request);}\n\n    /**\n     * <p>
+public CreateImageBuilderResult createImageBuilder(CreateImageBuilderRequest request) {request = beforeClientExecution(request);return executeCreateImageBuilder(request);}\n\n    /**\n    
+@Override public Iterator<E> iterator() {final Iterator<E> iterator = delegate.iterator();return new Iterator<E>() {private boolean hasNext = iterator.has
+public void visitContainedRecords(RecordVisitor rv) {if (subRecords.isEmpty()) {return;}rv.visitRecord(subRecords.get(0
+public String toString(){StringBuilder buffer = new StringBuilder();buffer.append("[SXVI]\\n");buffer.append("    .type = ").append(HexDump
+public CRC32VerifyingOutputStream(OutputStream out, MessageDigest messageDigest) {this(out, messageDigest, DEFAULT_BUFFER_SIZE);}public CRC
+public TagResourceResult tagResource(TagResourceRequest request) {request = beforeClientExecution(request);return executeTagResource(request);}\n\n    /**\n     * <p>
+public DeleteEventSubscriptionResult deleteEventSubscription(DeleteEventSubscriptionRequest request) {request = beforeClientExecution(request);return executeDeleteEventSubscription(request);}\n\n
+public ListNotebookInstancesResult listNotebookInstances(ListNotebookInstancesRequest request) {request = beforeClientExecution(request);return executeListNotebookInstances(request
+public IncreaseStreamRetentionPeriodResult increaseStreamRetentionPeriod(IncreaseStreamRetentionPeriodRequest request) {request = beforeClientExecution(request);return executeIncrease
+public UpdateCampaignResult updateCampaign(UpdateCampaignRequest request) {request = beforeClientExecution(request);return executeUpdateCampaign(request);}\n\n
+public String toFormulaString(String[] operands) {if (operands == null) {throw new IllegalArgumentException("Operands array must not be null");}if (
+public void put(K key, V value) {throw new UnsupportedOperationException();}\n\t@Override\n\tpublic void clear() {throw new UnsupportedOperationException();}\n
+public String toString() {return getClass().getSimpleName() + "[" + getName() + "]";}\n\n 
+public TokenStreamComponents(String name, Tokenizer source, TokenFilter... filters) {this.name = name;this.source = source;this.filters = Arrays.copyOf
+public ModifyInstanceAttributeRequest(String instanceId) {setInstanceId(instanceId);}\n    \n    /**\n     * <p>The instance ID.</p>\n    
+public void decode(byte[] blocks, int blocksOffset, long[] values, int valuesOffset, int iterations) {for (int i = 
+public Transport open(URIish uri, int bufferSize) throws NotSupportedException, TransportException {throw new NotSupportedException(MessageFormat.format(JGitText.get().
+public static void utf8ToSjis(byte[] src, byte[] dest) {utf8ToSjis(src, dest, src.length);}\nstatic void utf
+public K getKey() {return super.getKey();}\n    public V getValue() {return super.getValue();}\n    public V setValue(V value) {return
+public static int hashCode(Object[] array) {if (array == null) {return 
+public void add(int location, E object) {if (location < 
+public DescribeComponentResult describeComponent(DescribeComponentRequest request) {request = beforeClientExecution(request);return executeDescribeComponent(request);}\n\n    /**\n     *
+public void close() throws IOException {flush();}\n\n    /**\n     * Flushes the stream.\n     *\n     * @throws IOException if an I/O error
+public TurkishLowerCaseFilterFactory(Map<String,String> args) {super(args);if (!args.isEmpty()) {throw new IllegalArgumentException("Unknown parameters: " +
+public boolean incrementToken() {if (!input.incrementToken()) {return false;}clearAttributes();termAtt.setEmpty().append(termAtt.toString());positionIncrementAttribute.set
+public static DoubleBuffer allocate(int capacity) {if (capacity < 
+public RevCommit apply(RevCommit c) {RevCommit r = new RevCommit(c);r.parents = new ArrayList<RevCommit>(
+public UpdateSkillGroupResult updateSkillGroup(UpdateSkillGroupRequest request) {request = beforeClientExecution(request);return executeUpdateSkillGroup(request);}\n\n
+public ListIdentityPoolsResult listIdentityPools(ListIdentityPoolsRequest request) {request = beforeClientExecution(request);return executeListIdentityPools(request);}\n\n
+public UpdateDeploymentGroupResult updateDeploymentGroup(UpdateDeploymentGroupRequest request) {request = beforeClientExecution(request);return executeUpdateDeploymentGroup(request);}\n\n
+public void setIgnoreException(boolean ignoreException) {this.ignoreException = ignoreException;if (ignoreException) {setIgnoreFailure(true);}else {setIgnoreFailure(false
+public E get(int location) {if (location < 
+public DescribeSchemaResult describeSchema(DescribeSchemaRequest request) {request = beforeClientExecution(request);return executeDescribeSchema(request);}\n\n    /**\n     *
+public RevisionWalk(RevWalk walk) {this.walk = walk;}\n\n    /**\n     * Create a new revision walker.\n     *\n     *
+public DescribeAvailabilityZonesResult describeAvailabilityZones() {return describeAvailabilityZones(new DescribeAvailabilityZonesRequest());}\n\n   
+public boolean contains(int row, int col) {return _firstRow <= row && _lastRow >= row && _firstCol <= col && _lastCol >= col;}\npublic boolean
+public String toString() {return new String(bytes);}\n\n    @Override\n    public int hashCode() {\n      return Arrays.hashCode(bytes);\n   
+public FileMode getFileMode() {return fileMode;}\npublic void setFileMode(FileMode fileMode) {this.fileMode = fileMode;}\n\npublic byte[] get
+@Override public Iterator<Entry<K, V>> iterator() {return new EntryIterator();}\n    private final class EntryIterator implements Iterator<Entry<K, V>> {
+public CreateScriptResult createScript(CreateScriptRequest request) {request = beforeClientExecution(request);return executeCreateScript(request);}\n\n/**\n * Creates a new script
+public int ord() {if (ord == -1) {throw new IllegalStateException();}return ord;}\n\n    @Override\n    public BytesRef term() {\n
+public String toString(String field) {return null;}\n    @Override\n    public String toExternal(String field) {\n      return null;\n    }\n\n    @
+public AssociateResolverRuleResult associateResolverRule(AssociateResolverRuleRequest request) {request = beforeClientExecution(request);return executeAssociateResolverRule(request);}\n\n   
+public void resetTo(RevCommit c) {if (c == null) {throw new IllegalArgumentException(JGitText.get().cannotResetToNull);}
+public SnowballPorterFilterFactory(Map<String,String> args) {super(args);language = get(args, "language", "English");variant = get(args,
+public ModifyDBParameterGroupRequest(String dBParameterGroupName, java.util.List<Parameter> parameters) {setDBParameterGroupName(dBParameterGroupName);set
+public GetLoadBalancerTlsCertificatesResult getLoadBalancerTlsCertificates(GetLoadBalancerTlsCertificatesRequest request) {request = beforeClientExecution
+public void set(int index, long value) {final int o = index >>> 
+public RevFilter clone() {return new RevFilterRevList();}\n\n\t/**\n\t * Create a new {@link RevFilterRevList} instance.\n\t */\n
+public String toString() {return getClass().getSimpleName() + "(" + delegate.toString() + ")";}\n\n    @Override\n    public long ramBytesUsed
+public boolean isMatch() {if (children.isEmpty()) {return true;}for (AstNode child : children)if (child.isMatch())return true;return false;}\n
+public synchronized int offsetByCodePoints(int index, int codePointOffset) {return super.offsetByCodePoints(index, codePointOffset);}\n    /**\n     *
+public DeleteLaunchTemplateResult deleteLaunchTemplate(DeleteLaunchTemplateRequest request) {request = beforeClientExecution(request);return executeDeleteLaunchTemplate(request);}\n\n    /**\n    
+public AssociateResolverRuleResult associateResolverRule(AssociateResolverRuleRequest request) {request = beforeClientExecution(request);return executeAssociateResolverRule(request);}\n\n   
+public static int find(byte[] b, int ptr, int len) {final int e = ptr + len;while (ptr < e)switch (b[ptr++]) {case
+public int getLineNumber() {return lineNumber;}\n\n    @Override\n    public int getColumnNumber() {\n        return columnNumber;\n    }\n\n    @Override
+public SubmoduleSyncCommand addPath(String path) {paths.add(path);return this;}\n\n    /**\n     * Execute the command\n     *\n     * @
+public UpdateTemplateResult updateTemplate(UpdateTemplateRequest request) {request = beforeClientExecution(request);return executeUpdateTemplate(request);}\n\npublic UpdateTemplateResult updateTemplate(Update
+public DescribeImageResult describeImage(DescribeImageRequest request) {request = beforeClientExecution(request);return executeDescribeImage(request);}\n\n    /**\n     *
+public DescribeVpcsResult describeVpcs() {return describeVpcs(new DescribeVpcsRequest());}\n\n    /**\n     * <p>Des
+public ByteBuffer putInt(int index, int value) {throw new ReadOnlyBufferException();}\n    public final ByteBuffer putInt(int index, int value) {\n       
+public RegisterTaskDefinitionResult registerTaskDefinition(RegisterTaskDefinitionRequest request) {request = beforeClientExecution(request);return executeRegisterTaskDefinition(request);}\n\n    /**\n    
+public static CellType forName(String name) {for (CellType t : values()) {if (t.name().equalsIgnoreCase(name)) {return t;}}}throw new
+public DeleteApiResult deleteApi(DeleteApiRequest request) {request = beforeClientExecution(request);return executeDeleteApi(request);}\n\n    /**\n     * Executes the
+public GetCelebrityInfoResult getCelebrityInfo(GetCelebrityInfoRequest request) {request = beforeClientExecution(request);return executeGetCelebr
+public Analyzer getAnalyzer() {return analyzer;}\n\n 
+public static boolean isPunycodeLabel(String label) {if (label == null) {return false;}int length = label.length();if (length < 
+public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {request = beforeClientExecution(request);return executeListTagsForResource(request);}\n\n
+public SubscriptionState() {\n\n    @Override\n    public String toString() {\n    {\n        StringBuilder sb = new StringBuilder();\n        sb.append("{");\n
+public ValueEval evaluate(ValueEval[] args, OperationEvaluationContext ec) {if (args.length != 
+public int compareTo(Triple<Integer, Integer, Integer> o) {int r = Integer.compare(this.a.intValue(), o.a.intValue());if
+public void removeName(int nameIndex) {getNames().remove(nameIndex);}\n```\n\n## <a name="delete-a-worksheet-in-a-
+public GetQueueAttributesRequest(String queueUrl, java.util.List<String> attributeNames) {setQueueUrl(queueUrl);setAttributeNames(attributeNames);}\n   
+public static boolean equals(char[] array1, char[] array2) {if (array1 == array2) {return true;}if (array1 == null || array2 == null
+public static void setPrintStream(PrintStream out) {printStream = out;}\n\npublic static void setPrintStream(PrintStream out) {\n    printStream = out;\n
+public DeleteDocumentationVersionResult deleteDocumentationVersion(DeleteDocumentationVersionRequest request) {request = beforeClientExecution(request);return executeDeleteDocumentationVersion(request);}\n\n
+public boolean contains(Object o) {return map.containsKey(o);}\n    public boolean contains(Object o) {return map.containsKey(o);}\n    public
+public int checkExternSheet(int externSheetIndex, int firstSheetIndex, int lastSheetIndex) {return checkExternSheet(externSheetIndex, firstSheetIndex, last
+public boolean matches(String pattern) {return this.pattern.equals(pattern);}\n\n    @Override\n    public int hashCode() {\n      final int prime = 
+public static void init() {init(null);}\n    public static void init(Properties props) {\n        if (props == null) {\n            props = new Properties();\n
+public long ramBytesUsed() {long bytesUsed = BASE_RAM_BYTES_USED;if (fields != null) {bytesUsed += fields.ram
+public Role(String path, String roleName) {setPath(path);setRoleName(roleName);}\n\n    /**\n     * <p>The path to the
+public GetExportsResult getExports(GetExportsRequest request) {request = beforeClientExecution(request);return executeGetExports(request);}\n\n    /**\n    
+public DescribeAlgorithmResult describeAlgorithm(DescribeAlgorithmRequest request) {request = beforeClientExecution(request);return executeDescribeAlgorithm(request);}\n\n   
+public boolean matches(ValueEval x, ValueEval y) {if (x == BlankEval.instance) {if (y == BlankEval.instance) {
+public void write(LittleEndianOutput out) {out.writeByte(sid + getPtgClass());out.writeShort(field_1_index_extern
+public static void main(String[] args) throws Exception {if (args.length != 
+public void setStringValue(String value) {if (value == null) {throw new IllegalArgumentException("value must not be null");}if (!(this instanceof SortedSet
+public static int generateRandomSeed() {return generateRandomSeed(System.currentTimeMillis());}\n    public static int generateRandomSeed(long seed) {\n       
+public NumericDocValues(NumericType type) {this.type = Objects.requireNonNull(type);}\n\n    @Override\n    public NumericType getN
+public Parameter(String parameterName, String parameterValue) {setParameterName(parameterName);setParameterValue(parameterValue);}\n    \n    /**\n     * <p>The
+public static String urlEncode(String s) {return urlEncode(s, false);}\npublic static String urlEncode(String s, boolean plusForSpace) {\n
+public ListNotebookInstancesResult listNotebookInstances(ListNotebookInstancesRequest request) {request = beforeClientExecution(request);return executeListNotebookInstances(request
+public ListUsersResult listUsers(ListUsersRequest request) {request = beforeClientExecution(request);return executeListUsers(request);}\n\n    /**\n     * <p>
+public CreateAlbumRequest() {super("CloudPhoto", "2017-07-11", "CreateAlbum", "cloudphoto");setProtocol(ProtocolType.
+public CreateRuleGroupResult createRuleGroup(CreateRuleGroupRequest request) {request = beforeClientExecution(request);return executeCreateRuleGroup(request);}\n\nprivate CreateRuleGroup
+public ListResolverRuleAssociationsResult listResolverRuleAssociations(ListResolverRuleAssociationsRequest request) {request = beforeClientExecution(request);return executeListResolverRuleAssociations(request
+public List<SubmoduleConfig> getSubmoduleConfigs() {if (submoduleConfigs == null)return Collections.emptyList();return Collections.unmodifiableList(
+public DeleteTemplateResult deleteTemplate(DeleteTemplateRequest request) {request = beforeClientExecution(request);return executeDeleteTemplate(request);}\n\npublic DeleteTemplateResult deleteTemplate(Delete
+public CreateBucketResult createBucket(CreateBucketRequest request) {request = beforeClientExecution(request);return executeCreateBucket(request);}\n\n
+public static int getTotalSize(CellRangeAddress[] regions) {int size = 
+public ShingleFilterFactory(Map<String,String> args) {super(args);maxShingleSize = getInt(args, "maxShingleSize", Sh
+public final short getShort(int index) {checkIndex(index, SizeOf.SHORT);return Memory.peekShort(backingArray, index + arrayOffset);}\n
+public List<Suggestion> getSuggestions(int numSuggestions) {List<Suggestion> suggestions = new ArrayList<>(numSuggestions);for (int
+public ByteBuffer putShort(int index, short value) {throw new ReadOnlyBufferException();}\n    public ByteBuffer putShort(int index, short value) {\n        if
+public final void writeBoolean(boolean val) throws IOException {writeByte(val ? (byte)1 : (byte)0);}\n    public final void writeByte(int val)
+public int offsetByCodePoints(int index, int codePointOffset) {return offsetByCodePointsImpl(index, codePointOffset);}\npublic int offsetByCodePoints(int
+public static int getConflictingAlts(BitSet alts, ATNConfigSet configs) {for (ATNConfig config : configs) {int alt = config.
+public Date getDate() {return getDate(null);}\npublic Date getDate(TimeZone tz) {return getDate(tz, null);}\npublic Date getDate
+public TokenStreamComponents(String name, TokenizerFactory<? extends Tokenizer> tokenizerFactory, TokenFilterFactory<? extends TokenFilter> tokenFilterFactory) {if (name == null)
+public DisableAlarmActionsResult disableAlarmActions(DisableAlarmActionsRequest request) {request = beforeClientExecution(request);return executeDisableAlarmActions(request);
+public CreateApplicationResult createApplication(CreateApplicationRequest request) {request = beforeClientExecution(request);return executeCreateApplication(request);}\n\n    /**\n     * Creates an
+public DeleteDBClusterResult deleteDBCluster(DeleteDBClusterRequest request) {request = beforeClientExecution(request);return executeDeleteDBCluster(request);}\n\n
+public ByteBuffer decode(ByteBuffer bytes) throws CharacterCodingException {if (bytes == null) {throw new NullPointerException();}if (!bytes.hasArray()) {throw new
+public Role(String path, String roleName) {setPath(path);setRoleName(roleName);}\n\n    /**\n     * <p>The path to the
+public final byte[] array() {return protectedArray();}\n    public final int arrayOffset() {return protectedArrayOffset();}\n\n    public ByteBuffer asReadOnlyBuffer() {
+public PrintHeadersRecord(RecordInputStream in) {field_1_print_headers = in.readShort();}\n\npublic void setPrintHeaders(boolean value) {\n    field
+public DeleteDBInstanceRequest(String dBInstanceIdentifier) {setDBInstanceIdentifier(dBInstanceIdentifier);}\n\n    public String getDBInstanceIdentifier() {\n        return d
+public TemplateElement getElement(String name) {if (name == null) {return null;}TemplateElement element = elements.get(name);if (element != null) {return element
+public void setTokenizerFactory(Class<? extends TokenizerFactory> tokenizerFactory) {try {super.setTokenizerFactory(tokenizerFactory);} catch (IllegalAccessException
+public IncreaseReplicationFactorResult increaseReplicationFactor(IncreaseReplicationFactorRequest request) {request = beforeClientExecution(request);return executeIncrease
+public int[] getCellReferences() {return _cellReferences.clone();}\n\npublic int getNumCells() {return _cellReferences.length; }\n\npublic
+public long ramBytesUsed() {return super.ramBytesUsed()+ RamUsageEstimator.alignObjectSize(RamUsageEstimator.NUM_BYTES
+public RegisterInstancesWithLoadBalancerResult registerInstancesWithLoadBalancer(RegisterInstancesWithLoadBalancerRequest request) {request = beforeClientExecution(request);return executeRegister
+public ModifyImageSharePermissionRequest() {super("cr", "2016-06-07", "ModifyImageSharePermission", "cr");setUri
+public FnGroupCountRecord(RecordInputStream in) {field_1_fnGroupCount = in.readShort();}\n\npublic String toString() {\n    StringBuffer buffer
+public void serialize(LittleEndianOutput out) {out.writeShort(getFirstRow());out.writeShort(getLastRow());out.writeShort(getFirstCol());
+public DeleteInternetGatewayResult deleteInternetGateway(DeleteInternetGatewayRequest request) {request = beforeClientExecution(request);return executeDeleteInternetGateway(request
+public File getFile(final String name) throws FileNotFoundException {if (name == null) {throw new IllegalArgumentException("Name must not be null");}final Entry entry =
+public String toString() {StringBuilder buffer = new StringBuilder();buffer.append("[BACKUP]\\n");buffer.append("    .backup          = ").append(H
+public DeleteVoiceConnectorTerminationCredentialsResult deleteVoiceConnectorTerminationCredentials(DeleteVoiceConnectorTerminationCredentialsRequest request) {request = beforeClientExecution
+public FSTWriter add(BytesRef bytes) throws IOException {add(bytes.bytes, bytes.offset, bytes.length);return this;}\n\n 
+public static String fileExtension(String codecName) {if (codecName == null) {return null;}if (codecName.equals("Lucene3x")) {
+public static Optional<ObjectId> parse(AnyObjectId id) {if (id instanceof ObjectId) {return Optional.of((ObjectId) id);}if (id instanceof Object
+public StartDocumentTextDetectionResult startDocumentTextDetection(StartDocumentTextDetectionRequest request) {request = beforeClientExecution(request);return executeStartDocumentTextD
+public static String quote(String s) {StringBuilder sb = new StringBuilder(s.length() + 
+public void setValue(V newValue) {value = newValue;onChange(oldValue, newValue);}\n\\end{code}\n\nThe `onChange` method
+public StandardSyntaxParserTokenManager(CharStream stream){input_stream = stream;}\npublic StandardSyntaxParserTokenManager(CharStream stream){\n\tinput_stream = stream;\n}
+public double log2() {double result = Math.log(value) / Math.log(2.0);if (result == Double.NEGATIVE_INFINITY)
+public LongBuffer get(long[] dst, int dstOffset, int longCount) {byteBuffer.limit(limit * SizeOf.LONG);byteBuffer.position(position * Size
+public void removeParserListener(ParserListener listener) {_listeners.remove(listener);}\n\n    @Override\n    public void removeErrorListener(ANTLRErrorListener listener
+public XMLEventReaderImpl(XMLEventReader reader, XMLReporter reporter) {super(reader);this.reporter = reporter;this.reader = reader
+public ListObjectVersionsResult listObjectVersions(ListObjectVersionsRequest request) {request = beforeClientExecution(request);return executeListObjectVersions(request
+public ObjectId(byte[] name) {super(name);}\n\n    public ObjectId(ObjectId id) {\n        super(id);\n    }\n\n    public
+public int stemSuffix(char s[], int len) {for (int i = len - 
+public void reportAmbiguity(Parser recognizer, DFA dfa, int startIndex, int stopIndex, boolean exact, BitSet ambigAlts, ATNConfigSet
+public String toFormulaString() {StringBuilder sb = new StringBuilder(64);sb.append(FormulaError.valueOf(getErrorCode()).getString());if (getErrorCode
+public DeleteFaceRequest() {super("LinkFace", "2018-07-20", "DeleteFace");setProtocol(ProtocolType.HTTPS);setMethod(
+public Role(String path, String roleName) {setPath(path);setRoleName(roleName);}\n\n    /**\n     * <p>The path to the
+public String get(String key) {String value = super.get(key);if (value == null) {throw new NoSuchElementException(key);}return value; }
+public DescribeSnapshotAttributeResult describeSnapshotAttribute(DescribeSnapshotAttributeRequest request) {request = beforeClientExecution(request);return executeDescribeSnapshotAttribute(request);}\n\n   
+public DeleteApiKeyResult deleteApiKey(DeleteApiKeyRequest request) {request = beforeClientExecution(request);return executeDeleteApiKey(request);}\n\n    /**\n    
+public Credential(String accessKeyId, String accessKeySecret) {this.accessKeyId = accessKeyId;this.accessKeySecret = accessKeySecret;this.securityToken
+public Area3DPtg(int firstRow, int firstCol, int lastRow, int lastCol) {field_1_first_row = firstRow;field_2_
+public static TermsEnum getTermsEnum(IndexReader reader, String field, BytesRef term) throws IOException {Terms terms = reader.terms(field);if (ter
+public DeleteApnsVoipChannelResult deleteApnsVoipChannel(DeleteApnsVoipChannelRequest request) {request = beforeClientExecution(request);return executeDelete
+public ListAppsResult listApps(ListAppsRequest request) {request = beforeClientExecution(request);return executeListApps(request);}\n\n    /**\n    
+public DistanceValueSource(ValueSource vs1, ValueSource vs2, DistanceUnit unit) {this.vs1 = vs1;this.vs2 = vs2;this
+public char setChar(int index, char ch) {if (index < 
+public UpdateTemplateAliasResult updateTemplateAlias(UpdateTemplateAliasRequest request) {request = beforeClientExecution(request);return executeUpdateTemplateAlias(request);}\n\n
+public DescribeScalingPoliciesResult describeScalingPolicies(DescribeScalingPoliciesRequest request) {request = beforeClientExecution(request);return executeDescribe
+public DescribeHostsResult describeHosts(DescribeHostsRequest request) {request = beforeClientExecution(request);return executeDescribeHosts(request);}\n\n   
+public static ParserRuleContext getParserRuleContext(ParserRuleContext parent, Token start, Token stop, int ruleIndex) {ParserRuleContext result = new ParserRuleContext(parent
+public String toString() {StringBuilder buffer = new StringBuilder();buffer.append("[HFPATTERN]\\n");buffer.append("    .patternType = ").append(
+public String toString() {StringBuilder sb = new StringBuilder();sb.append(getClass().getSimpleName());sb.append('[');sb.append(getName());sb.append
+public ListApplicationsResult listApplications(ListApplicationsRequest request) {request = beforeClientExecution(request);return executeListApplications(request);}\n\n    /**\n    
+public boolean isAutoFlush() {return autoFlush;}\n    public void setAutoFlush(boolean autoFlush) {this.autoFlush = autoFlush;}\n
+public EscherAggregate() {_escherRecords = new ArrayList<>();}\n\n    public void addEscherRecord(EscherRecord r) {\n        _escher
+public ShortBuffer put(int index, short c) {throw new ReadOnlyBufferException();}\n\n 
+public void setQuery(String query) {try {this.query = new Query(query);} catch (ParseException e) {throw new RuntimeException(e);}}\n\n\t
+public SubmoduleSyncCommand submoduleSync() {return new SubmoduleSyncCommand(repo);}\n/** @see SubmoduleSyncCommand */\npublic static class SubmoduleSyncCommand extends Git
+public Set<String> keySet() {return Collections.unmodifiableSet(map.keySet());}\n\n\t@Override\n\tpublic int size() {\n\t\t
+public static int parsePort(String authority, int defaultPort) {if (authority == null) {return defaultPort;}int pos = authority.indexOf(':');if (pos <
+public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {request = beforeClientExecution(request);return executeListTagsForResource(request);}\n\n
+public RestoreDBClusterFromSnapshotResult restoreDBClusterFromSnapshot(RestoreDBClusterFromSnapshotRequest request) {request = beforeClientExecution(request);return executeRestore
+public void addShape(HSSFShape shape) {getEscherContainer().addChildRecord(shape.getEscherContainer());shape.afterInsert(this);}\n\n   
+public boolean equals(Object obj) {if (this == obj) {return true;}if (obj == null) {return false;}if (getClass() != obj.getClass())
+public static int skipWhitespace(byte[] s, int pos, int len) {while (pos < len && isWhitespace(s[pos]))pos++;return pos;}
+public boolean isExactRevision() {return refName != null;}\n\n    /**\n     * Create a new instance with the same data as this one.\n     *\n    
+public Token consume() {Token t = _input.LT(1);try {_channel = Token.DEFAULT_CHANNEL;_tokenStartCharIndex = _input.index
+public UpdateUserRequest(String userName) {setUserName(userName);}\npublic UpdateUserRequest() {}\n\npublic UpdateUserRequest(String userName) {\n    set
+public RevFilter negate() {return new NotRevFilter(this);}\n\n    public RevFilter not() {\n        return new NotRevFilter(this);\n   
+public void setProgressMonitor(ProgressMonitor pm) {progressMonitor = pm;}\n\npublic void setProgressMonitor(ProgressMonitor pm) {\n    progressMonitor
+public static int calculateBufferSize(int minBufferSize) {int bufferSize = minBufferSize;if (bufferSize < MIN_BUFFER_SIZE) {bufferSize = M
+public static int findLF(byte[] b, int pos, int end) {while (pos < end) {if (b[pos] == '\\n') return pos;pos
+public PrintHeadersRecord(RecordInputStream in) {field_1_print_headers = in.readShort();}\n\npublic void serialize(LittleEndianOutput out) {\n
+public DescribeJobFlowsRequest(java.util.List<String> jobFlowIds) {setJobFlowIds(jobFlowIds);}\n    public DescribeJobFlows
+public CreateFleetResult createFleet(CreateFleetRequest request) {request = beforeClientExecution(request);return executeCreateFleet(request);}\n\n
+public ImportKeyPairResult importKeyPair(ImportKeyPairRequest request) {request = beforeClientExecution(request);return executeImportKeyPair(request);}\n\n/**\n * <
+public int getType() {return type;}\npublic int getTypeValue() {return type;}\n\npublic String toString() {\n\tint type = getType();\n\tif
+public String getHost() {return this.host;}\n\n/**\n * @return the port number of the connection.\n */\npublic int getPort() {\n    return this.
+public void write(char[] cbuf, int off, int len) {append(new String(cbuf, off, len));}\n 
+public MoveAlbumPhotosRequest() {super("CloudPhoto", "2017-07-11", "MoveAlbumPhotos", "cloudphoto");}\n
+public DeleteAttributesResult deleteAttributes(DeleteAttributesRequest request) {request = beforeClientExecution(request);return executeDeleteAttributes(request);}\n\n    /**\n     * Executes the
+public GetAccountSendingEnabledResult getAccountSendingEnabled(GetAccountSendingEnabledRequest request) {request = beforeClientExecution(request);return executeGetAccountSendingEnabled(request
+@Override public boolean remove(Object key) {if (key == null) {throw new NullPointerException();}return super.remove(key) != null;}\n    }\n\\
+public E first() {return backingMap.firstEntry().getValue();}\n    public E last() {return backingMap.lastEntry().getValue();}\n    public void clear() {
+public CreateDeliveryStreamResult createDeliveryStream(CreateDeliveryStreamRequest request) {request = beforeClientExecution(request);return executeCreateDeliveryStream(request);}\n\n
+public boolean isReadOnly() {return this.readOnly;}\n    public boolean isReadOnly() {\n        return this.readOnly;\n    }\n\n    /**\n    
+public DisableDirectoryResult disableDirectory(DisableDirectoryRequest request) {request = beforeClientExecution(request);return executeDisableDirectory(request);}\n\n    /**\n     *
+public DescribeSchemaResult describeSchema(DescribeSchemaRequest request) {request = beforeClientExecution(request);return executeDescribeSchema(request);}\n\n    /**\n     *
+public void seek(int pos) {if (pos == curPos)return;if (pos < curPos)throw new IllegalStateException("seeking backwards");if (pos
+public RevFilter clone() {return new Binary(a.clone(), b.clone());}\n\npublic RevFilter clone() {\n\tfinal Binary b = (Binary) this.b
+public PorterStemFilter create(TokenStream input) {return new PorterStemFilter(input);}\n 
+public String action() {return action;}\n    public String getAction() {return action;}\n\n    @Override\n    public String toString() {\n        return message;\n   
+public String toString() {StringBuilder result = new StringBuilder();for (int i = 
+public DescribeImageAttributeResult describeImageAttribute(DescribeImageAttributeRequest request) {request = beforeClientExecution(request);return executeDescribeImageAttribute(request);}\n\n   
+public AttachVolumeResult attachVolume(AttachVolumeRequest request) {request = beforeClientExecution(request);return executeAttachVolume(request);}\n\n    /**\n     *
+public String toString() {StringBuilder sb = new StringBuilder();sb.append(getClass().getName()).append(" [");sb.append("rowIndex=").append(Integer.to
+public StandardAnalyzer(Version version, Set<? extends CharFilterFactory> charFilters, Set<? extends TokenFilterFactory> tokenFilters) {super(version, charFilters
+public ListTagsResult listTags(ListTagsRequest request) {request = beforeClientExecution(request);return executeListTags(request);}\n\n    /**\n     * <p>
+public CountDownLatch(int count, long timeout, TimeUnit unit) {super(count);this.timeout = unit.toMillis(timeout);this.unit = unit;
+public EscherAggregate() {_escherContainer = new EscherContainerRecord();}\n\n    /**\n     * Creates a new EscherAggregate from an existing
+public ListStacksResult listStacks(ListStacksRequest request) {request = beforeClientExecution(request);return executeListStacks(request);}\n\n    /**\n    
+public void decode(byte[] blocks, int blocksOffset, long[] values, int valuesOffset, int iterations) {for (int i = 
+public MultiTermQueryBuilder setRewriteMethod(MultiTermQuery.RewriteMethod rewriteMethod) {this.rewriteMethod = rewriteMethod;return this;}\n\n    @Override\n   
+public static int idealByteArraySize(int need) {int result = 
+public UpdateDetectorVersionResult updateDetectorVersion(UpdateDetectorVersionRequest request) {request = beforeClientExecution(request);return executeUpdateDetectorVersion(request);}\n\n
+public ModifyImageResult modifyImage(ModifyImageRequest request) {request = beforeClientExecution(request);return executeModifyImage(request);}\n\n    /**\n     *
+public Cell merge(Cell a, Cell b) {if (a == null) return b;if (b == null) return a;return new Cell(Math.min(a.
+public InputStream readFully(long position, int length) throws IOException {if (position < 
+public void reportTaskProgress(ReportTaskProgressRequest request) {request = beforeClientExecution(request);executeReportTaskProgress(request);}\n\n    public void reportTaskProgress(Report
+public synchronized void setProgress(int progress) {if (mProgress != progress) {mProgress = progress;onProgressChanged(mProgress, mSecondaryProgress);}}\n\n
+public FileMode getFileMode() {final FileMode result;if (isFile()) {result = FileMode.REGULAR_FILE;} else if (isDirectory()) {result =
+public static FontRecord createFontRecord(HSSFFont font) {FontRecord fr = new FontRecord();fr.setFontHeight((short)font.getFontHeight());fr.
+public CharBuffer put(char[] src, int srcOffset, int charCount) {byteBuffer.limit(limit * SizeOf.CHAR);byteBuffer.position(position * SizeOf
+public int getFormulaCount() {int count = 
+public StemmerOverrideFilterFactory(Map<String,String> args) {super(args);stemDict = get(args, "dictionary");overrideDict = get(args,
+public static double log2(double d) {if (d <= 
+public TurkishLowerCaseFilterFactory(Map<String,String> args) {super(args);if (!args.isEmpty()) {throw new IllegalArgumentException("Unknown parameters: " +
+public static boolean hasWildcard(String fieldName, Set<String> fieldsToLoad) {if (fieldsToLoad != null && fieldsToLoad.contains(fieldName)) {
+public DeleteDocumentResult deleteDocument(DeleteDocumentRequest request) {request = beforeClientExecution(request);return executeDeleteDocument(request);}\n\n    /**\n     * <p>
+public String toString() {StringBuilder buffer = new StringBuilder();buffer.append("[BACKGROUND]\\n");buffer.append("    .pattern         = ").append(
+public final byte get(int index) {checkIndex(index);return backingArray[offset + index];}\npublic final void set(int index, byte value) {checkIndex(
+public String toString() {return "";}\n\n    @Override\n    public int hashCode() {\n        return 
+public ValueEval evaluate(int srcRowIndex, int srcColumnIndex, ValueEval arg0, ValueEval arg1,ValueEval arg2) {AreaEval a
+public void clearScoreFunctions() {scorers.clear();}\n\n    @Override\n    public String toString() {\n      return scorers.toString();\n   
+public int copyString(char[] buffer, int offset, String string) {if (string == null) {return offset;}System.arraycopy(string.toCharArray(), 
+final public SrndQuery OrQuery() throws ParseException {SrndQuery q;ArrayList<SrndQuery> queries;Token op;q = AndQuery();queries = new
+public DeletePublicKeyResult deletePublicKey(DeletePublicKeyRequest request) {request = beforeClientExecution(request);return executeDeletePublicKey(request);}\n\n    /**\n    
+public ModifyUserInfoRequest() {super("LinkFace", "2018-07-20", "ModifyUserInfo", "linkface");setProtocol(Protocol
+public DeleteIdentityProviderResult deleteIdentityProvider(DeleteIdentityProviderRequest request) {request = beforeClientExecution(request);return executeDeleteIdentityProvider(request);}\n\npublic DeleteIdentityProvider
+public DescribeAvailabilityZonesResult describeAvailabilityZones(DescribeAvailabilityZonesRequest request) {request = beforeClientExecution(request);return executeDescribe
+public int serialize( int offset, byte[] data, EscherSerializationListener listener ) {listener.beforeRecordSerialize( offset, getRecordId(), this );int pos = offset;
+public CreateConfigurationSetEventDestinationResult createConfigurationSetEventDestination(CreateConfigurationSetEventDestinationRequest request) {request = beforeClientExecution(request);return executeCreateConfigurationSetEvent
+public DescribeClientVpnEndpointsResult describeClientVpnEndpoints(DescribeClientVpnEndpointsRequest request) {request = beforeClientExecution(request);return executeDescribe
+public static void fill(float[] array, float value) {for (int i = 
+public boolean hasPrevious() {return pos > 
+public PostingsEnum reset(int[] docs, int[] freqs) {this.docs = docs;this.freqs = freqs;doc = -1;return
+public final boolean has(RevFlag flag) {return (flags & flag.mask) != 
+public ModifyInstanceResult modifyInstance(ModifyInstanceRequest request) {request = beforeClientExecution(request);return executeModifyInstance(request);}\n\n    /**\n     *
+public Token get(int i) {if ( i < 
+public void removeSheet(int sheetIndex) {_workbook.removeSheet(sheetIndex);int nSheets = _workbook.getNumberOfSheets();for (int i
+public void removeName(int nameIndex) {getNames().remove(nameIndex);}\n```\n\n## <a name="delete-a-worksheet-in-a-
+public boolean equals(Object obj) {if (this == obj) {return true;}if (obj == null) {return false;}if (getClass() != obj.getClass())
+public GetRepoListRequest() {super("cr", "2016-06-07", "GetRepoList", "cr");setUriPattern("/repos
+public ByteArrayOutputStream() {buf = new byte[32];}\n\n    @Override\n    public void write(int b) {\n        if (count == buf.length
+public void addRecords(RecordStream rs) {\n        while (rs.hasNext()) {\n            records.add(rs.next());\n        }\n    }\n\n
+public void close() throws IOException {if (closed) {throw new IOException(JGitText.get().streamHasAlreadyBeenClosed);}closed = true;try {if
+public DescribeSchemaResult describeSchema(DescribeSchemaRequest request) {request = beforeClientExecution(request);return executeDescribeSchema(request);}\n\n    /**\n     *
+public void evaluateAll(FormulaEvaluator evaluator, OperationEvaluationContext ec) {int numPtgs = ptgs.length;for(int i=0;
+public RevCommit clone() {return new RevCommit(this);}\n\n    @Override\n    public boolean equals(Object o) {\n        if (this == o)
+public UpdateDataSourcePermissionsResult updateDataSourcePermissions(UpdateDataSourcePermissionsRequest request) {request = beforeClientExecution(request);return executeUpdateDataSourcePermissions(request);}\n\n
+public MultiFieldQueryNode(List<QueryNode> clauses) {if (clauses == null) {throw new IllegalArgumentException("Clauses must not be null");}if
+public CharSequence toQueryString(EscapeQuerySyntax escapeSyntaxParser) {CharSequence qstr = super.toQueryString(escapeSyntaxParser);if (qstr != null) {
+public void removePropertySets() {EscherAggregate escherAggregate = getEscherAggregate();if (null == escherAggregate) {return;}
+public void reset() {pos = 
+public RegisterTaskDefinitionResult registerTaskDefinition(RegisterTaskDefinitionRequest request) {request = beforeClientExecution(request);return executeRegisterTaskDefinition(request);}\n\n    /**\n    
+public boolean markSupported() {return false;}\n        @Override\n        public void mark(int readAheadLimit) {\n            throw new UnsupportedOperationException();\n        }
+public ModifyMountTargetSecurityGroupsResult modifyMountTargetSecurityGroups(ModifyMountTargetSecurityGroupsRequest request) {request = beforeClientExecution(request);return executeModifyMountTargetSecurity
+public DeleteDBClusterParameterGroupResult deleteDBClusterParameterGroup(DeleteDBClusterParameterGroupRequest request) {request = beforeClientExecution(request);return executeDeleteDBCluster
+public static String toString(byte[] bytes) {return new String(bytes, StandardCharsets.UTF_8);}\n    public static String toString(byte[] bytes, Char
+public int getPort() {return port;}\n\npublic String getHost() {\n\treturn host;\n}\n\npublic void setHost(String host) {\n\tthis.
+public StopTrainingJobResult stopTrainingJob(StopTrainingJobRequest request) {request = beforeClientExecution(request);return executeStopTrainingJob(request);}\n\n
+public void seekExact(BytesRef term, TermState otherState) {\n    if (term == null) {\n      throw new IllegalArgumentException("term must not be null
+public PrintHeadersRecord(RecordInputStream in) {field_1_print_headers = in.readShort();}\n\npublic void setPrintHeaders(boolean value) {\n    field
+public static void writeDouble(LittleEndianOutput out, double value) {if (Double.isNaN(value)) {out.writeInt(0xffc000
+public ClusterSecurityGroup authorizeClusterSecurityGroupIngress(AuthorizeClusterSecurityGroupIngressRequest request) {request = beforeClientExecution(request);return executeAuthorizeCl
+public void addFile(String filename) {addFile(new File(filename));}\n\n 
+public void setPadding(int left, int top, int right, int bottom) {mPaddingLeft = left;mPaddingTop = top;mPaddingRight = right
+public void setMergeSmallDictionaries(boolean mergeSmallDictionaries) {this.mergeSmallDictionaries = mergeSmallDictionaries;}\n\n   
+public IntervalSet getPredicateIntervals(RuleContext ctx, int ruleIndex) {return getPredicateIntervals(ctx, ruleIndex, PredictionContext.EMPTY_
+public void serialize(LittleEndianOutput out) {out.writeShort(getFirstRow());out.writeShort(getLastRow());out.writeShort(getFirstCol());
+public Builder(int size) {this.size = size;}\n\n    public Builder() {\n      this(DEFAULT_SIZE);\n    }\n\n    public Builder
+public IllegalArgumentException(String message, int index, int size) {super(message);if (index < 
+public long get(String key) {long value = map.get(key);if (value == 
+public ListNotebookInstanceLifecycleConfigsResult listNotebookInstanceLifecycleConfigs(ListNotebookInstanceLifecycleConfigsRequest request) {request = beforeClientExecution(request);
+public DeleteObjectResult deleteObject(String bucketName, String key) {return deleteObject(new DeleteObjectRequest(bucketName, key));}\n\npublic DeleteObjectResult deleteObject(
+public boolean isBetterThan(SimScorer scorer, int doc) {return docScorer.score(doc) > scorer.score(doc);}\n
+public void seekExact(long pos) {assert pos >= 
+public UpdateDetectorVersionResult updateDetectorVersion(UpdateDetectorVersionRequest request) {request = beforeClientExecution(request);return executeUpdateDetectorVersion(request);}\n\n
+public UpdateConfigurationSetEventDestinationResult updateConfigurationSetEventDestination(UpdateConfigurationSetEventDestinationRequest request) {request = beforeClientExecution(request);return executeUpdateConfigurationSetEvent
+public boolean equals(Object other) {if (other instanceof BytesRef) {final BytesRef otherBR = (BytesRef) other;return Arrays.equals(bytes, other
+public int stem(char s[], int len) {if (len < 
+public DescribeDBClusterParameterGroupsResult describeDBClusterParameterGroups(DescribeDBClusterParameterGroupsRequest request) {request = beforeClientExecution(request);return executeDescribe
+public FieldDoc(String field, int doc, float score, String[] values) {super(doc, score);this.field = field;this.values = values;this.doc
+public CreateDatasetResult createDataset(CreateDatasetRequest request) {request = beforeClientExecution(request);return executeCreateDataset(request);}\n\n    /**\n    
+public Object getValue() {return value;}\npublic String getString() {return (value != null) ? value.toString() : null;}\npublic int getIntValue() {return
+public ShortBuffer asReadOnlyBuffer() {return duplicate();}\n\n 
+public UpdateDataSourcePermissionsResult updateDataSourcePermissions(UpdateDataSourcePermissionsRequest request) {request = beforeClientExecution(request);return executeUpdateDataSourcePermissions(request);}\n\n
+public static boolean isBiffRecord(RecordInputStream in) {int sid = in.getSid();if (sid == BOFRecord.sid) {return true;}if
+public int size() {return mMap.size();}\n\n    @Override\n    public boolean containsKey(Object key) {\n        return mMap.containsKey(key);
+public DeleteAppLaunchConfigurationResult deleteAppLaunchConfiguration(DeleteAppLaunchConfigurationRequest request) {request = beforeClientExecution(request);return executeDeleteAppLaunchConfiguration(request);}\n\n
+public CreateImageResult createImage(CreateImageRequest request) {request = beforeClientExecution(request);return executeCreateImage(request);}\n\n    /**\n     * <p>
+public IntBuffer slice() {return new ReadWriteIntArrayBuffer(remaining(), backingArray, offset + position);}\npublic IntBuffer duplicate() {return new ReadWriteIntArrayBuffer
+public final float getFloat() throws IOException {return primitiveField.getFloat();}\n    @Override\n    public final double getDouble() throws IOException {\n        return primitiveField.get
+public LongBuffer put(int index, long c) {checkIndex(index);backingArray[offset + index] = c;return this;}\n\n 
+public StoredField(String name, double value) {super(name, TYPE);fieldsData = value;}\n    public void setDoubleValue(double value) {\n      if
+public IntervalSet getExpectedTokens() {ATN atn = getATN();List<IntervalSet> sets = new ArrayList<IntervalSet>();for (ATNState
+public String toString() {StringBuilder buffer = new StringBuilder();buffer.append("[BACKUP]\\n");buffer.append("    .backup          = ").append(H
+public SubmoduleUpdateCommand(Repository repo) {super(repo);paths = new ArrayList<>();}\n/**\n * Add a submodule to be updated.\n *\n * @param path
+public void updateRef(String name, boolean force, ObjectId id) {if (id == null)throw new IllegalArgumentException(MessageFormat.format(JGitText.get
+public CopyImageResult copyImage(CopyImageRequest request) {request = beforeClientExecution(request);return executeCopyImage(request);}\n\n    /**\n     * <p>
+public Builder clone() {return new Builder(this);}\n\n\t@Override\n\tpublic String toString() {\n\t\treturn getClass().getSimpleName() +
+public void serialize(LittleEndianOutput out) {out.writeShort(field_1_first_row);out.writeShort(field_2_last_row);out
+public static PrintWriter getPrintWriter() {return new PrintWriter(new OutputStreamWriter(System.out, StandardCharsets.UTF_8));}\n\n    /**\n     *
+public int get(String name, int dflt) {int vals[] = (int[]) values.get(name);if (vals == null) return dflt;
+public void removeExternSheetRecord() {ExternSheetRecord esr = _externSheetRecords.get(0);_externSheetRecords.remove(esr);
+public StandardAnalyzer(Version matchVersion,TokenizerFactory tokenizerFactory,TokenFilterFactory[] tokenFilters){super(matchVersion);this.tokenizerFactory = tokenizerFactory
+public ExternalBookBlock(int externSheetIndex) {_externSheetIndex = externSheetIndex;_externalBookBlockRecords = new ExternalBookBlockRecord[0];}\n\n
+public String toString() {StringBuilder buffer = new StringBuilder();buffer.append("[BACKUP]\\n");buffer.append("    .backup          = ").append(H
+public StashCreateCommand setIncludeUntracked(boolean includeUntracked) {checkCallable();this.includeUntracked = includeUntracked;return
+public int compareTo(HSSFName other) {return _nameRecord.compareTo(other._nameRecord);}\n\n    @Override\n    public String toString() {
+public TokenStream create(TokenStream input) {return new DutchStemFilter(input);}\n}\n\n/**\n * Filters {@link org.apache.lucene.
+public BlockList() {blocks = new ArrayList<>();}\n\n\t@Override\n\tpublic void clear() {\n\t\tblocks.clear();\n\t}\n\n\t@
+public QueryScorer(List<QueryScorer> subScorers) {this.subScorers = new ArrayList<QueryScorer>(subScorers.
+public boolean equals(Object obj) {if (this == obj) {return true;}if (obj == null) {return false;}if (getClass() != obj.getClass())
+public Charset charset() {return this.charset;}\n\npublic CharsetDecoder clone() {\n    return (CharsetDecoder) super.clone();\n}\n\n
+public DescribeModelResult describeModel(DescribeModelRequest request) {request = beforeClientExecution(request);\n        return executeDescribeModel(request);\n    }\n\n   
+public HSSFClientAnchor(int dx1, int dy1, int dx2, int dy2, int col1, int row1, int col2, int row2){
+public String pattern() {return this.pattern;}\n\npublic String replacement() {\nreturn this.replacement;}\n\npublic String flags() {\nreturn this.flags;}\n\n
+public DeleteLoadBalancerResult deleteLoadBalancer(DeleteLoadBalancerRequest request) {request = beforeClientExecution(request);return executeDeleteLoadBalancer(request);}\n\n
+public AssociateIpGroupsResult associateIpGroups(AssociateIpGroupsRequest request) {request = beforeClientExecution(request);return executeAssociateIpGroups(request);
+public PutScalingPolicyResult putScalingPolicy(PutScalingPolicyRequest request) {request = beforeClientExecution(request);return executePutScalingPolicy(request);}\n\n
+public Pair(K key, V value) {this.key = key;this.value = value;}\n\n\tpublic K getKey() {\n\t\treturn key;\n
+public void decode(byte[] blocks, int blocksOffset, long[] values, int valuesOffset, int iterations) {for (int i = 
+public DisassociateFleetResult disassociateFleet(DisassociateFleetRequest request) {request = beforeClientExecution(request);return executeDisassociateF
+public FileMode getOldMode() {return oldMode;}\npublic boolean hasOldMode() {return oldMode != null;}\n\npublic boolean hasNewMode() {return newMode !=
+@Override public String toString() {return map.toString();}\n\n    @Override\n    public int hashCode() {\n      return map.hashCode();\n    }\n
+public StopEntitiesDetectionJobResult stopEntitiesDetectionJob(StopEntitiesDetectionJobRequest request) {request = beforeClientExecution(request);return executeStop
+public String toString() {StringBuilder buffer = new StringBuilder();buffer.append(getClass().getName());buffer.append(" [");buffer.append(StringUtil.formatHexString
+public ListDocumentClassificationJobsResult listDocumentClassificationJobs(ListDocumentClassificationJobsRequest request) {request = beforeClientExecution(request);return executeListDocumentClassification
+public String toString() {return "[" + start + ":" + end + "]";}\n 
+public static int getEncodedSize(int value) {if (value < 
+public Parameter(String key, String value) {setKey(key);setValue(value);}\n    public String getKey() {\n        return this.key;\n    }
+public DescribeWorkflowTypeResult describeWorkflowType(DescribeWorkflowTypeRequest request) {request = beforeClientExecution(request);return executeDescribeWorkflowType(request);
+public HSSFCell getCell(int cellnum) {HSSFRow row = getRow(cellnum);return row == null ? null : row.getCell(cellnum
+public void write(byte[] b) {write(b,0,b.length);}\n    @Override\n    public void write(byte[] b, int off, int len
+public RunInstancesRequest(String imageId, Integer minCount, Integer maxCount) {setImageId(imageId);setMinCount(minCount);setMaxCount(maxCount
+public void clear() {_hasData = false;}\n\n    /**\n     * Returns true if this instance has data.\n     */\n    public boolean hasData() {return _
+public ObjectId getPeeledObjectId() {return peeledObjectId;}\n\npublic ObjectId getPeeledObjectId() {\n\treturn peeledObjectId
+public void deprecateDomain(DeprecateDomainRequest request) {request = beforeClientExecution(request);executeDeprecateDomain(request);}\n\n    /**\n     * <
+public void write(LittleEndianOutput out) {out.writeByte(sid + getPtgClass());out.writeShort(getRow());out.writeShort(
+public DeleteQueueResult deleteQueue(String queueUrl) {return deleteQueue(new DeleteQueueRequest().withQueueUrl(queueUrl));}\n\npublic DeleteQueueResult deleteQueue(Delete
+public void setDetectRenames(boolean b) {detectRenames = b;}\n\n    public boolean isDetectRenames() {\n        return detectR
+public void shrink() {start++;end--;if (end < start) {end = start;}}\npublic void grow() {start--;end++;if (end < start
+public int getPackedGitWindowSize() {return packedGitWindowSize;}\n\n/**\n * Create a new pack index.\n *\n * <p>\n * <p
+public PutScalingPolicyResult putScalingPolicy(PutScalingPolicyRequest request) {request = beforeClientExecution(request);return executePutScalingPolicy(request);}\n\n
+public ChangeMessageVisibilityBatchResult changeMessageVisibilityBatch(ChangeMessageVisibilityBatchRequest request) {request = beforeClientExecution(request);return executeChangeMessageVisibilityBatch(request);}\n\n
+public CreateQueueRequest(String queueName) {setQueueName(queueName);}\n\npublic CreateQueueRequest() {}\n\npublic CreateQueueRequest(String queueName) {\n
+public Area3DPtg(int externIdx, int firstRow, int firstColumn, int lastRow, int lastColumn) {this(externIdx, firstRow,
+public void setDuration(long duration) {this.duration = duration;}\n\npublic long getDuration() {return duration;}\n\npublic long getStartTime() {return startTime;}
+public EnableVpcClassicLinkDnsSupportResult enableVpcClassicLinkDnsSupport(EnableVpcClassicLinkDnsSupportRequest request) {request = beforeClient
+public String toString() {StringBuilder sb = new StringBuilder();sb.append(super.toString());sb.append(' ');sb.append(getField());return sb.toString();
+public DescribeScalingPoliciesResult describeScalingPolicies(DescribeScalingPoliciesRequest request) {request = beforeClientExecution(request);return executeDescribe
+public ValueEval getAreaEval(int relFirstRowIx, int relLastRowIx, int relFirstColIx, int relLastColIx) {if
+public ShortBuffer put(short[] src, int srcOffset, int shortCount) {byteBuffer.limit(limit * SizeOf.SHORT);byteBuffer.position(position * Size
+public void parse(String s) {this.s = s;}\n\n\t@Override\n\tpublic String toString() {\n\t\treturn s;\n\t}\n\n\t
+public final void writeBoolean(boolean val) throws IOException {writeByte(val ? (byte)1 : (byte)0);}\n    @Override\n    public void writeByte(
+public DescribeImageAttributeResult describeImageAttribute(DescribeImageAttributeRequest request) {request = beforeClientExecution(request);return executeDescribeImageAttribute(request);}\n\n   
+public CRNRecord(RecordInputStream in) {field_1_first_row = in.readUShort();field_2_last_row = in.readUShort();field
+public RevisionWalk(ObjectReader reader) {this(reader, false);}\n\nRevisionWalk(ObjectReader reader, boolean firstParent) {\n\tthis.reader
+public ExecuteWorkflowResult executeWorkflow(ExecuteWorkflowRequest request) {request = beforeClientExecution(request);return executeWorkflow(request);}\n\n    /**\n    
+public DVRecord clone() {return copy();}\n public DVRecord copy() {\n   DVRecord rec = new DVRecord();\n   rec.field_1_
+public DoubleBuffer slice() {byteBuffer.limit(limit * SizeOf.DOUBLE);byteBuffer.position(position * SizeOf.DOUBLE);ByteBuffer slice = byte
+public DescribeSnapshotCopyGrantsResult describeSnapshotCopyGrants(DescribeSnapshotCopyGrantsRequest request) {request = beforeClientExecution(request);return executeDescribeSnapshotCopyGr
+public ListApplicationsResult listApplications(ListApplicationsRequest request) {request = beforeClientExecution(request);return executeListApplications(request);}\n\n    /**\n    
+public PatchSet(int id, RevCommit commit) {this.id = id;this.commit = commit;}\npublic void setId(int id) {this.id
+public String toFormulaString(String[] operands) {StringBuilder buffer = new StringBuilder();buffer.append(operands[ 
+public void createFormulas(FormulaEvaluator evaluator, Workbook wb) {Sheet[] sheets = wb.getSheets();for (Sheet sheet : sheets) {
+public ListPhotosRequest() {super("CloudPhoto", "2017-07-11", "ListPhotos", "cloudphoto");setProtocol(ProtocolType.
+public RAMDirectory(int ramBufferSizeMB, int maxMergeCount) {super();this.ramBufferSizeMB = ramBufferSizeMB;this.maxMergeCount = max
+public AllocateHostsResult allocateHosts(AllocateHostsRequest request) {request = beforeClientExecution(request);return executeAllocateHosts(request);}
+public NameCommentRecord(RecordInputStream in) {super(in);int field_1_rwFirst = in.readUShort();int field_2_rwLast = in.read
+public RevCommit parseCommit(AnyObjectId id)throws MissingObjectException, IncorrectObjectTypeException, IOException {RevCommit c = (RevCommit
+public CreateClusterSnapshotResult createClusterSnapshot(CreateClusterSnapshotRequest request) {request = beforeClientExecution(request);return executeCreateClusterSnapshot(request);}\n\n
+public int getNextRowIndex() {if (!hasNext()) {throw new java.util.NoSuchElementException("There are no more elements in the iterator.");}return _next
+public String toString() {return new String(toByteArray(), UTF_8);}\n 
+public ListTablesRequest(String exclusiveStartTableName) {setExclusiveStartTableName(exclusiveStartTableName);}\n\npublic String getExclusiveStartTableName
+public EnableAlarmActionsResult enableAlarmActions(EnableAlarmActionsRequest request) {request = beforeClientExecution(request);return executeEnableAlarmActions(request);}\n
+public Builder() {this(null);}\n\n    public Builder(String name) {\n      this.name = name;\n    }\n\n    public Builder add
+public boolean equals(Object obj) {if (this == obj) return true;if (obj instanceof AndScorer) {AndScorer other = (AndScorer)
+public TokenStream create(TokenStream input) {return new DutchStemFilter(input);}\n}\n\n/**\n * Filters {@link StandardTokenizer} with {@link Dutch
+public void clearShrinkToFit() {if (getShrinkToFit()) {getCTWorksheet().unsetShrinkToFit();getCTWork
+public long get(int index) {assert index >= 
+public DeleteBucketPolicyResult deleteBucketPolicy(DeleteBucketPolicyRequest request) {request = beforeClientExecution(request);return executeDeleteBucketPolicy(request
+public String toString() {return toString(false);}\npublic String toString(boolean escape) {return toString(escape, false);}\npublic String toString(boolean
+public CreateCloudFrontOriginAccessIdentityResult createCloudFrontOriginAccessIdentity(CreateCloudFrontOriginAccessIdentityRequest request) {request = beforeClientExecution(request);return executeCreateCloudFrontOrigin
+public void write(int oneChar) {buf.append((char) oneChar);}\n    @Override\n    public void write(byte[] buffer, int offset, int count)
+public ExternalBookRecord getExternalBookRecord() {return externalBookRecord;}\npublic ExternalNameRecord getExternalNameRecord() {\n\treturn externalNameRecord;\n}\n\npublic External
+public String toString() {return "<field name=\\"" + this.name + "\\" value=\\"" + this.value + "\\" boost=\\"" + this.boost + "\\"
+public static boolean supports(DocValuesType valuesType, FieldType fieldType) {return valuesType == DocValuesType.SORTED_SET || valuesType == DocValuesType.S
+public Builder(boolean sorted) {this.sorted = sorted;}\n\n    public Builder() {\n      this(true);\n    }\n\n    public Builder add(
+public String toString() {return getClass().getSimpleName() + "[" + fields.size() + " fields]";}\n\n 
+public DeleteModelPackageResult deleteModelPackage(DeleteModelPackageRequest request) {request = beforeClientExecution(request);return executeDeleteModelPackage(request);}\n\n    /**\n    
+public CopyImageResult copyImage(CopyImageRequest request) {request = beforeClientExecution(request);return executeCopyImage(request);}\n\n    /**\n     * <p>
+public void writeToSlide(Slide slide) {writeToSlide(slide, null);}\n    public void writeToSlide(Slide slide, EscherAggreg
+public DeleteTagsResult deleteTags(DeleteTagsRequest request) {request = beforeClientExecution(request);return executeDeleteTags(request);}\n\n    /**\n     * <p>
+public RevisionHeader getRevisionHeader() {return revisionHeader;}\n\npublic void setRevisionHeader(RevisionHeader revisionHeader) {\n\tthis.revisionHeader = revision
+public static Class<? extends Throwable> getRootCause(Throwable t) {if (t == null) {return null;}if (t.getCause() == null
+public String toString() {StringBuilder sb = new StringBuilder();sb.append(getClass().getSimpleName());sb.append(" [");sb.append("index=").append(
+public int nextIndex() {return nextIndexImpl();}\n    public int previousIndex() {return previousIndexImpl();}\n    public int nextIndex() {return nextIndexImpl();
+public CharSequence toQueryString(EscapeQuerySyntax escapeSyntaxParser) {if (this.getChildren() != null && this.getChildren().size() > 
+public RecalcIdRecord clone() {return copy();}\npublic RecalcIdRecord copy() {\n    RecalcIdRecord rec = new RecalcIdRecord();
+public boolean isError() {return error;}\n\n    /**\n     * 
+public CreateInstanceExportTaskResult createInstanceExportTask(CreateInstanceExportTaskRequest request) {request = beforeClientExecution(request);return executeCreateInstanceExportTask(request);}\n\n
+public void serialize(LittleEndianOutput out) {out.writeShort(field_1_options);}\n\t@Override\n\tpublic String toString() {\n\t\t
+public StopTrainingJobResult stopTrainingJob(StopTrainingJobRequest request) {request = beforeClientExecution(request);return executeStopTrainingJob(request);}\n\n
+public void setExpiredSeconds(int expiredSeconds) {this.expiredSeconds = expiredSeconds;}\n\n    public int getExpiredSeconds() {\n        return expired
+public GetLoadBalancerResult getLoadBalancer(GetLoadBalancerRequest request) {request = beforeClientExecution(request);return executeGetLoadBalancer(request);}\n\n
+public DoubleBuffer slice() {return new ReadWriteDoubleArrayBuffer(remaining(), backingArray, offset + position);}\npublic DoubleBuffer duplicate() {return new ReadWriteDoubleArrayBuffer
+public static String join(List<String> parts, String separator) {StringBuilder sb = new StringBuilder();boolean first = true;for (String part : parts) {if (first)
+public String toString() {return "(" + a.toString() + " AND " + b.toString() + ")";}\n 
+public ListSubscriptionsByTopicRequest(String topicArn) {setTopicArn(topicArn);}\n\n    public void setTopicArn(String
+public byte readByte() {return buf[pos++];}\n 
+public EnableVpcClassicLinkDnsSupportResult enableVpcClassicLinkDnsSupport(EnableVpcClassicLinkDnsSupportRequest request) {request = beforeClient
+public SendMessageRequest(String queueUrl) {setQueueUrl(queueUrl);}\n\n    /**\n     * <p>The URL of the Amazon SQS queue to which
+public void serialize(LittleEndianOutput out) {out.writeShort(field_1_first_row);out.writeShort(field_2_last_row);out
+public float add(float a, float b) {return a + b;}\n    @Override\n    public float subtract(float a, float b) {return a - b;}\n
+public PutScalingPolicyResult putScalingPolicy(PutScalingPolicyRequest request) {request = beforeClientExecution(request);return executePutScalingPolicy(request);}\n\n
+public static int find(byte[] b, int off, int len, byte c) {for (int i = off; i < len; i++)if (b[i] ==
+public int fillFields(byte[] data, int offset, EscherRecordFactory recordFactory) {int bytesRemaining = readHeader( data, offset );int pos = offset + 
+public CreateCloudFrontOriginAccessIdentityResult createCloudFrontOriginAccessIdentity(CreateCloudFrontOriginAccessIdentityRequest request) {request = beforeClientExecution(request);return executeCreateCloudFrontOrigin
+public boolean isParsed() {return this.isParsed;}\n\n    public boolean isParsed() {\n        return this.isParsed;\n   
+public void setQuiet(boolean quiet) {this.quiet = quiet;}\n\n    public boolean isQuiet() {\n        return quiet;\n    }\n\n
+public String getTypeName() {return typeName;}\n\n    /**\n     * Returns the simple name of the type represented by this {@code GenericType}.\n     *\n    
+public synchronized IndexInput openInput(String name) throws IOException {if (name == null) {throw new IllegalArgumentException("name is null");}if (name.equals(
+public int indexOfKey(int key) {return indexOfKey(key, 
+public DimensionsRecord(RecordInputStream in) {field_1_first_col = in.readShort();field_2_last_col = in.readShort();field_3
+public long size() {return size;}\n\n    @Override\n    public int hashCode() {\n        return (int) (size ^ (size >>> 
+public RefModeRecord(RecordInputStream in) {field_1_mode = in.readShort();}\n\npublic String toString() {\n    StringBuffer buffer = new StringBuffer
+public IllegalArgumentException(String message, int index, int size) {super(message);if (index < 
+public void close() throws IOException {if (closed) {return; }synchronized (this) {if (closed) {return; }closed = true;try {flush();}
+public DeleteServerCertificateRequest(String serverCertificateName) {setServerCertificateName(serverCertificateName);}\n\nvoid DeleteServerCertificateRequest::setServerCertificate
+public E removeFirst() {return (size == 
+public CreateAlbumRequest() {super("CloudPhoto", "2017-07-11", "CreateAlbum", "cloudphoto");setProtocol(ProtocolType.
+public String toString() {return "--";}\n    }\n\n    /**\n     * Create a new command.\n     *\n     * @param name the name of the
+public int copyString(CharSequence source, int sourceOffset, int sourceLength, char[] dest, int destOffset) {if (sourceLength == 
+public void setObjectInserter(ObjectInserter ins) {objectInserter = ins;}\n\npublic ObjectInserter newObjectInserter() {\n   
+public AreaEval(AreaEval ae) {_firstRow = ae.getFirstRow();_firstCol = ae.getFirstColumn();_lastRow = a
+public CreateVpcEndpointResult createVpcEndpoint(CreateVpcEndpointRequest request) {request = beforeClientExecution(request);return executeCreateVpcEndpoint(request);}\n\n
+public DeregisterTaskDefinitionResult deregisterTaskDefinition(DeregisterTaskDefinitionRequest request) {request = beforeClientExecution(request);return executeDeregisterTaskDefinition(request
+public ChartFormatRecord(RecordInputStream in) {field_1_formatFlags = in.readShort();field_2_lineColor = in.readShort();field_3_fill
+public RepositoryBuilder clone() {return new RepositoryBuilder(this);}\n\npublic RepositoryBuilder setGitDir(File gitDir) {\n\tthis.gitDir = git
+public CreateDBClusterParameterGroupResult createDBClusterParameterGroup(CreateDBClusterParameterGroupRequest request) {request = beforeClientExecution(request);return executeCreateDBCluster
+public int numRules() {int n = 
+public void removeName(String name) {int index = getNameIndex(name);removeName(index);}\n\n    @Override\n    public void removeName(int index)
+public String toString() {StringBuilder buffer = new StringBuilder();buffer.append("[HeaderFooter]\\n");buffer.append(" 
+public ProtectRecord clone() {return copy();}\n\n    @Override\n    public ProtectRecord copy() {\n        return new ProtectRecord(this);\n    }\n
+public StandardQueryNodeProcessorPipelineNode(QueryConfigHandler queryConfigHandler) {\n    super(queryConfigHandler);\n    queryConfigHandler.registerNodeProcessor(StandardQueryConfigHandler
+public String formatRefAsString(int sheetIndex, String sheetName, int firstRow, int lastRow, int firstCol, int lastCol) {StringBuffer sb = new StringBuffer
+public ByteBuffer putInt(int index, int c) {throw new ReadOnlyBufferException();}\n    public final ByteBuffer putInt(int index, int c) {\n       
+public void set(int i) {this.i = i;}\n\n    public int get() {\n        return i;\n    }\n\n    @Override\n    public String
+public IntBuffer slice() {return new ReadWriteIntArrayBuffer(remaining(), backingArray, offset + position);}\npublic IntBuffer duplicate() {return new ReadWriteIntArrayBuffer
+public void set(int index, long value) {if (index < 
+public ByteBuffer putFloat(float value) {throw new ReadOnlyBufferException();}\n\n\tpublic ByteBuffer putDouble(double value) {\n\t\tthrow new ReadOnlyBuffer
+public static double sum(double[] values) {double sum = 
+public UpdateRepoWebhookRequest() {super("cr", "2016-06-07", "UpdateRepoWebhook", "cr");setUriPattern("/
+public RemoveAttributesRequest(String domainName, String itemName, java.util.List<Attribute> attributes) {setDomainName(domainName);setItemName(itemName);set
+public void serialize(LittleEndianOutput out) {out.writeShort(field_1_numShapes);for(int i=0;i<field_1_num
+public boolean isSuccessful() {if (isAborted()) {return false;}if (isCanceled()) {return false;}if (isFailed()) {return false;}return true
+public void setBytesRef(BytesRef bytes) {setBytesRef(bytes.bytes, bytes.offset, bytes.length);}\n 
+public DescribeWorkspacesResult describeWorkspaces(DescribeWorkspacesRequest request) {request = beforeClientExecution(request);return executeDescribeWorkspaces(request);}\n\n   
+public DeleteAlbumsRequest() {super("CloudPhoto", "2017-07-11", "DeleteAlbums", "cloudphoto");setProtocol(Protocol
+public void add(int location, E object) {listIterator(location).add(object);}\n    /** {@inheritDoc} */\n    @Override\n    public void add
+public static ByteBuffer allocateDirect(int capacity) {if (capacity < 
+public QueryNode getChild(int i) {return children.get(i);}\n\n    @Override\n    public QueryNode getChild(int i) {\n        return children
+public float computeWeight(int doc, float freq, int numDocs, long totalTermFreq) {if (freq < minTermFreq) {return 
+public String toString() {StringBuilder buffer = new StringBuilder();buffer.append("[Tick]\\n");buffer.append("    .type = ").append(HexDump
+public DescribeSchemaResult describeSchema(DescribeSchemaRequest request) {request = beforeClientExecution(request);return executeDescribeSchema(request);}\n\n    /**\n     *
+public RegisterTransitGatewayMulticastGroupSourcesResult registerTransitGatewayMulticastGroupSources(RegisterTransitGatewayMulticastGroupSources
+public GetAccountSendingEnabledResult getAccountSendingEnabled(GetAccountSendingEnabledRequest request) {request = beforeClientExecution(request);return executeGetAccountSendingEnabled(request
+public ObjectId getId() {return id;}\n    public boolean isPresent() {return id != null;}\n    public boolean isAbsent() {return id == null;}\n
+public boolean isReadOnly() {return true;}\n\n    @Override\n    public boolean isReadOnly() {\n        return true;\n    }\n\n    @Override\n   
+public DeleteLoadBalancerRequest(String loadBalancerName) {setLoadBalancerName(loadBalancerName);}\n\n/**\n * <p>Deletes the specified
+public StringBuffer append(float f) {realAppend(f);return this;}\n    public StringBuffer append(double d) {realAppend(d);return this;}\n    public
+public UpdateDetectorResult updateDetector(UpdateDetectorRequest request) {request = beforeClientExecution(request);return executeUpdateDetector(request);}\n\n    /**\n    
+public FormulaRecordAggregate getFormulaRecordAggregate() {return _formulaRecordAggregate;}\n\n    @Override\n    public String toString() {\n       
+public boolean hasNext() {if (matcher.hitEnd()) {return false;}if (matcher.requireEnd()) {return false;}matcher.consume();return true;}
+public GetCampaignActivitiesResult getCampaignActivities(GetCampaignActivitiesRequest request) {request = beforeClientExecution(request);return executeGetCampaign
+public StandardTokenizer(Reader input) {termAtt = addAttribute(CharTermAttribute.class);offsetAtt = addAttribute(OffsetAttribute.class);typeAtt = addAttribute(Type
+public void serialize(LittleEndianOutput out) {out.writeShort(field_1_options);}\n\t@Override\n\tpublic String toString() {\n\t\t
+public String toString() {StringBuilder sb = new StringBuilder();sb.append(getClass().getSimpleName());sb.append('[');sb.append(getName());sb.append
+public TagCommand setName(String name) {checkCallable();this.name = name;return this;}\n\npublic TagCommand setName(String name) {\n\tcheckCall
+public void setColumnHidden(int columnIndex, boolean hidden) {validateColumn(columnIndex);if (isColumnHidden(columnIndex) == hidden) {return;}if (hidden)
+public AssociateAdminAccountResult associateAdminAccount(AssociateAdminAccountRequest request) {request = beforeClientExecution(request);return executeAssociateAdminAccount(request);}\n\n   
+public String toString() {StringBuilder buffer = new StringBuilder();buffer.append("[HeaderFooter]\\n");buffer.append("    .initialized = ").append(Hex
+public QueryConfigHandler getQueryConfigHandler() {return this.queryConfigHandler;}\n\n 
+public String getQueryString() {if (queryString != null) {return queryString;}if (query != null) {queryString = query.toString();}return queryString;}\n

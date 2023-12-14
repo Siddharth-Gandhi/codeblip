@@ -161,8 +161,8 @@ class Blip2Llama(CodeBlip):
         targets = opt_tokens.input_ids.masked_fill(
             opt_tokens.input_ids == self.llama_tokenizer.pad_token_id, -100
         )
-        if self.prompt:
-            targets[:, : self.prompt_length] = -100  # do not apply loss to the prompt
+        # if self.prompt:
+        #     targets[:, : self.prompt_length] = -100  # do not apply loss to the prompt
 
         empty_targets = (
             torch.ones(atts_opt.size(), dtype=torch.long).to(self.device).fill_(-100)
@@ -190,13 +190,14 @@ class Blip2Llama(CodeBlip):
         samples,
         use_nucleus_sampling=False,
         num_beams=5,
-        max_length=30,
+        max_length=40,
         min_length=1,
         top_p=0.9,
         repetition_penalty=1.0,
         length_penalty=1.0,
         num_captions=1,
-        temperature=1,
+        temperature=0.8,
+        prompt = "",
     ):
         """
         Args:
@@ -220,6 +221,10 @@ class Blip2Llama(CodeBlip):
             max_length=self.max_source_len, return_tensors="pt"
         ).to(self.device)
 
+        # print("Source Tokens", source_tokens)
+        # print("len(source_tokens)", source_tokens['input_ids'].size(1))
+
+
         source_output = self.ln_code(self.code_encoder(**source_tokens, return_dict=True).last_hidden_state)
 
         query_tokens = self.query_tokens.expand(source_output.shape[0], -1, -1)
@@ -234,10 +239,6 @@ class Blip2Llama(CodeBlip):
         inputs_opt = self.opt_proj(query_output.last_hidden_state)
         atts_opt = torch.ones(inputs_opt.size()[:-1], dtype=torch.long).to(self.device)
 
-        # if "prompt" in samples.keys():
-        #     prompt = samples["prompt"]
-        # else:
-        #     prompt = self.prompt
 
         # prompt = [prompt] * image.size(0)
 
@@ -259,6 +260,8 @@ class Blip2Llama(CodeBlip):
         with self.maybe_autocast(dtype=torch.float16):
             inputs_embeds = self.llama_model.model.embed_tokens(opt_tokens.input_ids)
             inputs_embeds = torch.cat([inputs_opt, inputs_embeds], dim=1)
+
+            print("Max Length", max_length)
 
             outputs = self.llama_model.generate(
                 inputs_embeds=inputs_embeds, 

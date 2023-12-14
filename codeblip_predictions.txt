@@ -1,0 +1,1000 @@
+public override void Serialize(ILittleEndianOutput out1){out1.WriteShort(field_1_options);}\n       
+public void AddAll(T[] dest, int destOff, T[] src, int srcOff, int len){Array.Copy(src
+Tags. public_head = new byte[Tags.public_head_size];public_tail = new byte[Tags.public_tail
+public virtual ObjectId GetObjectId(){return objectId;}\npublic void SetObjectId(ObjectId objectId){this.objectId =
+public virtual DeleteDomainEntryResponse DeleteDomainEntry(DeleteDomainEntryRequest request){var options = new InvokeOptions();options.RequestMarsh
+# override\n\t\tpublic override long RamBytesUsed()\n\t\t{\n\t\t\tlong ramBytesUsed = 
+<?bool IsMergeCommit(const git_raw_object* raw_object){byte[] raw_type_buf = raw_
+Tags are used to indicate the type of data that is stored.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n
+public void Reset(byte[] bytes){Debug.Assert(bytes.Length == buffer.Length);Array.Copy(bytes, 
+public virtual NGit.Api.SubmoduleAddCommand SetPath(string path){this.path = path;return this;}\n\n       
+public virtual ListRepositoriesResponse ListRepositories(ListRepositoriesRequest request){var options = new InvokeOptions();options.RequestMarsh
+TagsTokenStream(TokenStream input, Tokenizer tokenizer, string field, int position, int startOffset, int endOffset)\n       
+public virtual GetItemResponse GetItem(GetItemRequest request){var options = new InvokeOptions();options.RequestMarshaller = Get
+public RefreshTokenRequest(): base("Ons", "2019-02-14", "RefreshToken"){\n
+// public override bool ready(){lock (lockObj){if (closed){throw new System.IO.IOException("stream is closed");}if
+public EOFRecord GetEOF(){return _eof;}\n\n        public override int DataSize\n        {\n            get { return
+public override void read(byte[] buffer, int offset, int length){lock (this){if (buffer == null){throw new java.
+# ParserATNSimulator(Parser parser, ATN atn){this.parser = parser;this.atn = atn
+The(java.lang.Object o){print(o);}\n\npublic virtual void print(java.lang.String s){\n
+Tags UnsupportedOperationException(string methodName, string message): base(message){this.methodName = methodName;}\n\n        public
+//java.util.Map.Entry<K, V> successor(java.util.Map.Entry<K, V> t){
+public void Read(byte[] b, int off, int len){while (len > 
+public virtual MergeShardsResponse MergeShards(MergeShardsRequest request){var options = new InvokeOptions();options.
+Tags public override void remove(int index){throw new NotSupportedException();}\n\npublic override string ToString(){return base.ToString
+public virtual ModifyCacheClusterResponse ModifyCacheCluster(ModifyCacheClusterRequest request){var options = new InvokeOptions
+public override void SetParams(string @params){base.SetParams(@params);if (@params == null){return;}string[] parts=
+public virtual DeleteDocumentationVersionResponse DeleteDocumentationVersion(DeleteDocumentationVersionRequest request){var options = new InvokeOptions();options.
+public override bool Equals(object obj)\n\t\t{\n\t\t\tif (this == obj)\n\t\t\t{\n
+public virtual GetInstancePortStatesResponse GetInstancePortStates(GetInstancePortStatesRequest request){var options = new InvokeOptions
+public HSSFSimpleShape CreateSimpleShape(HSSFChildAnchor anchor){HSSFSimpleShape shape = new HSSFSimple
+public String GetSheetName(int sheetIndex){return workbook.GetSheetName(sheetIndex);}\n\n    public void SetSheet
+public virtual GetDashboardResponse GetDashboard(GetDashboardRequest request){var options = new InvokeOptions();options.
+public virtual AssociateServiceQuotaTemplateResponse AssociateServiceQuotaTemplate(AssociateServiceQuotaTemplateRequest request){var options = new
+public void AddRowRecords(RowRecords rowRecords){for (int i = 
+public static string Escape(string s){StringBuilder sb = new StringBuilder();for (int i = 
+public override java.nio.ByteBuffer putShort(int index, short value){throw new System.NotImplementedException();}\n
+Tags(int count, ICell[] cells){CellValue[] values = new CellValue[count];CellRangeAddress[] ranges = new Cell
+public virtual GetGatewayResponseResponse GetGatewayResponse(GetGatewayResponseRequest request){var options = new InvokeOptions
+Tags override public String ToString(){return "<" + this.getClass().getName() + " at " + Integer.toHexString
+public override string ToString(string field){return "<terms prefix=\'" + m_prefix + "\'/>";}\n\n    public
+public void IncrementRefCount(){_refCount++;}\n\n          public void DecrementRefCount(){_refCount--;}\n
+public virtual UpdateAccountSettingsResponse UpdateAccountSettings(UpdateAccountSettingsRequest request){var options = new InvokeOptions();options.RequestMarsh
+TagsPerBlock = blockSize / (blockSize - kMetadataBlockSize);\n        }\n\n        /// <summary>\n        ///
+#public virtual void Normalize();public virtual void Normalize();Normalize();Normalize();Normalize();Normalize();Normalize();Normal
+@override public string ToString(){string NL = System.getProperty("line.separator");stringBuilder.append("[");int
+public void WithEcsRamRoleName(string ecsRamRoleName){this.ecsRamRoleName = ecs
+#public virtual void SetReceivePack(ReceivePack rp){receivePack = rp;}\npublic virtual ReceivePack GetReceivePack
+public override void Reset()\n        {\n            index = -1;\n        }\n\n        public override bool HasNext()\n
+# virtual E top();if (it.hasNext())\n{\ntry\n{\nreturn top();\n}\ncatch (java.
+public virtual string GetNewPath(){return this.newPath;}\n\n    /// <summary>Sets the new path.</summary>\n
+# virtual public int indexOfKey (java.lang.Object key)\n\tpublic int indexOfKey (java.lang.Object key
+# public virtual string[] GetParts(string key){if (parts == null){parts = new Dictionary<string, string[]>();}
+public virtual GetGatewayResponse GetGateway(GetGatewayRequest request){var options = new InvokeOptions();options.
+public override void SkipBytes(long count){int skip = (int)count;while (0 < skip){skip -= ReadByte();
+public override long Seek(long index){\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n
+Tags Cluster(CreateClusterRequest request)\n\t\t{\n\t\t\treturn this;\n\t\t}\n\n\t\t
+public override void Serialize(ILittleEndianOutput out1);\npublic override int DataSize{get{return 
+public int indexOf(string subString, int start){return indexOf(subString, start, subString.length());}\n\n
+public override bool add(E @object){return addLast(@object);}\n        public override void add(int index, E @object
+#public virtual void SetStartPoint(RevWalk rw, RevCommit startPt){startPt = rw.
+public virtual string GetName(){return name;}\npublic virtual void SetName(string name){this.name = name;}\n\npublic virtual
+package(Cell cell){cells.addElement(cell);}\n\n        public int Size{return cells.size();}\n\n
+public virtual bool remove(object o){lock (mutex){return list.remove(o);}}\n        }\n    }\n   
+Tags",\n      "params":{\n        "field":{\n          "type":"string",\n          "index":"not_anal
+#Override public long Size(){return _size;}\n\n        public override long Offset(){\n            return _offset;\n        }\n
+public virtual void SetValue(bool value);\n\tpublic virtual bool Value { get; set; }\n}\n\n/// <summary>
+TagsTreeWalk(RevWalk walk, Tree tree){this.walk = walk;this.tree = tree;}\n\n   
+Tags(int index){\npublic override int get(int index){\nif (index >= size){\nthrow new java.lang.Index
+public CreateNamespaceRequest(): base("cr", "2016-06-07", "CreateNamespace", "cr", "
+public virtual bool GetDeltaCompressionEnabled(){\n\t\t\treturn deltaCompressionEnabled;\n\t\t}\n\t\tset{\n
+import(){java.util.Iterator<E> it = lastReturned;if (it != null){if (it.next() ==
+public virtual MergeShardsResponse MergeShards(MergeShardsRequest request){var options = new InvokeOptions();options.
+public virtual ProvisionByoipCidrResponse ProvisionByoipCidr(ProvisionByoipCidrRequest
+public int getBeginIndex(){return beginIndex;}\npublic int getEndIndex(){return endIndex;}\npublic int getLength(){return end
+public static Query[] GetQueries(Query query){return GetQueries(query, null);}\n\n    /// <summary>\n
+public override java.nio.ByteBuffer compact(){throw new java.nio.ReadOnlyBufferException();}\npublic override java.nio.
+public override void Decode(byte[] blocks, int blocksOffset, long[] values, int valuesOffset, int iterations){for (int i
+// override string ToString(){string s = GetName();if (s == null){s = GetPath();}if (s == null
+public virtual DescribeJournalS3ExportResponse DescribeJournalS3Export(DescribeJournalS3ExportRequest request){var
+public string GetAccessKeyId(){return AccessKeyId;}\nsetAccessKeyId(string accessKeyId){AccessKeyId = accessKey
+public virtual CreateClientVpnEndpointResponse CreateClientVpnEndpoint(CreateClientVpnEndpointRequest request){var options = new InvokeOptions
+public virtual DescribeContactFlowsResponse DescribeContactFlows(DescribeContactFlowsRequest request){var options = new InvokeOptions
+public virtual ListTrainingJobsResponse ListTrainingJobs(ListTrainingJobsRequest request){var options = new InvokeOptions
+public DescribeJobRequest(string accountId, string vaultName, string jobId){_accountId = accountId;_vault
+TagsAreSet(int recordId, bool areSet);\n\n        /// <summary>\n        /// Checks whether a particular set of
+public virtual GetApiKeysResponse GetApiKeys(GetApiKeysRequest request){var options = new InvokeOptions();options.RequestMarsh
+public virtual DeleteSmsChannelResponse DeleteSmsChannel(DeleteSmsChannelRequest request){var options = new InvokeOptions();options.
+public virtual RefUpdate GetRefUpdate(){return refUpdate;}\npublic virtual void SetRefUpdate(RefUpdate ru){refUpdate = ru;}
+public virtual void println(bool b){println(b.ToString());}\n\npublic override void println(char c){println(c.
+public virtual IQueryNode GetChild(){return GetChild(0);}\n\tpublic virtual IQueryNode GetChild(int i){\n
+Tags(string path, bool isFile){this. Tags(string path, bool isFile){this.path = path;this.is
+TagsColumnWidthRecord(RecordInputStream in);\n\n        field_1_first_col = in.ReadShort();\n        field_
+public GetAlbumPhotosRequest(): base("CloudPhoto", "2017-07-11", "GetAlbum
+public virtual DescribeDirectConnectGatewaysResponse DescribeDirectConnectGateways(DescribeDirectConnectGatewaysRequest request){var
+public virtual PutVoiceConnectorLoggingConfigurationResponse PutVoiceConnectorLoggingConfiguration(PutVoiceConnectorLog
+TagsEnum GetTag(int i){return Tags[i];}\npublic void SetTag(int i, TagsEnum tag){Tags[
+public string GetText(){if (null != _tokenStream)return _tokenStream.GetText(_tokenStream.LT(0), _
+import virtual E peek(){ return peekImpl();}\n        protected virtual E peekImpl(){ throw new NoSuchElementException();
+public virtual CreateWorkspacesResponse CreateWorkspaces(CreateWorkspacesRequest request){var options = new InvokeOptions();options.RequestMarsh
+public override Object Clone(){return this;}\n        }\n\n        protected override int DataSize(){\n            return 
+public virtual DescribeRepositoriesResponse DescribeRepositories(DescribeRepositoriesRequest request){var options = new InvokeOptions();options.
+# BitSet(int bitsPerWord){if (bitsPerWord <= 
+public override TokenStream Create(TokenStream input){return new SwedishLightStemFilter(input);}\n        }\n    }\n}
+public virtual CreateDataSourceFromS3Response CreateDataSourceFromS3(CreateDataSourceFromS3Request request){var options = new InvokeOptions
+package URI, String, int) throws java.io.IOException{throw new System.NotImplementedException();}\npublic static void
+public virtual DeleteWorkspaceImageResponse DeleteWorkspaceImage(DeleteWorkspaceImageRequest request){var options = new InvokeOptions();options.
+public static string ToHex(long value){return ToHex(value, 
+public virtual UpdateDatasetResponse UpdateDataset(UpdateDatasetRequest request){var options = new InvokeOptions();options.RequestMarsh
+#short GetValue(int index){\n\t\t\tif (index == -1){\n\t\t\t\tthrow new ArgumentException("
+#ValueEval Evaluate(ValueEval[] args, int srcCellRow, int srcCellCol){return new NumberEval
+Tags(int idOffset, int nameTextOffset, int formatTextOffset, int categoryOffset, int seriesOffset, int valuesOffset, int
+public virtual DescribeDBInstancesResponse DescribeDBInstances(){return DescribeDBInstances(new DescribeDBInstancesRequest());
+TagsFormatException(int formatIndex, String message){super(message);this.mFormatIndex = formatIndex;}\n public int getFormat
+public static int ReadUShorts(byte[] array, int offset, short[] shorts, int length){for (int i = 
+public virtual UploadArchiveResponse UploadArchive(UploadArchiveRequest request){var options = new InvokeOptions();options.Request
+#public IList<IToken> GetAllTokens()\n\t\tpublic IList<IToken> GetAllTokens
+public override bool Equals(object obj){if (this == obj)return true;if (obj == null)return false;if (
+public virtual Filter BuildCustomAnalyzerFilter(string fieldName, Analyzer analyzer){IList<TokenFilterFactory> filterFact
+public virtual MergeCommand Merge(){return new MergeCommand(repo);}\n\n\t\t/// <summary>\n\t\t///
+Tags(FieldInfo fieldInfo){\n        if (fieldInfo == null) {\n          throw new ArgumentNullException("fieldInfo");\n
+public virtual DescribeEventTrackerResponse DescribeEventTracker(DescribeEventTrackerRequest request){var options = new InvokeOptions
+public virtual GetContentModerationResponse GetContentModeration(GetContentModerationRequest request){var options = new InvokeOptions
+public virtual DisableReplicationResponse DisableReplication(DisableReplicationRequest request){var options = new InvokeOptions();options.
+public virtual ModifyCacheClusterResponse ModifyCacheCluster(ModifyCacheClusterRequest request){var options = new InvokeOptions
+public virtual SetDesiredCapacityResponse SetDesiredCapacity(SetDesiredCapacityRequest request){var options = new InvokeOptions
+public virtual ModifyDBInstanceResponse ModifyDBInstance(ModifyDBInstanceRequest request){var options = new InvokeOptions();options.
+# public virtual void Add(char[] chars, int start, int len){if (len == 
+public GetAlbumsRequest(): base("CloudPhoto", "2017-07-11", "GetAlbums
+Tags#True#\n\t\tpublic override bool Exists() {\n\t\t\treturn dir.Exists();\n\t\t}\n\n
+TagsIndexChecker(IndexWriter writer){this.writer = writer;}\n\n    /// <exception cref="System.IO.IOException
+public UnbindInstance2VpcRequest() : base("Rds", "2014-08-15", "Un
+packageNamePtg CreateExternSheetNamePtg(int externSheetIndex){return CreateExternSheetNamePtg(
+public virtual ListObjectsV2Response ListObjectsV2(ListObjectsV2Request request){var options = new InvokeOptions();options.
+public virtual DescribeCacheSubnetGroupsResponse DescribeCacheSubnetGroups(DescribeCacheSubnetGroupsRequest request){var options = new
+public void SetShowFormula(bool value){field_1_options = showFormula.SetShortBoolean(field_1_options
+public virtual bool IsReuseDeltas(){return reuseDeltas;}\npublic void SetReuseDeltas(bool reuseD
+public virtual IToken CreateToken(int type, string text){\n\t\tIToken t = new CommonToken(type, text);\n
+Tags StandardFilter::StandardFilter(Vocabulary vocabulary, bool ignoreCase): vocabulary(vocab
+public virtual RemoveResourcePermissionResponse RemoveResourcePermission(RemoveResourcePermissionRequest request){var options = new InvokeOptions();options.RequestMarsh
+Tags = EnglishAnalyzer = "english";\n}\n\\end{code}\n\n\\begin{itemize}\n\\item
+public GetAlbumPhotosRequest(): base("CloudPhoto", "2017-07-11", "GetAlbum
+public virtual GetTypeResponse GetType(GetTypeRequest request){var options = new InvokeOptions();options.RequestMarshaller = Get
+package(){a = new RepositoryRevWalk(b.getRepository());}\nb = a;\na = new Repository
+public override bool Equals(object o){return o is DanishStemmer;}\n\n        public override int GetHashCode() {
+public sealed boolean isEmpty(){return size()==0;}\npublic boolean isEmpty(){return size()==0;}\n/**\n *
+                  
+Tags hidden = true;\n\npublic class POIFSFileSystem : POIFSViewable {\n    private DirectoryNode root;\n
+TagsFilter = new TagsFilter(string field, string[] includeTags, string[] excludeTags){TagsFilter(string field, string[] include
+public virtual RequestSpotFleetResponse RequestSpotFleet(RequestSpotFleetRequest request){var options = new
+public byte[] GetData(){return GetData(0);}\npublic byte[] GetData(int offset){return GetData(offset,
+public virtual GetContactAttributesResponse GetContactAttributes(GetContactAttributesRequest request){var options = new InvokeOptions();options.RequestMarsh
+public override string ToString(){return GetType().Name + "(" + GetKey() + ")";}\n\n\t/// <summary>
+public virtual ListSpeechSynthesisTasksResponse ListSpeechSynthesisTasks(ListSpeechSynthesisTasksRequest request){var options = new
+public virtual GetContactsResponse GetContacts(GetContactsRequest request){var options = new InvokeOptions();options.RequestMarsh
+public static int GetBuiltinRecordId(String name){int id = BUILTIN_RECORDS.get(name
+public virtual DescribeAnomalyDetectorsResponse DescribeAnomalyDetectors(DescribeAnomalyDetectorsRequest request){var
+public static string RefName(string namespace, string name){return RefName(namespace, name, null);}\n        public static string Ref
+package_t GetFormat(string format){switch (format){case "tar":return FORMAT_TAR;case "zip":
+public virtual ImportImageResponse ImportImage(ImportImageRequest request){var options = new InvokeOptions();options.RequestMarshaller = Import
+public virtual PutStorageLensConfigurationResponse PutStorageLensConfiguration(PutStorageLensConfigurationRequest request){var options = new InvokeOptions
+public NumberPtg(ILittleEndianInput in1){field_1_row = in1.ReadUShort();field_
+public virtual GetFieldLevelEncryptionConfigResponse GetFieldLevelEncryptionConfig(GetFieldLevelEncryptionConfigRequest request){var options = new
+public virtual DescribeDetectorResponse DescribeDetector(DescribeDetectorRequest request){var options = new InvokeOptions();options.
+public virtual GetInstanceHealthResponse GetInstanceHealth(GetInstanceHealthRequest request){var options = new InvokeOptions();options.
+public virtual DeleteAlarmResponse DeleteAlarm(DeleteAlarmRequest request){var options = new InvokeOptions();options.RequestMarsh
+public override TokenStream Apply(TokenStream input){return new SwedishLightStemFilter(input);}\n        }\n    }\n
+package;\n\n        public override byte[] toByteArray()\n        {\n            MemoryStream v = new MemoryStream();\n            v
+public virtual bool remove(object @object){lock (mutex){return c.remove(@object);}}\n    }\n    public override
+public virtual GetDedicatedIpResponse GetDedicatedIp(GetDedicatedIpRequest request){var options = new
+@Override\npublic String ToString(){return "start: " + start + ", end: " + end + ", label: " + label
+public virtual ListStreamsResponse ListStreams(ListStreamsRequest request){var options = new InvokeOptions();options.RequestMarsh
+public DeleteLoadBalancerListenersRequest(string loadBalancerName, List<Listener> listeners){_loadBalancerName =
+TagsRecord(int size){_size = size;}\n\n        public int getSize()\n        {\n            return _size;\n
+public ByteArrayDataInput(byte[] buf){buf_ = buf;}\npublic ByteArrayDataInput(byte[] buf)\n{\n
+public virtual GetResourcesResponse GetResources(GetResourcesRequest request){var options = new InvokeOptions();options.RequestMarshaller = Get
+public virtual void CopyTo(byte[] b, int pos){b[pos] = b0;b[pos + 
+TagsPageHeaderRecord(RecordType type, int size, int dataSize){\n\nthis.type = type;\nthis.size =
+public virtual StopWorkspacesResponse StopWorkspaces(StopWorkspacesRequest request){var options = new InvokeOptions();options.RequestMarsh
+package override public void close(){throw new System.NotImplementedException();}\n\npublic override void write(byte[] b, int
+public virtual DescribeMatchmakingRuleSetsResponse DescribeMatchmakingRuleSets(DescribeMatchmakingRuleSetsRequest request){var
+public string GetBaseForm(int wordId, int posId){return null;}\npublic string GetReading(int wordId, int
+public string getPath(){return path;}\npublic override string ToString(){return path;}\n\npublic override int GetHashCode(){return path
+#32-bit floating-point remainder of x divided by y.\npublic static double remainder(double x, double y){\ndouble
+public virtual GetDiskResponse GetDisk(GetDiskRequest request){var options = new InvokeOptions();options.RequestMarsh
+public override bool Equals(PooledByteBuffer other){return other is PooledHeapByteBuffer;}\n\n   public override
+public int end(){return end(0);}\npublic int end(int i){\n\tif(i < 
+public override void VisitCell(int rowIndex, int columnIndex, Cell cell){if (rowIndex == -1 && columnIndex ==
+public int Available(){return buf.length - pos;}\n\n        public override int Read(byte[] b, int off, int len
+The override public int CompareTo(object o){throw new NotImplementedException();}\n\n        /// <summary>\n       
+public virtual int Normalize(char[] s, int len){for (int i = 
+public override void Serialize(ILittleEndianOutput out1){out1.WriteShort(field_1_options);}\npublic
+package org.apache.commons.lang3.tuple.impl.ImmutablePairImpl;\n\n    public ImmutablePairImpl(T
+Tags(const Aws::String& key, const Aws::String& value)\n    Tags(Aws::String&& key,
+public virtual GetInvitationResponse GetInvitation(GetInvitationRequest request){var options = new InvokeOptions();options.RequestMarsh
+public virtual bool ContainsKey(ObjectMetadata key){return this.metadata.containsKey(key);}\n\n    /**\n     *
+public virtual GroupingSearch SetGroupSort(Sort groupSort){this.groupSort = groupSort;return this;}\n\n        /// <
+#public void SetMinWordLength(int minWordLength){lock (this){if (!frozen){minWordLength_ = min
+#public bool IsEmpty(){foreach (KeyValuePair<string, List<string>> entry in this){if (entry.Value.Count
+public virtual DeleteVoiceConnectorResponse DeleteVoiceConnector(DeleteVoiceConnectorRequest request){var options = new
+public virtual DeleteLifecyclePolicyResponse DeleteLifecyclePolicy(DeleteLifecyclePolicyRequest request){var options = new InvokeOptions();options.
+public void Write(byte[] b, int off, int len){CheckPosition(len);System.Array.Copy(b, off,
+public virtual MergeResult GetMergeResult(){return this.mMergeResult;}\n\n\t\t/// <summary>\n\t\t
+<? public static int CalculateNumberOfBuckets(int maxNumberOfBuckets, int minNumberOfBuckets, int
+public virtual DescribeDashboardResponse DescribeDashboard(DescribeDashboardRequest request){var options = new InvokeOptions
+public virtual CreateSegmentResponse CreateSegment(CreateSegmentRequest request){var options = new InvokeOptions();options.RequestMarsh
+public override String ToString(){StringBuilder buffer = new StringBuilder();buffer.Append("[EXTERNSHEET]\\n");buffer.Append
+#virtual IList<string> GetConflicts();\n\n\t\t/// <summary>\n\t\t/// Set the conflicts for this
+public override string ToString(){return "END_BLOCK";}\n\n    @Override\n    public boolean equals(Object o) {
+public override ObjectReader Open(RevWalk walk){return new Reader(walk);}\n\n        /// <summary>\n       
+public StandardAnalyzer(Stream @in){\n\t\tif (@in == null)\n\t\t{\n\t\t\tthrow new
+public java.lang.StringBuilder append(java.lang.Object obj){if (obj == null){appendNull();}else{append
+public virtual ListTagsForResourceResponse ListTagsForResource(ListTagsForResourceRequest request){var options = new InvokeOptions();options.
+// double kthlargest(double k, double a1, double a2, double a3, double a4, double a5
+public virtual DescribeDirectConnectGatewaysResponse DescribeDirectConnectGateways(DescribeDirectConnectGatewaysRequest request){var
+public virtual GetDiskResponse GetDisk(GetDiskRequest request){var options = new InvokeOptions();options.RequestMarsh
+public virtual CreateDBClusterParameterGroupResponse CreateDBClusterParameterGroup(CreateDBClusterParameterGroupRequest request){var options = new
+public static java.nio.CharBuffer wrap(char[] array_1, int start, int end_1){return new java.nio
+# public virtual ChangeType GetChangeType(){return changeType;}\npublic override string ToString(){return changeType.ToString();}\n\n
+public void DescribeGameSessionQueuesResponse DescribeGameSessionQueues(DescribeGameSessionQueuesRequest request){var options = new
+The java.util.regex.Pattern pattern(){return pattern;}\n\t\t/// <summary>Returns a pattern that is equivalent to this
+# override virtual void setValue(V value){throw new java.lang.UnsupportedOperationException();}\n    ///**\n
+public string ApplyRules(string word){if (rules == null){return word;}int len = word.Length;if (len
+public DeleteAlbumRequest(): base("CloudPhoto", "2017-07-11", "DeleteAlbum", "
+Tags public override string GetName(byte[] bytes){return GetString(bytes);}\npublic override byte[] GetBytes(string s){
+public static string ToTreeString(IParseTree t){return ToTreeString(t, null);}\npublic static string ToTreeString
+Tags[\'toString\'];\npublic override string ToString(){return "RevCommit[" + id + "]";}\n\n\t\t
+public GetRepoTagRequest(): base("cr", "2016-06-07", "GetRepoTag",
+public virtual GetJobDocumentResponse GetJobDocument(GetJobDocumentRequest request){var options = new InvokeOptions();options.RequestMarsh
+public DeleteTagsRequest(string resourceId){\npublic DeleteTagsRequest(string resourceId, List<Tag> tags){\nthis.resource
+#short GetShort(byte[] data){\n\t\tunchecked\n\t\t{\n\t\t\treturn (short)(data[offset
+# public virtual NGit.BatchRefUpdate AddCommand(RefUpdate cmd){commands.AddItem(cmd);return this;}\n\n       
+public short CheckExternSheet(int externSheetIndex){return CheckExternSheet(externSheetIndex, false);}\n    public
+public override bool Equals(object o){return list.Equals(o);}\n\n\t 
+// public override Query Build(IQueryNode queryNode){if (queryNode is null){throw new QueryNodeException(new ParserException
+public void StopStreamProcessor(StopStreamProcessorRequest request){var options = new InvokeOptions();options.RequestMarshaller = StopStream
+public virtual DescribeDashboardPermissionsResponse DescribeDashboardPermissions(DescribeDashboardPermissionsRequest request){var
+public virtual RevCommit GetCommit(AnyObjectId id){return (RevCommit)Get(id);}\n\n       
+# public long RamBytesUsed(){return RamUsageEstimator.ESTIMATE_OBJECT_SIZEOf(this);}
+public virtual GetDomainDetailResponse GetDomainDetail(GetDomainDetailRequest request){var options = new InvokeOptions();options.RequestMarsh
+public virtual DescribeStackResourcesResponse DescribeStackResources(DescribeStackResourcesRequest request){var options = new InvokeOptions();options.
+# int AddShape(int index, HSSFShape shape){return AddShape(index, new HSSFSimpleShape(sheet,
+public virtual CreateResolverRuleResponse CreateResolverRule(CreateResolverRuleRequest request){var options = new InvokeOptions();options.RequestMarsh
+Tags(RecordType type){\n        this.type = type;\n    }\n\n    public RecordType getType(){\n        return
+public GetNamespaceRequest(): base("cr", "2016-06-07", "GetNamespace", "cr", "
+Tags();}\n    public override void Serialize(ILittleEndianOutput out1){out1.WriteShort(field_1_
+public override bool Equals(object obj){if (this == obj){return true;}if (obj == null){return false;}if (
+public virtual CreateGatewayGroupResponse CreateGatewayGroup(CreateGatewayGroupRequest request){var options = new InvokeOptions
+public virtual CreateRoomMembershipResponse CreateRoomMembership(CreateRoomMembershipRequest request){var options = new
+public static double Log10(double d){return Log(d) / LN10;}\n\n    /// <summary>\n
+public virtual AssociateFileSystemResponse AssociateFileSystem(AssociateFileSystemRequest request){var options = new InvokeOptions();options.
+public virtual ObjectId CreateBranch(string branchName, ObjectId startPoint){return CreateBranch(repository, branchName, startPoint
+# public override ValueEval Evaluate(int srcRowIndex, int srcColumnIndex, ValueEval arg0, ValueEval
+//object removeLast();{object value = backingMap.get(backingMap.lastKey());backingMap.remove(backing
+public int ReadUShort(){int ch1 = ReadUByte();int ch2 = ReadUByte();int b1 = ch1;
+public ModifyCacheParameterGroupRequest(string cacheParameterGroupName, List<Parameter> parameters){_cacheParameterGroupName = cacheParameterGroup
+public virtual ListHITsResponse ListHITs(ListHITsRequest request){var options = new InvokeOptions();options.
+Tags public override V get(string tag){if (tag == null){throw new ArgumentNullException("tag");}return null;}\n\n
+public override TokenStreamComponents CreateComponents(IDictionary<string, string> args){Tokenizer source = GetTokenizer(args);TokenStream
+public string getPath(){return path;}\npublic override string ToString(){return path;}\n\npublic override int GetHashCode(){return path
+public virtual InitiateMultipartUploadResponse InitiateMultipartUpload(InitiateMultipartUploadRequest request){var options = new
+package java.lang.StringBuilder.append0(int, int, java.lang.StringBuffer, java.lang.StringBuffer){
+public override void Decode(byte[] blocks, int blocksOffset, long[] values, int valuesOffset, int iterations){for (int i
+Tags",\n        "tokenizer": "keyword",\n        "filter": [\n          {\n            "type": "lowercase"
+Tags|#0#1#2#3#4#5#6#7#8#9#10#11#
+public Token GetToken(int index){Token t = new Token();if (index == -1) {t.Token = Token.E
+package override String ToString(){StringBuilder b = new StringBuilder();b.Append("[").Append(this.GetType().Name).Append
+public virtual GetFolderResponse GetFolder(GetFolderRequest request){var options = new InvokeOptions();options.RequestMarshaller = Get
+public virtual void add(int location, E @object){throw new System.NotSupportedException();}\npublic override void add(int
+TagsSetSimilarityComparator, T> CreateWeightedSetSimilarityComparator(float boost)\n        {\n            return
+public CreateNamespaceRequest(): base("cr", "2016-06-07", "CreateNamespace", "cr", "
+public SheetRange(SheetRef sref){_sref = sref;_firstCell = new CellReference(sref.Get
+Tags();\n\n        /// <summary>\n        /// Creates a new instance.\n        /// </summary>\n        /// <param
+The public void Reset(){if (@in != null){@in.Reset();}}\n\n        public override string ToString(){\n           
+« reset();};\n\npublic override bool markSupported(){return true;}\n\npublic override void mark(int readlimit){\n   
+// write(char[] buf, int off, int len) throws IOException{if (buf == null){throw new NullPointerException("buf
+public virtual DescribeRepositoryResponse DescribeRepository(DescribeRepositoryRequest request){var options = new InvokeOptions();options.RequestMarsh
+public virtual CreateDBSubnetGroupResponse CreateDBSubnetGroup(CreateDBSubnetGroupRequest request){var options = new InvokeOptions
+public virtual NGit.Api.RemoveSubmoduleCommand SetSubmoduleName(string submoduleName){CheckCallable();this.submodule
+public virtual NGit.Api.CreateBranchCommand SetName(string name){CheckCallable();this.name = name;return this
+public virtual StopTrainingJobResponse StopTrainingJob(StopTrainingJobRequest request){var options = new InvokeOptions();options.
+public virtual void setSecondaryProgress(int secondaryProgress)\n\t\t{\n\t\t\tmSecondaryProgress = secondaryProgress;\n
+//public override byte[] GetBytes(){return EMPTY_BYTES;}\n\n        protected override void Dispose(bool disposing
+public string getPath(){return path;}\npublic override string ToString(){return path;}\n\npublic override int GetHashCode(){return path
+public GetNamespaceListRequest(): base("cr", "2016-06-07", "GetNamespaceList", "cr
+public virtual CreateExportResponse CreateExport(CreateExportRequest request){var options = new InvokeOptions();options.RequestMarshaller = Create
+public virtual CreateDiskImageResponse CreateDiskImage(CreateDiskImageRequest request){var options = new InvokeOptions();options.
+public override bool Equals(Object o){if (o == null)return false;if (o == this)return true;if (
+public virtual UnpeerVpcResponse UnpeerVpc(UnpeerVpcRequest request){var options = new InvokeOptions
+public override bool Equals(object o){if (o is java.util.Set<E>){java.util.Set<E
+import public virtual void SetRefLogMessage(string msg){if (msg == null){ClearRefLogMessage();}else{refLogMessage
+Tags(RecordType type){_type1 = type; _type2 = type;}\n\n        public override void Serialize(ILittle
+public InvokeServiceAsyncRequest(): base("industry-brain", "2018-07-12", "Invoke
+public sealed java.nio.ByteOrder order(){return java.nio.ByteOrder.nativeOrder();}\npublic java.nio.
+public virtual int GetDepth(){return depth;}\n\n\t\t/// <summary>\n\t\t/// Get the number of commits in the
+public virtual bool IsDirectory(){return false;}\n\n        public virtual bool IsFile()\n        {\n            return true;\n        }
+public virtual GetCloudFrontOriginAccessIdentityResponse GetCloudFrontOriginAccessIdentity(GetCloudFrontOriginAccessIdentityRequest request){var options = new
+public override bool Matches(int symbol){return index == symbol;}\n\n        public readonly int index;\n        public readonly string name;
+public virtual DeleteTransitGatewayResponse DeleteTransitGateway(DeleteTransitGatewayRequest request){var options = new
+public static short[] Grow(short[] array, int minSize){Debug.Assert(minSize >= 
+public GetPhotoRequest(): base("CloudPhoto", "2017-07-11", "GetPhoto", "cloudphoto
+Tags(){public bool hasDeletions(){return deletions != null && deletions.size() > 
+public virtual GetLaunchTemplateDataResponse GetLaunchTemplateData(GetLaunchTemplateDataRequest request){var options = new InvokeOptions();options.
+Tags(string[] tags){this.tags = tags;}\npublic virtual string[] Tags{get{return tags;}set{tags = value
+Tags = null;\n        this.tags = tags;\n    }\n\n    public string[] Tags {\n        get { return this
+public virtual PromoteReadReplicaResponse PromoteReadReplica(PromoteReadReplicaRequest request){var options = new InvokeOptions
+public virtual DescribeCapacityReservationFleetsResponse DescribeCapacityReservationFleets(DescribeCapacityReservationF
+public override string ToString(){return "IndexSearcher(" + searcher + ")";}\n\n        /// <summary>\n        ///
+public bool markSupported(){return true;}\n\n\t\tpublic void reset(){}\n\n\t\tpublic int read(){\n\t\t
+public overridevoid Serialize(ILittleEndianOutput out1){out1.WriteShort(sid);out1.WriteShort(
+Tags public override void Compress(byte[] src, int srcOff, byte[] dest, int destOff, int len){if (len
+TagsArePredictionsEnabled(ATNConfigSet *set, PredictionContextCache cache){\n    for (int i = 
+public virtual UpdateStreamResponse UpdateStream(UpdateStreamRequest request){var options = new InvokeOptions();options.RequestMarshaller = Update
+packageValue Evaluate(int srcRowIndex, int srcColumnIndex){return new AreaEval(srcRowIndex, srcColumnIndex
+public override String ToString(){StringBuilder sb = new StringBuilder(64);sb.Append(this.GetType().Name);sb.
+public virtual ListTagsForResourceResponse ListTagsForResource(ListTagsForResourceRequest request){var options = new InvokeOptions();options.
+public virtual DeleteAccessControlRuleResponse DeleteAccessControlRule(DeleteAccessControlRuleRequest request){var options = new InvokeOptions();options.
+importItr<T>(java.util.List<T> list){return new Iterator<T>() {public boolean hasNext(){
+public override void Decode(byte[] blocks, int blocksOffset, long[] values, int valuesOffset, int iterations){for (int i
+# public override long skip(long byteCount){if (byteCount < 
+public virtual IDictionary<string, Ref> GetRefs(){return refs;}\n\n\t\t/// <summary>\n\t\t///
+public virtual UpdateApiKeyResponse UpdateApiKey(UpdateApiKeyRequest request){var options = new InvokeOptions();options.RequestMarsh
+@ObjectId Resolve(@NonNull RevWalk walker, @NonNull AnyObjectId rev){try{ObjectId id = walk
+public sealed_class_1(){a = new java.lang.Array<T>(1);}\npublic sealed_class_
+public virtual UpdateDetectorVersionResponse UpdateDetectorVersion(UpdateDetectorVersionRequest request){var options = new InvokeOptions();options.
+public void Resize(int width, int height){Resize(width, height, true);}\n\n        public void Resize(
+# RevSort(RevSort r){if (!r.IsSorted()){r = new RevSort(r);}}\n\n
+public override int size(){return this._enclosing._size;}\npublic override string ToString(){return this._enclosing.ToString
+public sealed override long getLong(){int oldPosition = position;if (byteOrder == ByteOrder.LITTLE_ENDI
+#java.lang.StringBuilder insert(int offset, int length, java.lang.String str){\n#insert(int offset,
+public PersianNormalizationFilter(TokenStream input): base(input){termAtt = AddAttribute<ICharTermAttribute>();}\n\n
+public static ParseTreeMatch Match(Parser parser, ParseTree tree, string pattern){IList<string> tokenNames = parser.GetToken
+# public virtual void AddEdge(Edge edge){if (edge != null){edges.Add(edge);}}\n\t\tpublic virtual
+#public override Merger NewMerger(Repository db){return new RecursiveMerger(db);}\npublic override void SetConfig(
+public double Function(int docId, string field, int numTerms, long sumTotalTermFreq, long sumDocFreq,
+                  
+// override String ToFormulaString(){StringBuilder buffer = new StringBuilder();buffer.Append('[');buffer.Append(sheetName);buffer
+public virtual DescribeIndexFieldsResponse DescribeIndexFields(DescribeIndexFieldsRequest request){var options = new InvokeOptions();options.
+public virtual string GetName(int index){return GetEntry(index).Name;}\n\n\t\t/// <summary>\n\t\t///
+public virtual DescribeDirectoriesResponse DescribeDirectories(DescribeDirectoriesRequest request){var options = new InvokeOptions();options.
+public override String ToString(){return "<term>" + (GetText() == null ? "" : GetText()) + "</term>";}\n
+#\n        public virtual RevWalk GetRevWalk(){\n            return walk;\n        }\n        \n        /// <summary
+#. public static java.nio.IntBuffer put(int[] src, int srcOffset, int intCount){ java.nio.Int
+@override internal void EnsureCapacity(int minCapacity)\n        {\n            if (buffer.Length < minCapacity)
+public virtual DescribeDirectConnectGatewaysResponse DescribeDirectConnectGateways(DescribeDirectConnectGatewaysRequest request){var
+public override TokenStream Create(TokenStream input){return new NorwegianMinimalStemFilter(input);}\n\t}\n}
+package short[] cloneRange(int start, int end){if (end > array.Length){end = array.Length;}int diff =
+public Credential(string accessKeyId, string accessKeySecret, string securityToken){if (accessKeyId == null){throw new Argument
+public sealed override java.nio.ShortBuffer get(short[] dst, int dstOffset, int shortCount){if (shortCount >
+public virtual EnablePolicyTypeResponse EnablePolicyType(EnablePolicyTypeRequest request){var options = new InvokeOptions();options.Request
+public virtual DescribeReceiptRuleResponse DescribeReceiptRule(DescribeReceiptRuleRequest request){var options = new InvokeOptions
+Tags(String[])\npublic DescribeSecurityGroupsRequest(String[] groupNames) {\n    this.groupNames = groupNames;\n
+public override java.nio.DoubleBuffer put(java.nio.DoubleBuffer buf){throw new java.nio.ReadOnlyBufferException();
+public virtual CreateTrafficPolicyInstanceResponse CreateTrafficPolicyInstance(CreateTrafficPolicyInstanceRequest request){var options = new InvokeOptions
+# ICUTransformFilter(TokenStream input, string id, bool reverse): base(input){this.id = id;this reverse =
+public void WriteLong(long v){WriteInt((int)(v >> 
+public GitShallowCloneFilter(){filters = new AList<GitShallowCloneFilter>();}\npublic GitShallowClone
+public ValueEval GetRefEval(RefPtg ptg){SheetRangeEvaluator sre = GetSheetRefEvalu
+public virtual DeleteDatasetResponse DeleteDataset(DeleteDatasetRequest request){var options = new InvokeOptions();options.RequestMarsh
+public virtual StartRelationalDatabaseResponse StartRelationalDatabase(StartRelationalDatabaseRequest request){var options = new InvokeOptions();options.
+public virtual DescribeOrderableDBInstanceOptionsResponse DescribeOrderableDBInstanceOptions(){return DescribeOrderableDBInstanceOptions(new Descri
+static public double FV(double r, int nper, double pmt, double pv, double type){return FV(r
+public virtual DescribeDocumentVersionsResponse DescribeDocumentVersions(DescribeDocumentVersionsRequest request){var options = new
+public virtual ListDatasetContentsResponse ListDatasetContents(ListDatasetContentsRequest request){var options = new InvokeOptions();options.
+public DeleteKeyPairRequest(string keyPairName){_keyPairName = keyPairName;}\npublic DeleteKeyPairRequest(DeleteKey
+public static short[] Grow(short[] array){return Grow(array, 
+import(String value){if (value == null){throw new IllegalArgumentException("value cannot be null");}String[] split = value
+Tags referToAsCell(index){HSSFWorkbook wb, int index}{HSSFCell cell = HSSFCell
+#java.lang.StringBuilder insert(int offset, int length, java.lang.String str){\n\t\twrite(offset,
+public virtual SetIdentityPoolRolesResponse SetIdentityPoolRoles(SetIdentityPoolRolesRequest request){var options = new InvokeOptions
+package_t find_first_not_null (ref1, ref2, ref3, ref4, ref5, ref6,
+public override void Set(int index, long value){int o = (int)((uint)index >> 
+// override public string ToString(){var children = GetChildren();if (children == null || children.Count == 
+# of the number of characters needed to represent the formula in R1C1 notation.\n   * @return the number of characters needed to
+Tags public void setStopwords(IEnumerable<string> stopwords){if (stopwords == null){throw new System.ArgumentNullException
+# void AddListener(IWorkbookListener listener){if (listener == null){throw new ArgumentException("listener must not be null");}if
+import(java.util.ListIterator<? extends E> start, java.util.Collection<? extends E> c){lock (a){
+// public virtual ObjectId GetObjectId()\npublic virtual ObjectId GetObjectId()\n{\n\treturn objectId;\n}\n
+public virtual AttachLoadBalancerToSubnetsResponse AttachLoadBalancerToSubnets(AttachLoadBalancerToSub
+public UploadMultipartPartRequest(string accountId, string vaultName, string archiveDescription, string checksum, string uploadId,
+public override string ToString(){return "Zlib";}\n\n    /// <summary>\n    /// Compress the data using DEFL
+Tags::__construct\n\n1;\n\n\n\n=head1 SEE ALSO\n\nThis class forms part of L<P
+public void Add(BytesRef bytes){values.Add(bytes);}\n\n    public int Count{get {return values.Count;
+public virtual DeleteStackSetResponse DeleteStackSet(DeleteStackSetRequest request){var options = new InvokeOptions();options.RequestMarsh
+public GetRepoBuildHistoryRequest(): base("cr", "2016-06-07", "GetRepoBuild
+# BitSet(int capacity){mBits = new int[(capacity + 
+public InvokeServiceAsyncRequest(): base("cr", "2016-06-07", "InvokeServiceAsync", "
+public GetAlbumPhotosRequest(): base("CloudPhoto", "2017-07-11", "GetAlbum
+public override bool hasNext(){return this.mNext != null;}\n\npublic override bool hasNext(){return this.mNext != null
+public virtual DeleteHsmClientCertificateResponse DeleteHsmClientCertificate(DeleteHsmClientCertificateRequest request){var options = new
+public CreateLoadBalancerRequest(string loadBalancerName){_loadBalancerName = loadBalancerName;}\n        public CreateLoad
+public string getEncodedPath(){return encodedPath;}\npublic void setEncodedPath(string encodedPath){this.encodedPath = encoded
+public virtual TagResourceResponse TagResource(TagResourceRequest request){var options = new InvokeOptions();options.RequestMarshaller = Tag
+public virtual string GetName(){return name;}\npublic override int GetHashCode(){return name.GetHashCode();}\npublic override bool
+package Builder{\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
+public boolean isEmpty(CellRangeAddress range) {\n        if (range == null) {\n            return true;\n        }\n
+public virtual DescribeDBClusterParametersResponse DescribeDBClusterParameters(DescribeDBClusterParametersRequest request){var options = new
+public virtual GetVoiceConnectorProxyResponse GetVoiceConnectorProxy(GetVoiceConnectorProxyRequest request){return
+public MergeConfig GetMergeConfig(MergeStrategy mergeStrategy){MergeConfig mergeConfig = new MergeConfig();mergeConfig.
+public static DateTime GetJavaDate(double date){return GetJavaDate(date, false);}\n\n        /// <summary>\n       
+public virtual StartContentModerationResponse StartContentModeration(StartContentModerationRequest request){var options = new InvokeOptions
+public override int size(){return this._enclosing._size;}\npublic override string ToString(){return this._enclosing.toString
+public virtual GetRouteResponse GetRoute(GetRouteRequest request){var options = new InvokeOptions();options.RequestMarshaller = Get
+public virtual DeleteClusterResponse DeleteCluster(DeleteClusterRequest request){var options = new InvokeOptions();options.RequestMarsh
+public override String ToString(){StringBuilder buffer = new StringBuilder();buffer.Append("[Window2]\\n");buffer.Append("    .
+Tags FileBasedConfig(FilePath base, bool onDisk) : this(base, onDisk, new FilePath(base
+# override public int getBeginIndex(){if (text == null){throw new java.text.StringCharacterIterator.MalformedInputException("
+public virtual UpdateParameterGroupResponse UpdateParameterGroup(UpdateParameterGroupRequest request){var options = new InvokeOptions();options.RequestMarsh
+public override Object Clone(){return this;}\n        }\n\n        public override void Serialize(ILittleEndianOutput out1)
+Tags = MathUtils.CalculateSigFigsForDivide(dividendSigFigs, divisorSigFigs
+#. public virtual int codePointAt(int index){if (index < 
+public void SetPassword(string password){this.password = password;}\n        public void SetPassword(string password)\n        {\n           
+public ListObjectsRequest(string bucketName){_bucketName = bucketName;}\n        }\n\n        /// <summary>\n        ///
+Tags::RebaseOptions(){\n        public override string ToString()\n        {\n            StringBuilder sb = new StringBuilder();\n            sb
+public GetAlbumPhotosRequest(): base("CloudPhoto", "2017-07-11", "GetAlbum
+package_contains(java.lang.Object o){string s = (null == o) ? null : o.toString();java.util
+public virtual DescribeSpotInstanceRequestsResponse DescribeSpotInstanceRequests(DescribeSpotInstanceRequestsRequest request){var
+public virtual ListEntitiesResponse ListEntities(ListEntitiesRequest request){var options = new InvokeOptions();options.RequestMarsh
+#ICallback Callback2();ICallback Callback3();ICallback Callback4();ICallback Callback5();
+public override String ToString(){StringBuilder buffer = new StringBuilder();buffer.Append("[BOF]\\n");buffer.Append("    .
+public virtual int GetPackedGitVersion(){return packedGitVersion;}\npublic void SetPackedGitVersion(int packedGitVersion
+// override public String toString() {StringBuilder buffer = new StringBuilder();buffer.append("[").append(name).append("]\\n
+public static string ToHexString(byte[] bytes){return ToHexString(bytes, 
+import stringAfterLastOccurrence(string fullPath, string separator){return fullPath.Substring(fullPath.LastIndexOf(se
+public override void Reset(){this.parent.Reset();}\n\n        public override string ToString()\n        {\n            return this
+public override double get(int index){checkIndex(index);return byteBuffer.getDouble(index * libcore.io.SizeOf
+public virtual DeleteDetectorResponse DeleteDetector(DeleteDetectorRequest request){var options = new InvokeOptions();options.RequestMarsh
+packageArrays();\n    }\n\n    @Override\n    public void close() {\n      Arrays.fill(arrays,
+public virtual ListRulesResponse ListRules(ListRulesRequest request){var options = new InvokeOptions();options.RequestMarsh
+public static int GetRuleType(string ruleName){int type;if (!s_ruleTypeMap.TryGetValue(ruleName,
+public virtual RestoreDBClusterFromSnapshotResponse RestoreDBClusterFromSnapshot(RestoreDBClusterFromSnapshotRequest request){var
+# void Serialize(ILittleEndianOutput out){out.WriteInt(field_1_first_row);out.WriteInt
+public virtual PutIntegrationResponseResponse PutIntegrationResponse(PutIntegrationResponseRequest request){var options = new InvokeOptions();options.
+public virtual ParseTree Parse(ITokenStream input, ParserRuleContext parentContext, int invokingStateNumber){ParseTreeListener listener =
+public virtual StopDBClusterResponse StopDBCluster(StopDBClusterRequest request){ var options = new InvokeOptions(); options.
+public virtual string GetName(){return name;}\n\n    /// <summary>\n    /// Get the type of this entry.\n    ///
+public override void CopyTo(byte[] b, int offset){for (int i = 
+public static bool IsMerged(RevWalk walk, RevCommit a, RevCommit b){byte[] araw = a
+Tags::ObjectType GetType(AnyObjectId id){return id.IsCommit ? ObjectType.COMMIT : ObjectType.
+#public override long RamBytesUsed(){\n\t\t\treturn fields.RamBytesUsed();\n\t\t}\n\n\t
+# CompareFormulas(FormulaRecord[] exp, FormulaRecord[] act){if (exp == null){if (act == null){
+public override TokenStream Create(TokenStream input){return new SwedishLightStemFilter(input);}\n}\n\\end{code}
+public override string ToString(){StringBuilder sb = new StringBuilder();sb.Append("[");sb.Append("type=").Append(type
+#GermanNormalizationFilterFactory(IDictionary<string, string> args):base(args){if(args.Count > 
+public virtual CreateGlobalTableResponse CreateGlobalTable(CreateGlobalTableRequest request){var options = new InvokeOptions();options.RequestMarsh
+public virtual AssociateMemberResponse AssociateMember(AssociateMemberRequest request){var options = new InvokeOptions();options.RequestMarsh
+Tags_ =>\n            this.handler.sendMessage(this.handler.obtainMessage(MSG_TIMEOUT, this));\n
+public virtual SetVaultNotificationsResponse SetVaultNotifications(SetVaultNotificationsRequest request){var options = new InvokeOptions
+#Error(int type, string text, string[] expected){string msg = "Encountered \\"" + escapeChar(text) +
+\n    public override java.io.InputStream getInputStream() throws java.io.IOException {\n      return new java.io.ByteArray
+public virtual StopTrainingJobResponse StopTrainingJob(StopTrainingJobRequest request){var options = new InvokeOptions();options.
+public virtual ObjectId GetObjectId(){return objectId;}\npublic virtual void SetObjectId(ObjectId objectId){this.objectId
+public override void Clear(){\n\n\t\t\tbase.Clear();\n\t\t\tarray = null;\n\t\t}\n\n\t
+public virtual void reset(){lock (@lock){if (@in == null){throw new System.IO.IOException("Stream closed");}@in
+public Ref3DPtg(ILittleEndianInput in){field_1_index_extern_sheet = in.ReadShort
+public virtual StopGameSessionPlacementResponse StopGameSessionPlacement(StopGameSessionPlacementRequest request){var options = new InvokeOptions
+from ValueEval evaluate(ValueEval[] args, int srcRowIndex, int srcColumnIndex){if (args.Length != 
+public GetNamespaceRequest(): base("cr", "2016-06-07", "GetNamespace", "cr", "
+public void SetDate(DateTime date){if (date != null){this.date = date;this.dateString = date.ToString(
+public override TokenStream Apply(TokenStream input){return new GreekLowerCaseFilter(m_luceneMatchVersion, input);}
+#override public object[] toArray(){return (object[])array.Clone();}\n\t\t\t}\n\n\t\t\tpublic
+public override void write(byte[] buffer, int offset, int count){lock (this){ensureCapacity(count);System.Array.
+package static RevFilter BEFORE(Date date){return BEFORE(date.getTime());}\n\n    /**\n     *
+public DeleteGroupPolicyRequest(string groupName, string policyName){_groupName = groupName;_policyName = policyName;}\n
+public virtual DeregisterTransitGatewayMulticastGroupSourcesResponse DeregisterTransitGatewayMulticastGroup
+public virtual BatchDeleteScheduledActionResponse BatchDeleteScheduledAction(BatchDeleteScheduledActionRequest request){var options = new In
+public virtual CreateDataSourceResponse CreateDataSource(CreateDataSourceRequest request){var options = new InvokeOptions();options.RequestMarshaller = Create
+public int ReadUShort(){return _in.ReadUShort();}\n        public int ReadInt(){return _in.ReadInt();
+Tags(BLOCK_SIZE, BLOCK_SHIFT, OFFSET_SHIFT, OFFSET_MASK){
+public virtual DescribeScalingPoliciesResponse DescribeScalingPolicies(DescribeScalingPoliciesRequest request){return
+public virtual ListTagsForResourceResponse ListTagsForResource(ListTagsForResourceRequest request){var options = new InvokeOptions();options.
+public virtual IToken RecoverInline(Parser recognizer){\n\t\t\tIToken matchedSymbol = recognizer.CurrentToken;\n
+public virtual SetObjectAttributesResponse SetObjectAttributes(SetObjectAttributesRequest request){var options = new InvokeOptions();options.RequestMarsh
+public ModifyGroupBaseInfoRequest(): base("OpenSearch", "2017-12-25", "ModifyGroup
+public virtual void AttachLoadBalancerTlsCertificate(AttachLoadBalancerTlsCertificateRequest request){var options = new
+public virtual EnableEnhancedMonitoringResponse EnableEnhancedMonitoring(EnableEnhancedMonitoringRequest request){var options
+public override bool contains(object o){return this._enclosing.containsKey(o);}\npublic override bool containsValue(object
+public HSSFCellRangeAddress(HSSFCellReference topLeft, HSSFCellReference bottomRight): base(topLeft,
+public CreateKeyPairRequest(string keyName){_keyName = keyName;}\npublic CreateKeyPairRequest(string keyName)\n
+import ParseException(string message, int line, int charPositionInLine, bool recognizer, symbol offendingSymbol, int line, int
+public GetAlbumsRequest(): base("CloudPhoto", "2017-07-11", "GetAlbums
+public java.io.OutputStream @out(){return @out;}\n\n    /// <summary>\n    /// Set the output stream.\n
+#LetterTokenizerFactory(Version matchVersion): base(matchVersion)\n\t\t{\n\t\t\tthis.matchVersion =
+public virtual bool IsRecursive(){return recursive;}\npublic override string ToString(){\n   return MessageFormat.Format(JGitText.
+TagsFilterFactory::Register(LuceneVersion.LUCENE_30, "English", EnglishAnalyzer.ENGL
+public virtual CreateTrafficPolicyResponse CreateTrafficPolicy(CreateTrafficPolicyRequest request){var options = new InvokeOptions();options.
+# void Serialize(ILittleEndianOutput out1){out1.WriteShort(0);out1.WriteShort(0);
+public static double Log(double a, int b){return Log(a, (double)b);}\n\n        /// <summary>
+Tags::Fill(bytes, 
+public static IList<object> ToList(IEnumerable e){IList<object> list = new List<object>();foreach (object
+public override void clear(){this._enclosing.clear();}\n\n    public void clear(){\n        this._enclosing.
+Tags(int size){setSize(size);}\n\n        public int getSize() {\n            return size;\n        }\n
+public virtual DeleteNamedQueryResponse DeleteNamedQuery(DeleteNamedQueryRequest request){var options = new InvokeOptions();options.RequestMarsh
+Tags(List<byte[]> values){this.m_values = values;this.m_count = values.Count;this.
+public InvokeServiceAsyncRequest(): base("industry-brain", "2018-07-12", "Invoke
+public virtual ListIdentityPoolsResponse ListIdentityPools(ListIdentityPoolsRequest request){var options = new InvokeOptions();options.
+public virtual CreateRelationalDatabaseFromSnapshotResponse CreateRelationalDatabaseFromSnapshot(CreateRelationalDatabaseFromSnapshotRequest request){var options = new
+public virtual StartJobResponse StartJob(StartJobRequest request){var options = new InvokeOptions();options.RequestMarshaller = Start
+Tags public static string[] GetIgnoredFiles(){return ignoredFiles;}\npublic static void SetIgnoredFiles(string[] ignoredFiles){this
+Tagsize(uint32_t num_tags){num_tags_ = num_tags; tags_.resize(num_tags);
+import ChangeResourceRecordSetsRequest(resourceRecordSetChanges, hostedZoneId)\n        : ChangeResourceRecordSetsRequest(resourceRecord
+public virtual DeleteImageResponse DeleteImage(DeleteImageRequest request){var options = new InvokeOptions();options.RequestMarshaller = Delete
+public virtual CreateConfigurationSetResponse CreateConfigurationSet(CreateConfigurationSetRequest request){var options = new InvokeOptions();options.RequestMarsh
+Tags = java.util.Vector.EMPTY_LIST;return (java.util.List<E>)objects.clone();\n
+import RecordVisitor _visitor;\n\n        public void VisitRecord(Record record)\n        {\n            if (record is
+public override String ToString(){StringBuilder buffer = new StringBuilder();buffer.Append(GetType().Name);buffer.Append(" [");buffer
+Tags. public.toc.write(OutputStream out) throws IOException {\n        out.write(new byte[16]);\n       
+public virtual TagResourceResponse TagResource(TagResourceRequest request){var options = new InvokeOptions();options.RequestMarshaller = Tag
+public virtual DeleteResourcePermissionsResponse DeleteResourcePermissions(DeleteResourcePermissionsRequest request){var options = new InvokeOptions();options.
+public virtual ListDatasetsResponse ListDatasets(ListDatasetsRequest request){var options = new InvokeOptions();options.
+public virtual ResumeProcessesResponse ResumeProcesses(ResumeProcessesRequest request){var options = new InvokeOptions();options.
+public virtual GetProfileObjectTypeResponse GetProfileObjectType(GetProfileObjectTypeRequest request){var options = new InvokeOptions();options.
+# override public String ToFormulaString(String[] operands){StringBuilder sb = new StringBuilder();if (operands.Length > 
+import override T merge(T left, T right){throw new System.NotImplementedException();}\n\t\t}\n\n\t
+public override String ToString(){return this.getClass().getName() + "[" + this.GetHashCode() + "]";}
+public UrlPathSegment(string url, string[] segments){this.Url = url;this.Segments = segments;this.
+public CreateGroupRequest(string groupName){_groupName = groupName;}\n        public CreateGroupRequest(string groupName)\n       
+public override void Decode(byte[] blocks, int blocksOffset, long[] values, int valuesOffset, int iterations){for (int j
+public virtual Repository OpenRepository(){throw new NotSupportedException();}\n\n        /// <exception cref="NotSupportedException"></
+public static void StrToLower(char[] s, int start, int len){for (int i = start; i < start + len
+package java.util.Map.Entry<K, V> higherEntry(java.util.Map.Entry<K, V> entry
+public static long SizeOf(object o){if (o != null){return SizeOf(o.GetType());}else{return 
+<? public void add(int location, E value){int i = count;if (location == i){addElement(value);}else
+public virtual DescribeDomainResponse DescribeDomain(DescribeDomainRequest request){var options = new InvokeOptions();options.RequestMarsh
+public override void write(byte[] buffer){throw new System.NotImplementedException();}\n        public override void write(byte[]
+package ArabicNormalizationFilterFactory::CreateTokenStream(TokenStream input)\n\t\t{\n\t\t\treturn new ArabicNormal
+#{\n    public override bool Next()\n    {\n      if (buffered)\n      {\n        buffered = false;
+public static java.nio.IntBuffer allocate(int capacity_1){if (capacity_1 < 
+Tags.\npublic static RevisionRange Create(RevCommit a, RevCommit b){return new RevisionRange(a,
+public virtual UpdateRuleVersionResponse UpdateRuleVersion(UpdateRuleVersionRequest request){var options = new InvokeOptions();options.RequestMarsh
+                  
+public virtual GetDeploymentResponse GetDeployment(GetDeploymentRequest request){var options = new InvokeOptions();options.RequestMarsh
+//public void SetUp(){setUpMethods = new List<MethodInfo>();foreach (MethodInfo method in type.GetMethods(BindingFlags
+#. public virtual E get(int index){for (java.util.ListIterator i = list.listIterator(index); i.
+public virtual DescribeDataSetResponse DescribeDataSet(DescribeDataSetRequest request){var options = new InvokeOptions();options.RequestMarsh
+public RevisionWalker(RevWalk revWalk){this.RevWalk = revWalk;}\n\n       
+public virtual DescribeLoadBalancersResponse DescribeLoadBalancers(){return DescribeLoadBalancers(new DescribeLoadBal
+public boolean ContainsValue(int rowIndex, int columnIndex, Object value){for (int i = 
+public override string ToString(){return Hex.Utf8BytesToString(this.bytes);}\n\n// LUCENENET
+package public virtual FileMode GetFileMode(){return fileMode;}\npublic virtual void SetFileMode(FileMode fileMode){this.file
+//return java.util.Enumeration<java.util.Map.Entry<K, V>>[]{return new java.util.
+public virtual CreateScriptResponse CreateScript(CreateScriptRequest request){var options = new InvokeOptions();options.RequestMarshaller = Create
+#\n        public BytesRef Next()\n        {\n            if (current == null)\n            {\n                return null;\n
+public override string Output(ICharTermAttribute termAtt){return termAtt.ToString();}\n\n        /// <summary>\n        ///
+public virtual AssociateWebsiteCertificateAuthorityResponse AssociateWebsiteCertificateAuthority(AssociateWebsiteCertificateAuthorityRequest
+// public void Expire(Ref @ref){while (@ref != null){Ref next = @ref.Next;@ref.Next =
+#LetterTokenizerFactory(Version matchVersion): base(matchVersion)\n\t\t{\n\t\t\tthis.matchVersion =
+public ModifyDBParameterGroupRequest(string dbParameterGroupName, List<Parameter> parameters){_dbParameterGroupName = dbParameterGroup
+public virtual GetHostedZoneCountResponse GetHostedZoneCount(GetHostedZoneCountRequest request){var options = new InvokeOptions
+public override void Set(int index, long value){int o = (int)((uint)index >> 
+Tags\tpublic override ITreeFilter Create()\n\t\t\t{\n\t\t\t\treturn new NGit.Api.Impl.Tree
+public override string ToString(){var sb = new StringBuilder();sb.Append("(");sb.Append(Term);sb.Append(" ");
+package public override bool HasUncommittedChanges(){foreach (var path in paths){if (path.IsUncommitted()){return true
+public override int offsetByCodePoints(int index, int codePointOffset){lock (this){return base.offsetByCodePoints(index
+public virtual DeleteNetworkAclEntryResponse DeleteNetworkAclEntry(DeleteNetworkAclEntryRequest request){var options = new InvokeOptions
+public virtual RegisterUserResponse RegisterUser(RegisterUserRequest request){var options = new InvokeOptions();options.RequestMarshaller = Register
+public static int CommitMsg(byte[] b, int ptr){int sz = b.Length;if (ptr < sz){b[
+Tags::int getStartOffset(){return start;}\npublic int getEndOffset(){return end;}\n@Override\npublic String toString(){
+public virtual NGit.Api.SubmoduleAddCommand AddFile(string file){files.AddItem(file);return this;}\npublic
+public virtual GetVoiceTemplateResponse GetVoiceTemplate(GetVoiceTemplateRequest request){var options = new InvokeOptions
+public virtual DescribeEndpointResponse DescribeEndpoint(DescribeEndpointRequest request){var options = new InvokeOptions();options.RequestMarsh
+public virtual VpcPeeringConnection[] DescribeVpcPeeringConnections(){return DescribeVpcPeeringConnections(new Descri
+public override java.nio.ByteBuffer putLong(int index, long value){throw new System.NotImplementedException();}\n
+public virtual RegisterDeviceResponse RegisterDevice(RegisterDeviceRequest request){var options = new InvokeOptions();options.RequestMarshaller = Register
+#public static int[] ToIntArray(int[] array){if(array==null){return null;}int[] result=new int[
+public virtual DeleteAppResponse DeleteApp(DeleteAppRequest request){var options = new InvokeOptions();options.RequestMarshaller = Delete
+public virtual GetGcmChannelResponse GetGcmChannel(GetGcmChannelRequest request){var options = new InvokeOptions();options.
+import public override Iterable<BytesRef> getTerms(){return terms.toArray(new BytesRef[terms.size()
+public static bool IsValidChar(int c){switch(c){case 'A':case 'B':case 'C':case 'D
+public virtual ListSchemaVersionsResponse ListSchemaVersions(ListSchemaVersionsRequest request){var options = new InvokeOptions
+Tags public override string ToString(){return name;}\n\n    public override int GetHashCode(){return name.GetHashCode();}\n
+public ValueEval Evaluate(ValueEval[] args, OperationEvaluationContext ec){if (args.Length != 
+public int CompareTo(byte[] bs, int p){int r = 
+public void RemoveSheet(int sheetnum){_sheets.RemoveAt(sheetnum);_workbook.RemoveSheet(sheetnum);}
+public GetLogEventsRequest(string logGroupName, string logStreamName){_logGroupName = logGroupName;_logStreamName
+public static bool equals(byte[] array1, byte[] array2){if (array1 == null || array2 == null){return false
+public static void setEnabled(bool enabled){enabled_ = enabled;}\npublic static bool isEnabled(){return enabled_;}\n}\n}
+public virtual DeleteLogSubscriptionResponse DeleteLogSubscription(DeleteLogSubscriptionRequest request){var options = new InvokeOptions();options.
+public override bool Contains(string key){return map.ContainsKey(key);}\n\n\t\tpublic override bool Contains(string
+public int GetExternalSheetIndex(int externSheetIndex){return CheckExternSheet(externSheetIndex);}\n\n\t\t///
+public bool CanHandle(string path){return path.endsWith(".md") || path.endsWith(".markdown");}\n  \n
+// public static void Register(MergeStrategy s){MergeStrategy.Register(s);}\n   public static void Register(Merge
+# override long RamBytesUsed(){\n\t\t\treturn fields.RamBytesUsed();\n\t\t}\n\n\t\t
+Tags Bucket(const Aws::String& name, const Aws::String& creationDate){name(name), creationDate(cre
+public virtual GetFindingsResponse GetFindings(GetFindingsRequest request){var options = new InvokeOptions();options.RequestMarsh
+public virtual DescribeEntitiesDetectionJobResponse DescribeEntitiesDetectionJob(DescribeEntitiesDetectionJobRequest
+public bool Evaluate(ValueEval arg0){if (arg0 == BlankEval.getInstance()){return false;}if
+public override void Write(ILittleEndianOutput out1){out1.WriteByte(sid + PtgClass.Pt
+# public static void Main(string[] args){if(args.Length == 
+#public void SetBytes(BytesRef bytes){if (bytes == null){throw new System.ArgumentNullException("bytes");}if (!
+Tags public static int SetDefaultLocale(){return SetDefaultLocale(0);}\n\n        /// <summary>\n        /// S
+#DoubleValuesSource(field){this.field = field;}\n\t\t[System.Serializable]\n\t\tpublic class DoubleValues
+Tags Tag(String key, String value)\n        public Tag(string key, string value)\n        {\n            _key = key
+Tags(string, string, string, string, string, string, string, string, string, string, string, string, string, string
+public virtual ListContainerInstancesResponse ListContainerInstances(ListContainerInstancesRequest request){var options = new InvokeOptions();options.
+public virtual ListResourcesResponse ListResources(ListResourcesRequest request){var options = new InvokeOptions();options.RequestMarshaller = List
+public GetAlbumPhotosRequest(): base("CloudPhoto", "2017-07-11", "GetAlbum
+public virtual CreateMatchmakingRuleSetResponse CreateMatchmakingRuleSet(CreateMatchmakingRuleSetRequest request){var options = new InvokeOptions
+public virtual ListHostedZonesResponse ListHostedZones(ListHostedZonesRequest request){var options = new InvokeOptions
+public virtual AnyObjectId GetObjectId(){if (type == OBJ_COMMIT){return commitObjectId;}else{return
+public virtual DeleteVoiceTemplateResponse DeleteVoiceTemplate(DeleteVoiceTemplateRequest request){var options = new InvokeOptions
+public virtual CreateDomainEntryResponse CreateDomainEntry(CreateDomainEntryRequest request){var options = new InvokeOptions();options.RequestMarsh
+public static int CountCellsWithFormula(IEnumerable cells){int count = 
+# LetterTokenizerFactory(IDictionary<string, string> args): base(args)\n{\n 
+public sealed override int getInt(int index){checkIndex(index, libcore.io.SizeOf.INT);return libcore
+#public virtual IList<string> GetPaths(IList<string> basePaths){if (basePaths == null){
+public override java.nio.ByteBuffer putShort(int index, short value){throw new System.NotImplementedException();}\n
+public virtual void writeObject(object obj){throw new System.NotImplementedException();}\n\n        public override bool Equals(
+# override public int codePointCount(int beginIndex, int endIndex){return codePointCountImpl(beginIndex, endIndex);}
+TagsLookup.Lookup = TagsLookup.Lookup.GetInstance(TagsLookup.Lookup.GetInstance(TagsLook
+package java.Time.temporal.TemporalUnit unit;\n\t\t\tif (unit == null) {\n\t\t
+Tags WordTag(string word, string tag){IllegalArgumentException e){if (word == null){throw new IllegalArgumentException("
+public virtual DisableOrganizationAdminAccountResponse DisableOrganizationAdminAccount(DisableOrganizationAdminAccountRequest request){var options = new
+public virtual CreateRoomResponse CreateRoom(CreateRoomRequest request){var options = new InvokeOptions();options.RequestMarsh
+public virtual DeleteGlobalTableResponse DeleteGlobalTable(DeleteGlobalTableRequest request){var options = new InvokeOptions();options.RequestMarsh
+public java.nio.CharBuffer decode(java.nio.ByteBuffer bytes){return decode(bytes, java.nio.charset.
+                  
+public sealed override object array() { return protectedArray(); }\npublic sealed override string toString() { return protectedToString(); }\n
+Tags PrintSizeRecord(RecordInputStream in1){field_1_x = in1.ReadShort();field_2_y = in
+public DeleteDBSnapshotRequest(string dbSnapshotIdentifier){_dbSnapshotIdentifier = dbSnapshotIdentifier;}\n        public DeleteDBSnapshotRequest(string
+Tags(string name){return this.name.equals(name) ? this.tags : null;}\r\n\r\n        /// <summary
+#. public virtual void Inform(string property, string value){if (property == null){throw new System.ArgumentNullException("property");
+public virtual InitiateMultipartUploadResponse InitiateMultipartUpload(InitiateMultipartUploadRequest request){var options = new
+public char[] GetChars(){return chars;}\n\n\t[MethodImpl(MethodImplOptions.AggressiveInlining)]\n
+#Override\n\t\tpublic long RamBytesUsed() {\n\t\t\treturn RamUsageEstimator.AlignObjectSize(
+public virtual RegisterInstancesWithLoadBalancerResponse RegisterInstancesWithLoadBalancer(RegisterInstancesWithLoadBalancerRequest request){var
+public UnbindInstance2VpcRequest(): base("Rds", "2014-08-15", "Unbind
+package RefModeRecord(RecordInputStream in);\n\n        public void serialize(LittleEndianOutput out) {\n            out.write
+public override void Serialize(ILittleEndianOutput out1){out1.WriteShort(FirstRow);out1.WriteShort(
+public virtual DeleteInterconnectResponse DeleteInterconnect(DeleteInterconnectRequest request){var options = new InvokeOptions();options.RequestMarsh
+#public virtual FileInfo GetFileInfo(string name){if (name == null){throw new ArgumentNullException();}if (!name.
+public override String ToString(){StringBuilder buffer = new StringBuilder();buffer.Append("[EXTERNSHEET]\\n");buffer.Append
+public virtual DeleteVoiceConnectorTerminationCredentialsResponse DeleteVoiceConnectorTerminationCredentials(DeleteVoiceConnectorTerm
+public virtual Writer append(char c){write(c);return this;}\n        public virtual Writer append(string str){write(
+//. public static DirectoryReader open(Directory dir){if (dir is null){throw new ArgumentNullException(nameof(dir));}
+#lang. public static IRevCommit Parse(string id){if (id == null){throw new ArgumentNullException("id");
+public virtual StartDocumentTextDetectionResponse StartDocumentTextDetection(StartDocumentTextDetectionRequest request){var options = new
+public static string Escape(string str){StringBuilder sb = new StringBuilder();for (int i = 
+public void setValue(V value){this.value = value;}\n\npublic override bool Equals(java.lang.Object o){
+public QueryParserTokenManager(TextReader reader)\n        {\n            this._reader = reader;\n        }\n        \n        public
+# override public long getEstimation(long size){if (size == 
+public override java.nio.LongBuffer get(long[] dst, int dstOffset, int longCount){byteBuffer.limit(_limit *
+# public void RemoveAllFormulas(){_formulas.Clear();}\n        public void RemoveFormula(int idx){_formulas
+# LexerATNSimulator(ATN atn, ATNState decisionToState):\n        public LexerATNSimulator
+public virtual ListObjectVersionsResponse ListObjectVersions(ListObjectVersionsRequest request){var options = new InvokeOptions
+public static ObjectId FromRaw(byte[] raw)\n        {\n            if (raw.Length != Constants.OBJECT_ID
+The int Transliterate(char[] s, int start){for (int i = start; i < s.Length; i++){char
+public virtual void Recover(Parser recognizer, RecognitionException e){RecognitionException re;if (e is FailedPredicateException
+public override String ToString(){StringBuilder buffer = new StringBuilder();buffer.Append(GetType());buffer.Append(" [");buffer.Append
+public RefreshTokenRequest(): base("Ons", "2019-02-14", "RefreshToken"){Protocol
+Tags Tag(String key, String value)\npublic Tag(String key, String value) {\n    this.key = key;\n
+#public override string Get(string key){StringBuilder sb = new StringBuilder();for (int i = 
+public virtual DescribeMountTargetsResponse DescribeMountTargets(DescribeMountTargetsRequest request){var options = new InvokeOptions
+public virtual GetApiMappingResponse GetApiMapping(GetApiMappingRequest request){var options = new InvokeOptions();options.RequestMarsh
+public HttpRequest(string url) : base(url){Headers = new Dictionary<string, string>(StringComparer.Default);}
+public RefPtg(int row, int col){field_1_row = row;field_2_col = col;}\n
+import public static IEnumerable<IndexSearcher> CreateSearchers(Directory dir, IndexReader reader, Analyzer analyzer, int numSearch
+public virtual DeleteApnsChannelResponse DeleteApnsChannel(DeleteApnsChannelRequest request){var options = new InvokeOptions();options.
+public.ListResourcesResponse ListResources(ListResourcesRequest request){var options = new InvokeOptions();\noptions.RequestMarshaller =
+TagsNearestNeighbourFilter(String fieldName, Point point, double distanceInKm){this.fieldName = fieldName
+#.public override char get(int index){checkIndex(index);return backingArray[offset + index];}\n        /// <summary
+public virtual UpdateAccountSettingsResponse UpdateAccountSettings(UpdateAccountSettingsRequest request){var options = new InvokeOptions();options.RequestMarsh
+public virtual DescribeLifecycleConfigurationsResponse DescribeLifecycleConfigurations(DescribeLifecycleConfigurationsRequest request){var
+public virtual DescribeDomainResponse DescribeDomain(DescribeDomainRequest request){var options = new InvokeOptions();options.RequestMarsh
+package<T> GetExistingRule(ATN atn, int ttype){\n        if (atn.grammarType ==
+# override String ToString(){StringBuilder buffer = new StringBuilder();buffer.Append("[").Append(this.GetType().Name).Append
+# override public string ToString(){StringBuilder sb = new StringBuilder();sb.Append("commit ");sb.Append(Name);sb.Append
+public virtual ListTagsForResourceResponse ListTagsForResource(ListTagsForResourceRequest request){var options = new InvokeOptions();options.
+//public virtual bool IsReuseDifferentHash(){return reuseDifferentHash;}\npublic void SetReuseDifferentHash(bool reuse
+TagsheetRecord();\n\n        public override String ToString()\n        {\n            StringBuilder sb = new StringBuilder();\n            sb.Append
+public override java.nio.ShortBuffer put(short c){throw new java.nio.ReadOnlyBufferException();}\n\npublic override
+public void SetQueryString(string queryString){this.queryString = queryString;if (this.queryString == null){this.
+public virtual MergeCommand Merge(){return new MergeCommand(repo);}\n\n        /// <exception cref="NGit.
+Tags|public override string[] GetTags(string key){return new string[0];}\npublic override void Put(string key, string
+public static int checkPortRange(int port, int minPort, int maxPort){if (port < minPort || port > maxPort
+public virtual ListAssessmentTemplatesResponse ListAssessmentTemplates(ListAssessmentTemplatesRequest request){var options = new
+public virtual RestoreClusterResponse RestoreCluster(RestoreClusterRequest request){var options = new InvokeOptions();options.
+public void Add(HSSFCell cell){cells.Add(cell);}\npublic void RemoveCell(HSSFCell cell
+public override bool Equals(object obj){if (obj == null){return false;}if (this == obj){return true;}if (
+public static int Next(byte[] array, int ptr, char c){while (ptr < array.Length){if (array[ptr]
+public virtual bool IsDelta(){return GetDeltaBase() != null;}\n\n\t/// <summary>Returns the object ID of the base
+package public static void EmitEOFAction();public static void EmitEOFAction(){try{_input.EOF();}\n
+public UpdateUserRequest(string userName){_userName = userName;}\npublic UpdateUserRequest(string userName,string newPath
+public override RevFilter Negate(){throw new NonReversibleFilterException(Type());return new NegateRevFilter(this);}
+import virtual void SetAuthor(PersonIdent author){author_ = author;}\n\n      public override string ToString()\n      {\n        
+public static IndexSearcher Create(IndexReader reader){if (reader == null){throw new ArgumentNullException("reader");}return new Index
+Tags::diff_t diff_t diff_t diff_tdiff_tdiff_tdiff_tdiff_tdiff_t
+Tags DefaultRowHeightRecord(RecordInputStream in);\n\n        field_1_default_row_height = in.ReadShort();\n
+public GetLoggingOptionsRequest(string logType){_logType = logType;}\n        }\n\n        /// <summary>\n
+public virtual CreateGameSessionQueueResponse CreateGameSessionQueue(CreateGameSessionQueueRequest request){var options = new InvokeOptions();options.
+public virtual CreateConnectionResponse CreateConnection(CreateConnectionRequest request){var options = new InvokeOptions();options.RequestMarshaller = Create
+public virtual int GetMode(){return mode;}\npublic virtual long GetLength(){return length;}\npublic virtual string GetName(){return name;}
+public string getScheme(){return scheme;}\npublic string getSchemeSpecificPart(){return schemeSpecificPart;}\npublic string get
+The(char[] buf, int offset, int count){java.lang.lang.System.arraycopy(buf, offset, buf,
+public GetAlbumPhotosRequest(): base("CloudPhoto", "2017-07-11", "GetAlbum
+public virtual DeleteMembersResponse DeleteMembers(DeleteMembersRequest request){var options = new InvokeOptions();options.RequestMarsh
+public virtual GetDomainDetailResponse GetDomainDetail(GetDomainDetailRequest request){var options = new InvokeOptions();options.RequestMarsh
+public override bool remove(object o){return this._enclosing.remove(o);}\n    }\n    #endregion\n
+package java.util.Map.Entry<K, V> ceilingEntry(K key);return backingMap.ceilingEntry(key
+public virtual CreateStreamingSessionStreamResponse CreateStreamingSessionStream(CreateStreamingSessionStreamRequest request){var options = new InvokeOptions
+public bool isAbsolute(){return path.startsWith(File.separator);}\n\n\n\n\n\n\n\n\n\n\n
+public virtual DisableRequestResponse DisableRequest(DisableRequestRequest request){var options = new InvokeOptions();options.RequestMarsh
+public virtual DescribeResourceResponse DescribeResource(DescribeResourceRequest request){var options = new InvokeOptions();options.RequestMarsh
+public void Next(){if (this.m_index < this.m_count){this.m_index++;}else{this.
+package(){a = new RepositoryRevWalk(b.getRepository());}\nb = a;\na = new Repository
+public override TextReader Create(TextReader input){return new ICUTransformFilter(input, transform);}\npublic override string ToString(){
+The string value;\npublic string value{ get; set; }\n\n\t\t/// <summary>Gets the string representation of the
+public override string ToString(){var buf = new java.lang.StringBuilder();buf.append(this.GetType().ToString());buf
+public void DescribeChannel(DescribeChannelRequest request){var options = new InvokeOptions();options.RequestMarshaller = Describe
+public virtual AttachInternetGatewayResponse AttachInternetGateway(AttachInternetGatewayRequest request){var options = new
+public override String ToString(){StringBuilder sb = new StringBuilder();sb.Append(GetType().Name);sb.Append(" [");sb
+TagsPerFieldAnalyzerWrapperFactory: org.apache.lucene.index.codecs.perfield.analyzers.
+public virtual ListTemplatesResponse ListTemplates(ListTemplatesRequest request){var options = new InvokeOptions();options.RequestMarsh
+Tags HeapProfiler. HeapProfiler(long interval, int stackDepth) : base(interval, stackDepth
+TagsContinueSubRecord().setData(new byte[0]);\n        this.data = new byte[0];\n    }\n
+public virtual ListDirectoriesResponse ListDirectories(ListDirectoriesRequest request){var options = new InvokeOptions();options.RequestMarsh
+public override void Decode(byte[] blocks, int blocksOffset, long[] values, int valuesOffset, int iterations){for (int j
+public virtual IndexWriterConfig SetMergePolicy(MergePolicy mergePolicy){this.mMergePolicy = mergePolicy;return this;}
+public static int alignObjectSize(int size){return alignObjectSize(size, 
+public virtual ApproveAssignmentResponse ApproveAssignment(ApproveAssignmentRequest request){var options = new InvokeOptions();options
+public virtual ModifyVolumeResponse ModifyVolume(ModifyVolumeRequest request){var options = new InvokeOptions();options.RequestMarsh
+# public virtual Node Merge(Node a, Node b){if (a == null){return b;}if (b == null){return
+#.public virtual int read(byte[] b, int off, int len){if (len > remaining()){throw new java.io
+public virtual RespondActivityTaskCompletedResponse RespondActivityTaskCompleted(RespondActivityTaskCompletedRequest request){var options = new InvokeOptions
+public virtual void setSecondaryProgress(int secondaryProgress){lock (this){base.setSecondaryProgress(secondaryProgress);}}\n
+// override public int CompareTo(DiffEntry other){if (other == null){throw new ArgumentNullException("other");}if (
+TagsRecord r = new HLinkRecord();\n        r.setFirstColumn((short)0);\n        r.setLastColumn((
+//.public override java.nio.CharBuffer put(char[] src, int srcOffset, int charCount){byteBuffer.limit(_
+#public bool IsEmpty(){for (int i = 
+Tags. public.ro/public.ro/en/public.ro/en/public.ro/en/public.ro/en
+// #. public static double NORMINV(double a, double b){public static double NORMINV(double a, double
+#FrenchMinimalStemFilterFactory(IDictionary<string, string> args):base(args){if(args.Count >
+public static Query NewTermQuery(string field, string term){return new TermQuery(new Term(field, term));}\n\n\t
+public virtual DeleteDocumentationVersionResponse DeleteDocumentationVersion(DeleteDocumentationVersionRequest request){var options = new InvokeOptions();options.
+public override String ToString(){StringBuilder buffer = new StringBuilder();buffer.Append("[NOTE]\\n");buffer.Append("    .
+Tags public override int get(int index){return getByte(index) & 
+public override string ToString(){return Name;}\n\n    /// <summary>\n    /// The name of the entry.\n    /// </
+public override ValueEval Evaluate(int srcRowIndex, int srcColumnIndex, ValueEval arg0, ValueEval arg
+public override void Dispose(){base.Dispose();}\n\t\tpublic override object Clone(){\n\t\t\tvar clone = (
+# public int FindBreakOpportunity(int start, int end){if (start == end){return start;}}else if (
+// @ts-expect-error {@ts-expect-error ts-expect-error ts-expect-error ts-expect-error ts
+public virtual DeleteApiKeyResponse DeleteApiKey(DeleteApiKeyRequest request){var options = new InvokeOptions();options.RequestMarsh
+public UpdateInstanceRequest(): base("Ots", "2016-06-20", "UpdateInstance", "ots",
+public virtual DeleteIdentityPoolResponse DeleteIdentityPool(DeleteIdentityPoolRequest request){var options = new InvokeOptions();options.RequestMarsh
+public virtual DescribeNetworkInterfacesResponse DescribeNetworkInterfaces(DescribeNetworkInterfacesRequest request){var options = new InvokeOptions
+TagsOverride public int Serialize(int offset, byte[] data, EscherSerializationListener listener){listener.BeforeRecordSerialize(offset
+public virtual CreateLoggingConfigurationResponse CreateLoggingConfiguration(CreateLoggingConfigurationRequest request){var options = new InvokeOptions();options.
+public virtual DescribeDirectConnectGatewaysResponse DescribeDirectConnectGateways(DescribeDirectConnectGatewaysRequest request){var
+public static void fill(double[] array, double value){{for (int i = 
+public virtual bool HasNext(){return this.next != null;}\n\n\t\t/// <summary>Returns the next element in the iteration
+Tags = next;\npublic override void Dispose(bool disposing)\n{\n    if (!disposing)\n    {\n
+public override bool ContainsAll(RevFlagSet set){return (flags & set.mask) == set.mask;}\n\n 
+TagsResponse\npublic virtual TagsResponse Tags(TagsRequest request)\n{\n    return Invoke<TagsResponse>(request, marshaller
+public virtual Token Next(){if (p == tokens.Length){return null;}else{return tokens[p++];}return null;}public
+public void RemoveName(int namenum){if (namenum < 
+public void RemoveSheet(int sheetIndex){string sheetName = GetSheetName(sheetIndex);RemoveSheet(sheetName);}\npublic
+public override bool Equals(object obj){if (obj is byte[]){byte[] other = (byte[])obj;int len = other
+public GetRepoBuildHistoryRequest(): base("cr", "2016-06-07", "GetRepoBuild
+"git diff --no-prefix --numstat\\"", or \\"git diff --no-prefix --numstat -M\\""\n\n
+Tags.\n\npublic void AddToMessage(MessageContainer p) {\n    for (int i = 
+#. public override void Close(){@base.Close();}\n@override public void Close(){@base.Close();}\n\n@
+public virtual DescribeModelPackageResponse DescribeModelPackage(DescribeModelPackageRequest request){var options = new InvokeOptions();options.
+# public void ApplyStyles(WorkbookEvaluator workbookEvaluator, FormulaParsingWorkbook workbook, FontRecordA
+public override ObjectReader Open(int windowSize)\n\t\t{\n\t\t\treturn new PackReader(this, windowSize);\n
+public virtual UpdateResolverEndpointResponse UpdateResolverEndpoint(UpdateResolverEndpointRequest request){var options = new InvokeOptions();options.RequestMarsh
+Tags(public XmlTag(string name, XmlTag parent){if (name == null){throw new ArgumentNullException("name");}if
+public override string ToString(string field){StringBuilder buffer = new StringBuilder();if (!field.Equals(m_field, StringComparison
+public void RemoveRow(int rowIndex){HSSFRow row = (HSSFRow)sheet.GetRow(rowIndex);
+public void Reset(){active = false;}\n\n        public override string ToString()\n        {\n            StringBuilder sb = new StringBuilder();
+public virtual ConfirmDeviceResponse ConfirmDevice(ConfirmDeviceRequest request){var options = new InvokeOptions();options.RequestMarsh
+# public override bool isDirectory(){throw new System.NotImplementedException();}\n\n\t\t[Sharpen.Stub
+public virtual ModifySnapshotCopyRetentionPeriodResponse ModifySnapshotCopyRetentionPeriod(ModifySnapshotCopyRetentionPeriodRequest request){var
+public virtual DeleteClusterSubnetGroupResponse DeleteClusterSubnetGroup(DeleteClusterSubnetGroupRequest request){var options = new
+public static string Decode(byte[] data){return Decode(data, 
+public int getPort(){return port;}\npublic void setPort(int port){this.port = port;}\npublic InetAddress get
+public virtual StopJobResponse StopJob(StopJobRequest request){var options = new InvokeOptions();options.RequestMarshaller = Stop
+public override void SeekExact(long ord, IOContext context){Debug.Assert(ord >= 
+package WriteAccessRecord(RecordInputStream in);\n\n        public void serialize(LittleEndianOutput out) {\n            out.write
+// public static void WriteUnicodeString(ILittleEndianOutput out1, String stringValue){out1.WriteString(stringValue
+public virtual AuthorizeSecurityGroupEgressResponse AuthorizeSecurityGroupEgress(AuthorizeSecurityGroupEgressRequest request){var options = new
+// public void AddFile(FilePath file){files.Add(file);}\n\n\t\t/// <exception cref="System.
+                  
+#def setIgnoreDelete(boolean ignoreDelete){if (ignoreDelete){throw new IllegalArgumentException("ignoreDelete cannot be set to true
+Tags(ATNState, int, int, int, int, int, int, int, int, int, int, int, int
+//public override void Serialize(ILittleEndianOutput out1){out1.WriteShort(sid);out1.WriteShort
+public Builder(bool ignoreCase){this.ignoreCase = ignoreCase;}\n        public Builder SetIgnoreCase(bool ignoreCase){
+# DefaultConcurrentMap(int numSegments, int segmentShift){if(numSegments <= 
+#public virtual int Get(int key){\n\t\t\tif (key == -1){\n\t\t\t\treturn -1;
+public virtual ListHyperParameterTuningJobsResponse ListHyperParameterTuningJobs(ListHyperParameterTuningJobsRequest
+public virtual DeleteTableResponse DeleteTable(string tableName){var request = new DeleteTableRequest();request.TableName = tableName;return
+import bool CanCompare(Range r1, Range r2){r1.Start == r2.Start && r1.End ==
+public void Advance(int by){Debug.Assert(by <= bufPos_);bufPos_ -= by;Debug.Assert(buf
+public virtual UpdateDocumentVersionResponse UpdateDocumentVersion(UpdateDocumentVersionRequest request){var options = new InvokeOptions();options.RequestMarsh
+public virtual UpdateNotebookInstanceLifecycleConfigResponse UpdateNotebookInstanceLifecycleConfig(UpdateNotebookInstanceLifecycleConfigRequest request){\n
+public override int CompareTo(BytesRef other){return this.Comparator.Compare(this, other);}\n        public override
+public virtual int Stem(char[] s, int len){if (len < 
+public virtual DescribeDBSecurityGroupsResponse DescribeDBSecurityGroups(DescribeDBSecurityGroupsRequest request){var options = new InvokeOptions
+public SortedDocValuesField(string name, SortedSetDocValues values): base(name, values){DocValuesType = DocValues
+public virtual CreateDocumentationPartResponse CreateDocumentationPart(CreateDocumentationPartRequest request){var options = new InvokeOptions();options.
+public virtual string getValue(){return value;}\npublic virtual void setValue(string value){this.value = value;}\npublic override string
+public override java.nio.ShortBuffer asReadOnlyBuffer(){return duplicate();}\npublic override java.nio.ShortBuffer asReadOnly
+public virtual UpdateDataSourcePermissionsResponse UpdateDataSourcePermissions(UpdateDataSourcePermissionsRequest request){var options = new InvokeOptions();options.
+public static Record Create(RecordInputStream in1){if (in1.IsLeftoverData){throw new RecordFormatException("Data
+# virtual public int getCount() { return mItems.length; }\n\t\t\t\t\t\t\t\t\t\t\t\t\t
+public virtual DeleteDeviceDefinitionResponse DeleteDeviceDefinition(DeleteDeviceDefinitionRequest request){var options = new InvokeOptions();options.RequestMarsh
+public virtual CreateGraphResponse CreateGraph(CreateGraphRequest request){var options = new InvokeOptions();options.RequestMarshaller = Create
+<? return java.nio.ShortBuffer; else throw new java.nio.ReadOnlyBufferException();}\noverride public java.nio.
+public sealed override java.nio.ByteBuffer get(){if (this.position == this.limit){throw new java.nio.Buffer
+// public override java.nio.LongBuffer put(int index, long c);\npublic override java.nio.LongBuffer put(int
+public NumericDocValuesField(string name, long value): base(name, TYPE){FieldsData = new Int64(value
+TagsToKeep tokensToKeep = new List<int>();\n    for (int i = 
+public override String ToString(){StringBuilder buffer = new StringBuilder();buffer.Append("[NOTE]\\n");buffer.Append("    .
+protected SubmoduleUpdateCommand(Repository repo) : base(repo){paths = new AList<string>();}\n\n        /// <summary
+#public virtual void Add(Ref @ref, ObjectId id){if (@ref == null){throw new ArgumentNullException(@ref);}
+public virtual EnableSnapshotCopyResponse EnableSnapshotCopy(EnableSnapshotCopyRequest request){var options = new InvokeOptions();options.Request
+package FunctionValues. public override bool Equals(object o){throw new System.NotSupportedException();}\n\t\tpublic override int
+public override void Serialize(ILittleEndianOutput out1){out1.WriteInt(RowIndex);out1.WriteInt(
+public static java.util.Calendar getInstance(){return getInstance(java.util.TimeZone.getDefault());}\n\n        [
+" public virtual string Get(string name, string dflt){string[] vals;object temp;if (map.TryGetValue
+public void WriteToDisk(){FooterRecord footer = (FooterRecord)FindFirstRecordBySid(FooterRecord.Foot
+#_token_filter_factory(token_stream_factory, token_filter_factory): new token_filter_factory(token_
+public ExternalBookBlock(int externalBookCount){_externalBooks = new ExternalBookRecord[externalBookCount];}\n\n        public
+public override String ToString(){StringBuilder buffer = new StringBuilder();buffer.Append("[UNKNOWN]\\n");buffer.Append("
+public virtual NGit.Api.PushCommand SetForce(bool force){CheckCallable();this.force = force;return this;}
+# override int Compare(string id1, string id2){return id1.Length.CompareTo(id2.Length);
+public override TokenStream Create(TokenStream @in){return new FrenchLightStemFilter(@in);}\npublic override string ToString(){
+Tags()\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
+Tags@ = new StandardAnalyzer(TEST_VERSION_CURRENT).SetPositionIncrementGap(TestUtil.LUCEN
+public override bool Equals(object obj){if (this == obj){return true;}if (obj == null){return false;}if (
+public CharsetDecoder charsetDecoder(){return decoder;}\npublic CharsetDecoder charsetDecoder(){return decoder;}\n\n
+public virtual DescribeExperimentResponse DescribeExperiment(DescribeExperimentRequest request){var options = new InvokeOptions();options.
+public HSSFPatriarch CreatePatriarch(HSSFWorkbook wb){return new HSSFPatriarch(w
+public string Text{return _text;}\n\n        /// <summary>Gets the type of the token.</summary>\n        /// <
+public virtual DeleteRouteResponse DeleteRoute(DeleteRouteRequest request){var options = new InvokeOptions();options.RequestMarshaller = Delete
+public virtual AssociateVPCWithHostedZoneResponse AssociateVPCWithHostedZone(AssociateVPCWithHostedZoneRequest
+public virtual PutIntegrationResponse PutIntegration(PutIntegrationRequest request){var options = new InvokeOptions();options.RequestMarsh
+import SimpleImmutableEntry(K key, V value){this.mKey = key;this.mValue = value;}\n\n\n
+public override void Decode(byte[] blocks, int blocksOffset, long[] values, int valuesOffset, int iterations){for (int i
+public virtual DisassociateConnectionFromLagResponse DisassociateConnectionFromLag(DisassociateConnectionFromLagRequest request){var
+#public virtual FileMode GetOldMode(){return oldMode;}\npublic virtual FileMode GetNewMode(){return newMode;}\n\n///
+public override string ToString(){return c.ToString();}\n\n\t\t/// <summary>Removes the element at the specified position
+public virtual StopTextTranslationJobResponse StopTextTranslationJob(StopTextTranslationJobRequest request){var options = new InvokeOptions
+# override public String ToString(){StringBuilder sb = new StringBuilder();sb.Append("[");sb.Append("]");return sb.
+                  
+public override string ToString(){return "start=" + start + ", end=" + end + ", label=\'" + label + "\'";}
+public static int ToInt(byte b){return ToInt(unchecked((int)b));}\n\n    public static int ToInt
+Tags(string, string, string, string, string, string, string, string, string, string, string, string, string, string
+public virtual DescribeStackSetOperationResponse DescribeStackSetOperation(DescribeStackSetOperationRequest request){var options = new InvokeOptions
+import(int sheetIndex, int rowIndex, int colIndex, bool rowAbsolute, bool colAbsolute);\n\t\treturn Get
+public void Write(byte[] b){_out.Write(b);_size += b.Length;}\npublic void Write(int i
+public ResetImageAttributeRequest(ImageAttributeName attribute, string imageId){_imageId = imageId;_attribute = attribute;_
+public virtual void DisableLogging(){logDisabled = true;}\n\n        /// <summary>Returns true if logging is disabled.</
+public override ObjectId GetObjectId(){ObjectId id = GetLooseObjectId();if(id == null){id = GetPacked
+public virtual DeleteDomainNameResponse DeleteDomainName(DeleteDomainNameRequest request){var options = new InvokeOptions();options.RequestMarsh
+public override void Write(ILittleEndianOutput out1){out1.WriteByte(sid + 
+public virtual DeleteQueueResponse DeleteQueue(string queueUrl){var request = new DeleteQueueRequest();request.QueueUrl = queueUrl;return
+Tags::NewObject = newObject;Tags::Push(tag);\n\n        public override string ToString()\n        {\n            return
+public override void GetBounds(int[] bounds){bounds[0] = start;bounds[1] = end;bounds[2] =
+public virtual int GetPackedGitVersion(){return packedGitVersion;}\npublic void SetPackedGitVersion(int packedGitVersion
+public virtual PutMetricAlarmResponse PutMetricAlarm(PutMetricAlarmRequest request){var options = new InvokeOptions
+public virtual GetExportResponse GetExport(GetExportRequest request){var options = new InvokeOptions();options.RequestMarshaller = Get
+public CreateQueueRequest(string queueName){_queueName = queueName;}\n\n        /// <summary>The name of the queue to
+Tags = new Tags(tags);\n        if (tags != null) {\n            this.tags.addAll(tags);\n       
+public virtual void SetDuration(long duration){duration_ = duration;}\n\n    /// <exception cref="IOException"/>\n    public virtual
+public virtual AttachVpnGatewayResponse AttachVpnGateway(AttachVpnGatewayRequest request){var
+public override string ToString(){string path = GetPath();string type = GetType();if (path == null)return type;return $
+public virtual DescribeReplicationGroupsResponse DescribeReplicationGroups(DescribeReplicationGroupsRequest request){var options = new InvokeOptions
+TagsEvaluator GetTableArrayEvaluator(int sheetIndex, int firstRow, int firstCol, int lastRow, int last
+public override java.nio.ShortBuffer put(int index, short c){byteBuffer.putShort(index * libcore.io.
+public void Set(String v){this._value = v;}\n    public String ToString(){return this._value;}\n}\n\n
+// public override void write(int b) throws IOException{throw new System.NotImplementedException();}\n\n\t\tpublic override
+public virtual DescribeImportImageTasksResponse DescribeImportImageTasks(DescribeImportImageTasksRequest request){var options = new InvokeOptions
+Tags SeriesRecord(RecordInputStream in){field_1_ = in.ReadInt();field_2_ = in.ReadInt();field
+Tags CommitsToPush(ICollection<RevCommit> commitsToPush) {this.commitsToPush = commitsToPush
+public virtual CreateWorkflowResponse CreateWorkflow(CreateWorkflowRequest request){var options = new InvokeOptions();options.RequestMarsh
+public override Object Clone(){return this;}\n    }\n\n    public override String ToString()\n    {\n        StringBuffer buffer
+// public override java.nio.FloatBuffer duplicate();\noverride public java.nio.FloatBuffer slice();\noverride public java.nio.
+public virtual DescribeClusterSnapshotsResponse DescribeClusterSnapshots(DescribeClusterSnapshotsRequest
+public virtual ListImagesResponse ListImages(ListImagesRequest request){var options = new InvokeOptions();options.RequestMarshaller = List
+public Change(int oldStart, int oldEnd, int newStart, int newEnd){o = oldStart;n = oldEnd;
+# override public String ToString(){StringBuilder buffer = new StringBuilder();buffer.Append(this.GetType().Name).Append(" [");
+public static void RegisterBuiltInFunctions(Workbook wb, FormulaEvaluator evaluator){for (int i = 
+public GetAlbumPhotosRequest(): base("CloudPhoto", "2017-07-11", "GetAlbum
+Tags ConsolidationStrategy(int maxMergeAtOnce, int maxMergeAtOnceDocs, int maxMergeAtOnceSize
+public virtual AllocateAddressResponse AllocateAddress(AllocateAddressRequest request){var options = new InvokeOptions();options.
+Tags(RecordType type, int size, RecordInputStream in){int recordCount = size / RECORD_SIZE;for (int k
+packageObject peel(RevWalk walker, AnyObjectId objectId){RevCommit commit = walker.Commit
+public virtual CreateDBClusterSnapshotResponse CreateDBClusterSnapshot(CreateDBClusterSnapshotRequest request){var options = new InvokeOptions
+Tags.public_static_fields.get(int i) {throw new RuntimeException("Enum out of range");}\n   ~~~
+# public override string ToString(){return "commit-tree " + Sha1.getSha1String(id) + "\\n
+public ListTablesRequest(string exclusiveStartTableName = default(string)){}\n\n        /// <summary>\n        /// Lists the
+public virtual EnableAlarmActionsResponse EnableAlarmActions(EnableAlarmActionsRequest request){var options = new InvokeOptions();
+                  
+public override bool Equals(object other)\n\tpublic override int GetHashCode()\n\t{\n\t\tint hash = this.
+public override TokenStream Create(TokenStream input){return new PersianNormalizationFilter(input);}\n        }\n\n        /// <
+public void UnhideSheet(){_isHidden = true;UnhideSheet(this);}\npublic void HideSheet(){_isHidden
+public virtual int Get(int index, long[] arr, int off, int len){Debug.Assert(len > 
+public virtual DeleteRouteResponse DeleteRoute(DeleteRouteRequest request){var options = new InvokeOptions();options.RequestMarshaller = Delete
+public virtual string ToAsciiString(){\n        StringBuilder sb = new StringBuilder();\n        ToAsciiString(sb);\n        return sb
+public virtual CreateCustomDomainNameResponse CreateCustomDomainName(CreateCustomDomainNameRequest request){var options = new InvokeOptions();options.
+public override void write(int oneByte){writeImpl(oneByte);}\n        public override void write(byte[] buffer){write(
+# BOFRecord BOFRecord(){return bofRecord;}\r\n\r\n        /// <summary>\r\n        /// Gets or sets
+@Override public String ToString() {return "term=" + term + " docFreq=" + docFreq + " totalTermF
+#pragma warning disable CS0618 // Type or member is obsolete\n        public static bool ShouldSample(TraceId traceId
+Tags(Tags){}\npublic Tags(IEnumerable<string> tags){this.tags = tags;}\npublic Tags(){}\npublic
+<? override public String ToString() { return getClass().getName() + ": " + super.ToString(); }\n    /// <summary>
+public virtual DeleteDataSourceResponse DeleteDataSource(DeleteDataSourceRequest request){var options = new InvokeOptions();options.RequestMarshaller = Delete
+public virtual UpdateInstanceResponse UpdateInstance(UpdateInstanceRequest request){var options = new InvokeOptions();options.RequestMarshaller = Update
+Tags HaveHeader = false;\n\n        public void WriteTo(byte[] data, int offset) {\n            if (HaveHeader)
+public virtual CreateTagsResponse CreateTags(CreateTagsRequest request){var options = new InvokeOptions();options.RequestMarshaller = Create
+public virtual ObjectDatabase GetObjectDatabase(){return objectDatabase;}\n\n        /// <exception cref="NGit.Errors.MissingObject
+public static java.io.InputStream getInputStream(java.net.URL url){try{return url.openStream();}catch(java
+# override public String ToString(){StringBuilder sb = new StringBuilder();sb.Append("[");sb.Append(this.GetType().
+public int nextIndex(){return position + 
+public override string ToQueryString(IEscapeQuerySyntax syntax){if (syntax == null){return this.ToString();}return syntax.
+public override Object Clone(){SetPrintAreaRecord rec = new SetPrintAreaRecord();rec.field_1_first_row = field
+package public bool isSigned(){return signed;}\npublic void setSigned(bool signed){this.signed = signed;}\n\npublic
+public virtual CreateNetworkInterfaceResponse CreateNetworkInterface(CreateNetworkInterfaceRequest request){var options = new InvokeOptions();options.RequestMarsh
+public override void Serialize(ILittleEndianOutput out1){out1.WriteShort(field_1_options);}\n       
+public virtual StartKeyPhrasesDetectionJobResponse StartKeyPhrasesDetectionJob(StartKeyPhrasesDete
+// AWSCredentialsProvider credentialProvider{getCredentials = () => new BasicAWSCredentials(accessKey, secretKey);
+public virtual GetGatewayResponse GetGateway(GetGatewayRequest request){var options = new InvokeOptions();options.
+package java.nio.ByteBuffer;\n\noverride public java.nio.ByteBuffer slice(){return new java.nio.ReadOnlyByte
+public static string ToPath(params string[] elements){var sb = new StringBuilder();for (int i = 
+public override string ToString(){return "(" + a.ToString() + " AND " + b.ToString() + ")";}\n\n
+public ListSubscriptionsRequest(string topicArn, string nextToken){_topicArn = topicArn;_nextToken =
+public override byte ReadByte(){return buf[pos++];}\npublic override void Seek(long pos){this.pos = (int
+public virtual DisableVgwRoutePropagationResponse DisableVgwRoutePropagation(DisableVgwRoutePro
+public SendMessageRequest(string queueUrl, string messageBody){_queueUrl = queueUrl;_messageBody = messageBody;}\n       
+<? override void Serialize(ILittleEndianOutput out){out.WriteInt(field_1_first_row);out.Write
+#IFunctor<T> Apply(IFunctor<T> a, IFunctor<T> b);#end\n
+public virtual CreateEntityResponse CreateEntity(CreateEntityRequest request){var options = new InvokeOptions();options.RequestMarshaller = Create
+public static int Compare(byte[] a, int aStart, byte[] b, int bStart, int len){if (aStart
+#Override public int Draw(byte[] srcData, int srcOffset, byte[] dstData, int dstOffset, int width, int height
+public virtual CreateCloudFrontOriginAccessIdentityResponse CreateCloudFrontOriginAccessIdentity(CreateCloudFrontOriginAccessIdentityRequest request){var options = new
+public override bool isLenient(){return false;}\npublic override void setLenient(bool lenient){}\npublic override void setTime
+public virtual void SetCanonical(bool on){canonical = on;}\n\n    public virtual bool IsCanonical()\n
+public virtual string Name{get{return name;}\npublic virtual void SetName(string name){this.name = name;}\n\npublic
+package JGitRepository {\npublic class JGitRepository {\n    private final Repository repository;\n\n    /**\n     * Creates
+#[int](int, int, int, int, int, int, int, int, int, int, int, int, int
+TagsPrintSetupRecord(int offset, byte[] data){field_1_offset = offset;field_2_data = data;}\n
+public override long Length(){return _length;}\n\n        public override string ToString(){\n            return string.Empty;\n        }
+Tags DefaultColWidthRecord(RecordInputStream in){field_1_ = in.ReadShort();}\n\n        public override short Sid{
+Tags(1 + (int)(Math.pow(2, Math.ceil(Math.log(capacity) / Math.log(
+# public void Run(){bool success = false;try{long start = System.Threading.Interlocked.CompareExchange(ref
+public DeleteKeyPairRequest(string keyName){_keyName = keyName;}\npublic DeleteKeyPairRequest(string keyName){\n
+package E poll();\npublic E poll(){lock (this){return _elements.poll();}}\npublic E poll(long timeout,
+public GetPhotoRequest(): base("CloudPhoto", "2017-07-11", "GetPhoto", "cloudphoto
+public virtual string GetName(){return null;}\n\n    /// <summary>\n    /// Get the type of the object.\n    ///
+# public int FindBreakOpportunity(int start, int end){for (int i = start; i < end; i++){
+public virtual void SetObjectReader(ObjectReader or){objectReader = or;}\npublic virtual ObjectReader GetObjectReader(){return objectReader;}
+public SheetRange(SheetRef sref){_sref = sref;_firstCell = new CellReference(sref.Get
+public virtual CreateVpcLinkResponse CreateVpcLink(CreateVpcLinkRequest request){var options = new InvokeOptions();options.
+public virtual DisassociateFileSystemResponse DisassociateFileSystem(DisassociateFileSystemRequest request){var options = new InvokeOptions
+packageExtendedSSTRecord(RecordInputStream in1)\n        {\n            sid = in1.ReadShort();\n            options =
+<?(MergeStrategy, IMergeStrategy mergeStrategy){...}));\n    }\n\n    /// <summary>\n    ///
+public virtual CreateDataSourceFromS3Response CreateDataSourceFromS3(CreateDataSourceFromS3Request request){var options = new InvokeOptions
+# public virtual void Reset(){foreach (ATNState state in atn.StateSet){state.SetReachable();}\n
+public void RemoveSheet(int sheetIndex){string sheetName = GetSheetName(sheetIndex);RemoveSheet(sheetName);}\npublic
+public override String ToString(){StringBuilder buffer = new StringBuilder();buffer.Append("[LeftMargin]\\n");buffer.Append("   
+public override Object Clone(){return this;}\n    }\n\n    public override String ToString()\n    {\n        StringBuilder buffer =
+Tags t, t2, t3, t4, t5, t6, t7, t8, t9, t1
+Tags(String fileName, String sheetName, int startRow, int startCol, int endRow, int endCol){if (fileName ==
+public override java.nio.ByteBuffer put(int index, byte b){throw new java.nio.ReadOnlyBufferException();}\n
+public virtual void SetType(int type){_type = type;}\n\n        public override string ToString()\n        {\n            return
+public override java.nio.ShortBuffer slice(){return new java.nio.ReadOnlyShortArrayBuffer(remaining(), backingArray, offset
+#. public void set(int index, int value){throw new NotSupportedException();}\n\n\t\t/// <summary>\n
+public override java.nio.ByteBuffer putDouble(double value){throw new System.NotImplementedException();}\n\n        public
+#4;\n    public static double MEDIAN(double[] values){\n        int n = values.Length;\n        if
+public UpdateInstanceRequest(): base("cr", "2016-06-07", "UpdateInstance", "cr", "
+public DeleteAttributesRequest(string domainName, string itemName, List<Attribute> attributes){_domainName = domainName;_itemName
+Tags public String ToString(){StringBuffer sb = new StringBuffer();sb.Append("[").Append(GetType().Name).Append("
+Tags public override bool Dirty(){\n\t\t\tgetDirty = base.Dirty();\n\t\t\treturn getDirty ||
+#public void SetBytes(byte[] value){Bytes = value;}\n\n\t\tpublic override string ToString(){\n\t\t\treturn
+public virtual DescribeConnectorsResponse DescribeConnectors(DescribeConnectorsRequest request){var options = new InvokeOptions();options.
+public DeleteAlbumRequest(): base("CloudPhoto", "2017-07-11", "DeleteAlbum", "
+public void add(E @object){contents.add(@object);}\n}\npublic override bool remove(Object @object){\nreturn
+public static java.nio.ByteBuffer allocateDirect(int capacity_1){if (capacity_1 < 
+Tags(BlockStartTag[] tags){\npublic BlockStartTag[] GetBlockStartTags(){return tags;}\npublic void AddBlockStartTag
+# virtual double calcScore(int docId, float freq, int numTerms, long totalTermFreq, long docFreq
+public override String ToString(){StringBuilder buffer = new StringBuilder();buffer.Append("[BOUNDSHEET]\\n");buffer.Append
+public virtual DescribeLoggingStatusResponse DescribeLoggingStatus(DescribeLoggingStatusRequest request){var options = new InvokeOptions
+public virtual RegisterTransitGatewayMulticastGroupSourcesResponse RegisterTransitGatewayMulticastGroupSources(Register
+public virtual GetContactAttributesResponse GetContactAttributes(GetContactAttributesRequest request){var options = new InvokeOptions();options.RequestMarsh
+public virtual ObjectId GetObjectId(){return objectId;}\npublic override int GetType(){return type;}\npublic override long GetLength(){
+public override bool IsEmpty(){return false;}\n\n    public override string ToString(){\n      StringBuilder sb = new StringBuilder();\n      sb
+public DeleteKeyPairRequest(string keyName){_keyName = keyName;}\n        public DeleteKeyPairRequest(string keyName)
+public java.lang.StringBuilder append(bool b){return append(b ? "true" : "false");}\n\npublic java
+public virtual GetBatchPredictionResponse GetBatchPrediction(GetBatchPredictionRequest request){var options = new InvokeOptions();options.
+public BuiltInNameRecord GetBuiltInName(){return builtInName;}\n\n        public void SetBuiltInName(Bu
+#endif\npublic override bool Matches(byte* ptr, int len){\n    if (len < minLength){\n        return false
+public virtual GetLifecyclePolicyResponse GetLifecyclePolicy(GetLifecyclePolicyRequest request){var options = new InvokeOptions();options.
+public Tokenizer(Tokenizer tokenizer){\n        this.tokenizer = tokenizer;\n        if (tokenizer != null)\n
+Tags();}\n\n        public override void Serialize(ILittleEndianOutput out1){\n            out1.WriteShort(field
+# public override string ToString(){string s = GetType().FullName;s = s.Substring(s.LastIndexOf('.
+public virtual NGit.Api.CreateBranchCommand SetName(string name){CheckCallable();this.name = name;return this
+TagsContainingRecord(sstRecord, workbook.getNumSSTRecords() + 
+public virtual AssociateSkillWithSkillGroupResponse AssociateSkillWithSkillGroup(AssociateSkillWithSkillGroupRequest
+public override String ToString(){StringBuilder buffer = new StringBuilder();buffer.Append("[Window2]\\n");buffer.Append("    .
+Tags public class BuildContext(){get;set; }\n\n    /// <summary>\n    /// Gets or sets the project.\n
+import string getExtension(){string extension = null;int index = getPath().lastIndexOf('.');if (index != -1){extension
