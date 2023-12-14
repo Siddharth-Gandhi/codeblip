@@ -9,6 +9,7 @@ from torch.utils.data import DataLoader
 from tqdm import tqdm
 from transformers import AutoTokenizer, T5ForConditionalGeneration, logging
 
+from codeblip_linear import CodeBlipLinear
 from codeblip_qformer import CodeQformer
 from codeblip_t5 import CodeBlipT5
 from dataset import CodeTranslationDataset
@@ -37,8 +38,8 @@ if __name__ == '__main__':
     set_seed(42)
 
     # paths
-    source_lang = 'java'
-    target_lang = 'cs'
+    source_lang = 'cs'
+    target_lang = 'java'
 
     train_source_file, train_target_file = f'data/train.java-cs.txt.{source_lang}', f'data/train.java-cs.txt.{target_lang}'
     valid_source_file, valid_target_file = f'data/valid.java-cs.txt.{source_lang}', f'data/valid.java-cs.txt.{target_lang}'
@@ -47,7 +48,7 @@ if __name__ == '__main__':
     assert os.path.exists(train_source_file) and os.path.exists(train_target_file)
 
     # Parameters
-    num_epochs = 1
+    num_epochs = 10
     batch_size = 4
     # learning_rate = 1e-4
     # num_training_steps = 1000  # This should be adjusted based on your dataset size
@@ -60,8 +61,8 @@ if __name__ == '__main__':
     # num_warmup_steps = 3
 
     # Load dataset
-    train_dataset = CodeTranslationDataset(train_source_file, train_target_file, is_t5=True)
-    valid_dataset = CodeTranslationDataset(valid_source_file, valid_target_file, is_t5=True)
+    train_dataset = CodeTranslationDataset(train_source_file, train_target_file, is_t5=False)
+    valid_dataset = CodeTranslationDataset(valid_source_file, valid_target_file, is_t5=False)
 
     # train_dataset = train_dataset[:1000]
     # valid_dataset = valid_dataset[:100]
@@ -84,20 +85,27 @@ if __name__ == '__main__':
     #     max_target_len=512,
     # )
 
-    stage1_checkpoint = 'models/stage1_out/stage1_best.pt'
-    stage1_model = CodeQformer.from_config({'pretrained_path': stage1_checkpoint})
+    # v_name = 'codet5_ft_prompt'
+    v_name = 'cs2java_codet5_linear'
 
-    stage1_qformer = stage1_model.Qformer
-    stage1_query_tokens = stage1_model.query_tokens
+    # stage1_checkpoint = 'models/stage1_out/stage1_best.pt'
+    # stage1_model = CodeQformer.from_config({'pretrained_path': stage1_checkpoint})
+
+    # stage1_qformer = stage1_model.Qformer
+    # stage1_query_tokens = stage1_model.query_tokens
 
     t5_tokenizer = AutoTokenizer.from_pretrained('Salesforce/codet5-base')
     t5_model = T5ForConditionalGeneration.from_pretrained(f'Salesforce/codet5-base-codexglue-translate-{source_lang}-{target_lang}')
+    # t5_model = T5ForConditionalGeneration.from_pretrained('Salesforce/codet5-base')
 
-    # prompt = f'Translate {source_lang} to {target_lang}'
-    prompt = ''
+    prompt = f'Translate {source_lang} to {target_lang}'
+    # prompt = ''
 
-    model = CodeBlipT5(stage1_qformer, stage1_query_tokens, t5_tokenizer=t5_tokenizer, t5_model=t5_model, prompt=prompt).to('cuda' if torch.cuda.is_available() else 'cpu')
+    # model = CodeBlipT5(stage1_qformer, stage1_query_tokens, t5_tokenizer=t5_tokenizer, t5_model=t5_model, prompt=prompt).to('cuda' if torch.cuda.is_available() else 'cpu')
 
+    model = CodeBlipLinear(t5_tokenizer=t5_tokenizer, t5_model=t5_model, prompt=prompt).to('cuda' if torch.cuda.is_available() else 'cpu')
+
+    v_name += '_next'
 
     # Create optimizer
     # optimizer = AdamW(model.parameters(), lr=learning_rate)
@@ -118,8 +126,8 @@ if __name__ == '__main__':
     best_val_loss = float('inf')
 
     source_code_samples = [
-        "public static void main(String[] args) { System.out.println(\"Hello, world!\"); }",
-        "public class Test { public static int add(int a, int b) { return a + b; } }"]
+       "class HelloWorld { static void Main(string[] args) { Console.WriteLine(\"Hello, world!\"); } }",
+        "class Test { static int Add(int a, int b) { return a + b; } }"]
 
     def sanity_check():
         for source_code in source_code_samples:
@@ -128,7 +136,7 @@ if __name__ == '__main__':
             samples = {"source_code": [source_code]}
             print(f'Current Sample: {source_code}')
             # Perform a forward pass
-            output = model.generate(samples, max_length=750)
+            output = model.generate(source_code, max_length=512)
             print(f"Current Output: {output}")
             print()
 
@@ -181,15 +189,15 @@ if __name__ == '__main__':
         sanity_check()
 
         # Save the Qformer state after latest epoch
-        torch.save(model.Qformer.state_dict(), 'models/stage2_out/qformer_stage2_latest.pt') # type: ignore
-        torch.save(model.state_dict(), 'models/stage2_out/stage2_latest.pt')
+        # torch.save(model.Qformer.state_dict(), f'models/stage2_out/{v_name}_qformer_stage2_latest.pt') # type: ignore
+        torch.save(model.state_dict(), f'models/stage2_out/{v_name}_stage2_latest.pt')
 
         # Save the Qformer state after best validation loss
         if valid_loss['loss'] < best_val_loss:
             best_val_loss = valid_loss['loss']
             print(f'New best validation loss: {best_val_loss}')
-            torch.save(model.Qformer.state_dict(), 'models/stage2_out/qformer_stage2_best.pt') # type: ignore
-            torch.save(model.state_dict(), 'models/stage2_out/stage2_best.pt')
+            # torch.save(model.Qformer.state_dict(), f'models/stage2_out/{v_name}_qformer_stage2_best.pt') # type: ignore
+            torch.save(model.state_dict(), f'models/stage2_out/{v_name}_stage2_best.pt')
 
     print(f"Training completed. Best validation loss: {best_val_loss}")
     print(f"Training loss list: {train_loss_list}")

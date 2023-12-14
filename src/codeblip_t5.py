@@ -195,10 +195,10 @@ class CodeBlipT5(CodeBlip):
         atts_t5 = torch.ones(inputs_t5.size()[:-1], dtype=torch.long).to(self.device)
 
 
-        if "prompt" in samples.keys():
-            prompt = samples["prompt"]
-        else:
-            prompt = self.prompt
+        # if "prompt" in samples.keys():
+        #     prompt = samples["prompt"]
+        # else:
+        #     prompt = self.prompt
 
         # if isinstance(prompt, str):
         #     prompt = [prompt] * image.size(0)
