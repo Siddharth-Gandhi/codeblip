@@ -1,0 +1,5 @@
+Arjun: Problem formulation, methodology creation, problem motivation, literature review, results analysis, visualisation and image making, report writing, poster making.
+
+Siddharth: Baseline implementation, code writing for CodeT5 including experimentation for linear layer study done, analysis of results and quant results generation.
+
+Piyush: Baseline implementation, code writing for CodeLlama, analysis of results and quant results generation, implementation of additional metrics for evaluation.
